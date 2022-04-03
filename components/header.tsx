@@ -67,7 +67,7 @@ const Header = ({ menuIsOpen, setMenuIsOpen }) => {
               </a>
             </Link>
 
-            <div className="mt-5 mr-16 text-3xl cursor-pointer md:mr-40 ">
+            <div className="mt-5 mr-16 text-4xl cursor-pointer md:mr-40 ">
               <ThemeToggle />
               <button
                 onClick={() => toggleMenu()}
