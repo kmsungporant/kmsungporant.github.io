@@ -27,6 +27,8 @@ jobs:
         run: |
           npm ci
           npm run build
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
       
 
       - name: Deploy 🚀
