@@ -2,8 +2,7 @@ import Link from "next/link";
 import { ImCross } from "react-icons/im";
 import { useState, useEffect } from "react";
 import ThemeToggle from "./themetoggle";
-import { FaWindowRestore } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { CgMenuRight, CgClose } from "react-icons/cg";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = ({ menuIsOpen, setMenuIsOpen }) => {
@@ -74,7 +73,7 @@ const Header = ({ menuIsOpen, setMenuIsOpen }) => {
                 onClick={() => toggleMenu()}
                 className="dark:text-NavyBlueLight text-WitchingHourLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
               >
-                {menuIsOpen ? <ImCross /> : <GiHamburgerMenu />}
+                {menuIsOpen ? <CgClose /> : <CgMenuRight />}
               </button>
             </div>
           </motion.div>
