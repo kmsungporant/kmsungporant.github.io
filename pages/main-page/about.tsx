@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div id="about" className="h-full ">
+    <div id="about" className="h-1/2 ">
       <AnimatePresence>
         <div className="flex flex-col items-center justify-center h-full font-black dark:bg-white bg-DarkGray ">
           <motion.p

@@ -45,7 +45,7 @@ const Contacts = () => {
   ];
 
   return (
-    <div id="contacts" className="h-full">
+    <div id="contacts" className="h-1/2">
       <AnimatePresence>
         <div className="flex items-center justify-center h-full space-x-5 text-white bg-DarkGray dark:bg-white dark:text-black ">
           <div className="flex justify-center w-[6%]">
@@ -78,7 +78,7 @@ const Contacts = () => {
           <div className="space-y-3">
             {icons.map((icon, i) => (
               <div key={i} className="text-5xl">
-                <Link href={icon.link} passHref >
+                <Link href={icon.link} passHref>
                   <motion.a
                     initial={{ opacity: 0, transform: "translateX(10px)" }}
                     whileInView={{
