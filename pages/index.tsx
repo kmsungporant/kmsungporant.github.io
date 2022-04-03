@@ -3,14 +3,14 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Menu from "./components/menu";
-import Header from "./components/header";
-import Hero from "./main-page/hero";
-import About from "./main-page/about";
-import Portfolio from "./main-page/portfolio";
-import Contacts from "./main-page/contacts";
-import Footer from "./main-page/footer";
-import Gotop from "./components/goTopArrow";
+import Menu from "../components/menu";
+import Header from "../components/header";
+import Hero from "../components/main-page/hero";
+import About from "../components/main-page/about";
+import Portfolio from "../components/main-page/portfolio";
+import Contacts from "../components/main-page/contacts";
+import Footer from "../components/main-page/footer";
+import Gotop from "../components/goTopArrow";
 
 export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function Home() {
       <Portfolio />
       <Contacts />
       <Footer />
-      
+
       <Gotop menuIsOpen={menuIsOpen} />
     </div>
   );
