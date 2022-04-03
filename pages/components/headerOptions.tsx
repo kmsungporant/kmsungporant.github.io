@@ -27,11 +27,11 @@ const HeaderOptions: React.FC<Props> = ({ setMenuIsOpen }) => {
     { link: "https://www.facebook.com/kmsungporant", icon: <AiFillFacebook /> },
   ];
 
-  const categories: { name: string; link: ReactNode }[] = [
-    { name: "Home", link: "/" },
-    { name: "Experience", link: "/aboutPage" },
-    { name: "Portfolio", link: "/portfolioPage" },
-    { name: "Contact", link: "/#contacts" },
+  const categories: { name: string; link: string; animation: ReactNode }[] = [
+    { name: "Home", link: "/", animation: <motion.div /> },
+    { name: "Experience", link: "/aboutPage", animation: <motion.div /> },
+    { name: "Portfolio", link: "/portfolioPage", animation: <motion.div /> },
+    { name: "Contact", link: "/#contacts", animation: <motion.div /> },
   ];
 
   return (
