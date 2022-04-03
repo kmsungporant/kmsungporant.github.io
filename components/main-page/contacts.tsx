@@ -75,17 +75,19 @@ const Contacts = () => {
             className="flex w-2 bg-white h-60 dark:bg-black"
           />
 
-          <div className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, transform: "translateX(10px)" }}
+            whileInView={{
+              opacity: 1,
+              transform: "translateX(0px)",
+              transition: { duration: 1, delay: 1.5 },
+            }}
+            className="space-y-3"
+          >
             {icons.map((icon, i) => (
               <div key={i} className="text-5xl">
                 <Link href={icon.link} passHref>
-                  <motion.a
-                    initial={{ opacity: 0, transform: "translateX(10px)" }}
-                    whileInView={{
-                      opacity: 1,
-                      transform: "translateX(0px)",
-                      transition: { duration: 1, delay: 1.5 },
-                    }}
+                  <a
                     target="_blank"
                     className="flex flex-row items-center space-x-2 cursor-pointer hover:text-WitchingHourLight hover:dark:text-NavyBlueLight"
                   >
@@ -93,11 +95,11 @@ const Contacts = () => {
                     <a className="flex flex-col text-base font-black">
                       {icon.linkName}
                     </a>
-                  </motion.a>
+                  </a>
                 </Link>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </AnimatePresence>
     </div>

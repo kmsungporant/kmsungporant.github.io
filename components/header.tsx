@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { GiCrossedSwords } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 import { useState, useEffect } from "react";
 import ThemeToggle from "./themetoggle";
-import { FaHamburger, FaWindowRestore } from "react-icons/fa";
+import { FaWindowRestore } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = ({ menuIsOpen, setMenuIsOpen }) => {
@@ -45,7 +46,7 @@ const Header = ({ menuIsOpen, setMenuIsOpen }) => {
             className="fixed top-0 z-30 flex justify-center w-full bg-DarkGray dark:bg-white "
           >
             <Link href="/">
-              <a className="flex py-3 text-4xl font-semibold -skew-y-2 dark:text-NavyBlueLight text-WitchingHourLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80">
+              <a className="flex py-3 text-[3vw] font-semibold -skew-y-2 dark:text-NavyBlueLight text-WitchingHourLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80">
                 MinsungK
               </a>
             </Link>
@@ -67,13 +68,13 @@ const Header = ({ menuIsOpen, setMenuIsOpen }) => {
               </a>
             </Link>
 
-            <div className="mt-5 mr-16 text-4xl cursor-pointer md:mr-40 ">
+            <div className="mt-5 mr-16 text-3xl cursor-pointer md:mr-40 ">
               <ThemeToggle />
               <button
                 onClick={() => toggleMenu()}
                 className="dark:text-NavyBlueLight text-WitchingHourLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
               >
-                {menuIsOpen ? <GiCrossedSwords /> : <FaHamburger />}
+                {menuIsOpen ? <ImCross /> : <GiHamburgerMenu />}
               </button>
             </div>
           </motion.div>

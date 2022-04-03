@@ -13,7 +13,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: false }}
-            className="text-lg text-white dark:text-black "
+            className="text-lg text-white dark:text-black"
           >
             <span className="text-3xl">Hello</span>, my name is{" "}
           </motion.div>
@@ -43,7 +43,7 @@ const Hero = () => {
             viewport={{ once: false }}
           >
             <div className="mt-3 text-white text-md dark:text-black">
-              An incoming Computer Scientist.
+              An incoming Software Engineer
             </div>
             <div className="text-sm text-white dark:text-black">
               <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
