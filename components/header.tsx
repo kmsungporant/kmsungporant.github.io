@@ -28,10 +28,10 @@ const Header = ({ menuIsOpen, setMenuIsOpen }) => {
       } else {
         setBackgroundChange(false);
       }
-      return () => {
-        window.removeEventListener("scroll", () => {});
-      };
     });
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
   }, []);
 
   return (
