@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div id="about" className="h-1/2 ">
+    <div id="about" className="h-full">
       <AnimatePresence>
-        <div className="flex flex-col items-center justify-center h-full font-black dark:bg-white bg-DarkGray ">
+        <div className="flex flex-col items-center justify-center h-full font-black dark:bg-white ">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1 } }}

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ReactNode } from "react";
+import Footer from "./footer";
 import {
   AiFillLinkedin,
   AiFillGithub,
@@ -45,9 +46,9 @@ const Contacts = () => {
   ];
 
   return (
-    <div id="contacts" className="h-1/2">
+    <div id="contacts" className="h-full">
       <AnimatePresence>
-        <div className="flex items-center justify-center h-full space-x-5 text-white bg-DarkGray dark:bg-white dark:text-black ">
+        <div className="flex items-center justify-center h-[95%] space-x-5 text-white dark:bg-white dark:text-black ">
           <div className="flex justify-center w-[6%]">
             <div className="flex justify-end w-[20%] space-x-5">
               <div className="flex flex-row items-center justify-center w-[15%] text-5xl font-black -rotate-90 ">
@@ -100,6 +101,9 @@ const Contacts = () => {
               </div>
             ))}
           </motion.div>
+        </div>
+        <div className=" b-0">
+          <Footer />
         </div>
       </AnimatePresence>
     </div>

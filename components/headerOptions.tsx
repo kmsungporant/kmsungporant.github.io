@@ -28,14 +28,14 @@ const HeaderOptions: React.FC<Props> = ({ setMenuIsOpen }) => {
   ];
 
   const categories: { name: string; link: string; animation: ReactNode }[] = [
-    { name: "Home", link: "/", animation: <motion.div /> },
-    { name: "Experience", link: "/aboutPage", animation: <motion.div /> },
-    { name: "Portfolio", link: "/portfolioPage", animation: <motion.div /> },
-    { name: "Contact", link: "/#contacts", animation: <motion.div /> },
+    { name: "Home", link: "#hero", animation: <motion.div /> },
+    { name: "Experience", link: "#about", animation: <motion.div /> },
+    { name: "Portfolio", link: "#portfolio", animation: <motion.div /> },
+    { name: "Contact", link: "#contacts", animation: <motion.div /> },
   ];
 
   return (
-    <div className="z-50 h-full text-5xl font-black">
+    <div className="h-full text-5xl font-black ">
       <ul className="flex flex-col items-center justify-center h-full leading-snug">
         {categories.map((name, i) => (
           <div key={i}>

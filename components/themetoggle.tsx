@@ -22,9 +22,9 @@ const ThemeToggle = () => {
             : "dark"
         )
       }
-      className="dark:text-NavyBlueLight text-WitchingHourLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+      className="text-white dark:text-NavyBlueLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80 "
     >
-      <div className="mr-2 transition-colors">
+      <div className="transition-colors ">
         <FaSun className="block dark:hidden" />
         <FaMoon className="hidden dark:block" />
       </div>

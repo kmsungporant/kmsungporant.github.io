@@ -37,9 +37,9 @@ const Portfolio = () => {
   const [title, setTitle] = useState(BASE_TITLE);
 
   return (
-    <div id="portfolio" className="h-1/2">
+    <div id="portfolio" className="h-full">
       <AnimatePresence>
-        <div className="h-full text-white bg-DarkGray dark:bg-white dark:text-black">
+        <div className="h-full text-white dark:bg-white dark:text-black">
           <div className="flex flex-col items-center justify-center h-full font-black">
             <div className="z-20 justify-center text-3xl font-semibold text-white lg:text-4xl dark:text-black">
               {title}
