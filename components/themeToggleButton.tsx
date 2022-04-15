@@ -33,13 +33,13 @@ const ThemeToggleButton = () => {
           }
         />
         <button
-          className="w-20 h-10 mx-5 bg-white rounded-full"
+          className="w-20 h-10 mx-2 bg-black rounded-full dark:bg-white"
           onClick={toggleSwitchHandler}
         >
           {toggleSwitch ? (
-            <div className="w-2/5 ml-10 bg-black rounded-full h-4/5"></div>
+            <div className="w-2/5 ml-10 bg-white rounded-full dark:bg-black h-4/5"></div>
           ) : (
-            <div className="w-2/5 ml-1 bg-black rounded-full h-4/5"></div>
+            <div className="w-2/5 ml-1 bg-white rounded-full dark:bg-black h-4/5"></div>
           )}
         </button>
         <FaMoon
