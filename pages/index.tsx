@@ -9,7 +9,6 @@ import About from "../components/main-page/about";
 import Portfolio from "../components/main-page/portfolio";
 import Contacts from "../components/main-page/contacts";
 import Sidebar from "../components/sidebar";
-
 import MenuIcon from "../components/menuIcon";
 
 export default function Home() {
