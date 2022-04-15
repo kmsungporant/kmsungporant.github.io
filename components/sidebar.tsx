@@ -9,13 +9,14 @@ import { AiOutlineFolder, AiFillFolderOpen } from "react-icons/ai";
 import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ThemeToggle from "./themetoggle";
+import ThemeToggleButton from "./themeToggleButton";
 
 type Props = {
   menuIsOpen: boolean;
-  setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-const Sidebar = () => {
+const Sidebar = ({ menuIsOpen }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const icons: {
@@ -51,62 +52,59 @@ const Sidebar = () => {
   ];
 
   return (
-    <motion.div
-      className="fixed z-50 flex justify-center h-full text-white bg-DarkGray"
-      animate={isHovering ? { width: "30vw" } : { width: "15vw" }}
-    >
-      <div className="flex h-full">
-        <div className="flex flex-col text-[2rem] ">
-          <div className="font-black grow">
-            {isHovering ? (
-              <div className="flex justify-start p-5 -skew-x-2">MinsungK</div>
-            ) : (
-              <div className="flex justify-center p-5 ">MK</div>
-            )}
-          </div>
-          <div className="font-black grow">
-            <div className="flex justify-center">
-              <div className="">
-                {icons.map((icon, i) => (
-                  <div key={i}>
-                    <Link href={icon.location} passHref>
-                      <a className="flex w-full bg-transparent hover:bg-WitchingHourLight rounded-xl">
-                        <div className="mx-5 my-6 rounded-lg">{icon.icon}</div>
-                        {isHovering ? (
-                          <div className="mx-5 my-6 text-lg ">{icon.name}</div>
-                        ) : (
-                          <div className="hidden my-6 text-lg xl:block xl:mx-5 ">
-                            {icon.name}
-                          </div>
-                        )}
-                      </a>
-                    </Link>
+    <div className="hidden sm:block">
+      <div className="">
+        <motion.div
+          className="fixed z-50 flex justify-center h-full text-white bg-DarkGray"
+          animate={isHovering ? { width: "15vw" } : { width: "6vw" }}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          <div className="flex h-full">
+            <div className="flex flex-col text-[2rem] ">
+              <div className="font-black grow">
+                {isHovering ? (
+                  <div className="flex justify-start p-5 -skew-x-2">
+                    MinsungK
                   </div>
-                ))}
+                ) : (
+                  <div className="flex justify-center p-5 ">MK</div>
+                )}
+              </div>
+              <div className="font-black grow">
+                <div className="flex justify-center">
+                  <div className="">
+                    {icons.map((icon, i) => (
+                      <div key={i}>
+                        <Link href={icon.location} passHref>
+                          <a className="flex w-full bg-transparent hover:bg-WitchingHourLight rounded-xl">
+                            <div className="mx-5 my-6 rounded-lg">
+                              {icon.icon}
+                            </div>
+                            {isHovering ? (
+                              <div className="mx-5 my-6 text-lg ">
+                                {icon.name}
+                              </div>
+                            ) : null}
+                          </a>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-center mb-5 ">
+                {isHovering ? (
+                  <ThemeToggleButton />
+                ) : (
+                  <ThemeToggle menuIsOpen={menuIsOpen} />
+                )}
               </div>
             </div>
           </div>
-          <div className="hidden md:block xl:hidden">
-            <div className="flex justify-center m-5 font-black cursor-pointer hover:text-WitchingHourLight">
-              {isHovering ? null : (
-                <BsArrowRightSquare
-                  className=""
-                  onClick={() => setIsHovering(true)}
-                />
-              )}
-              {isHovering ? (
-                <div className="text-lg " onClick={() => setIsHovering(false)}>
-                  Close
-                </div>
-              ) : null}
-            </div>
-          </div>
-          <div className="block md:hidden xl:block">
-            <div className="flex justify-center p-4 m-5 font-black cursor-pointer hover:text-WitchingHourLight"></div>
-          </div>
-        </div>
+        </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

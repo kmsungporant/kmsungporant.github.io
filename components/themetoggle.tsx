@@ -32,7 +32,7 @@ const ThemeToggle = ({ menuIsOpen }) => {
           : "text-white dark:text-black dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
       }
     >
-      <div className="transition-colors ">
+      <div className="text-white">
         <FaSun className="block dark:hidden" />
         <FaMoon className="hidden dark:block" />
       </div>

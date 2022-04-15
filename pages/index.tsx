@@ -21,7 +21,7 @@ export default function Home() {
         <title>MinsungK</title>
         <link rel="icon" href="/device.svg" />
       </Head>
-      <Sidebar />
+      <Sidebar menuIsOpen={menuIsOpen} />
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <MenuIcon menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <Template>
