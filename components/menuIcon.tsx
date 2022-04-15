@@ -38,7 +38,9 @@ const MenuIcon = ({ menuIsOpen, setMenuIsOpen }) => {
         </div>
       </div>
       <div className="absolute mt-5 ml-10 ">
-        <span className="text-4xl font-black text-white ">MinsungK</span>
+        <span className="text-4xl font-black text-white dark:text-black ">
+          MinsungK
+        </span>
       </div>
     </div>
   );

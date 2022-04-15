@@ -55,7 +55,7 @@ const Sidebar = ({ menuIsOpen }) => {
     <div className="hidden sm:block">
       <div className="">
         <motion.div
-          className="fixed z-50 flex justify-center h-full text-white bg-DarkGray"
+          className="fixed z-50 flex justify-center h-full text-white bg-DarkGray dark:bg-DarkGray/70"
           animate={isHovering ? { width: "15vw" } : { width: "6vw" }}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
@@ -77,7 +77,7 @@ const Sidebar = ({ menuIsOpen }) => {
                     {icons.map((icon, i) => (
                       <div key={i}>
                         <Link href={icon.location} passHref>
-                          <a className="flex w-full bg-transparent hover:bg-WitchingHourLight rounded-xl">
+                          <a className="flex w-full bg-transparent hover:bg-WitchingHourLight rounded-xl dark:hover:bg-NavyBlueLight">
                             <div className="mx-5 my-6 rounded-lg">
                               {icon.icon}
                             </div>

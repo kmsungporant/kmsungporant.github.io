@@ -57,7 +57,7 @@ const Contacts = () => {
                   whileInView={{
                     opacity: 1,
                     transform: "translateY(0px)",
-                    transition: { duration: 1, delay: 1 },
+                    transition: { duration: 1, delay: 0.5 },
                   }}
                   className=""
                 >
@@ -81,7 +81,7 @@ const Contacts = () => {
             whileInView={{
               opacity: 1,
               transform: "translateX(0px)",
-              transition: { duration: 1, delay: 1.5 },
+              transition: { duration: 1, delay: 0.75 },
             }}
             className="space-y-3"
           >

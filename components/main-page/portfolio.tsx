@@ -79,7 +79,7 @@ const Portfolio = () => {
                   whileInView={{
                     opacity: 1,
                     transform: "translateY(10px)",
-                    transition: { duration: 1, delay: 1.25 },
+                    transition: { duration: 1, delay: 0.75 },
                   }}
                   exit={{ opacity: 0 }}
                   className="hover:text-WitchingHourLight hover:dark:text-NavyBlueLight"
@@ -95,7 +95,7 @@ const Portfolio = () => {
               whileInView={{
                 opacity: 1,
                 transform: "translateY(-10px)",
-                transition: { duration: 1, delay: 1.5 },
+                transition: { duration: 1, delay: 1 },
               }}
               viewport={{ once: false }}
               className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:bg-NavyBlueLight"
