@@ -9,7 +9,7 @@ import About from "../components/main-page/about";
 import Portfolio from "../components/main-page/portfolio";
 import Contacts from "../components/main-page/contacts";
 import Sidebar from "../components/sidebar";
-import Template from "../components/template";
+
 import MenuIcon from "../components/menuIcon";
 
 export default function Home() {
@@ -24,18 +24,11 @@ export default function Home() {
       <Sidebar menuIsOpen={menuIsOpen} />
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <MenuIcon menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-      <Template>
-        <Hero />
-      </Template>
-      <Template>
-        <About />
-      </Template>
-      <Template>
-        <Portfolio />
-      </Template>
-      <Template>
-        <Contacts />
-      </Template>
+
+      <Hero />
+      <About />
+      <Portfolio />
+      <Contacts />
     </div>
   );
 }

@@ -46,7 +46,7 @@ const Contacts = () => {
   ];
 
   return (
-    <div id="contacts" className="h-full">
+    <div id="contacts" className="h-full snap-start">
       <AnimatePresence>
         <div className="flex items-center justify-center h-[95%] space-x-5 text-white dark:bg-white dark:text-black ">
           <div className="flex justify-center w-[6%]">
