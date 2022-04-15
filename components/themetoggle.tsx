@@ -15,7 +15,7 @@ const ThemeToggle = ({ menuIsOpen }) => {
     const media = window.matchMedia(MEDIA);
     media.addEventListener("change", setSystem);
     return () => media.removeEventListener("change", setSystem);
-  }, []);
+  }, [setTheme]);
 
   return (
     <button
