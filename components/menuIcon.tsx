@@ -16,13 +16,23 @@ const MenuIcon = ({ menuIsOpen, setMenuIsOpen }) => {
       <div className="absolute z-50 justify-center">
         <motion.div className="fixed right-0">
           <div className="mt-5 mr-10 text-4xl cursor-pointer ">
-            <ThemeToggle />
+            <ThemeToggle menuIsOpen={menuIsOpen} />
             <button
               onClick={() => toggleMenu()}
-              className="ml-3 text-white dark:text-NavyBlueLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+              className={
+                menuIsOpen
+                  ? "ml-3 text-black dark:text-black dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+                  : "ml-3 text-white dark:text-black dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+              }
             >
               {menuIsOpen ? (
-                <CgClose className="text-black" />
+                <CgClose
+                  className={
+                    menuIsOpen
+                      ? "text-black dark:text-white dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+                      : "text-white dark:text-black dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+                  }
+                />
               ) : (
                 <CgMenuRight />
               )}

@@ -17,7 +17,6 @@ type Props = {
 
 const Sidebar = () => {
   const [isHovering, setIsHovering] = useState(false);
-  const [isHoveringIcon, setIsHoveringIcon] = useState(false);
 
   const icons: {
     name: string;
@@ -54,11 +53,10 @@ const Sidebar = () => {
   return (
     <motion.div
       className="fixed z-50 flex justify-center h-full text-white bg-DarkGray"
-      initial={{ width: "15vw" }}
       animate={isHovering ? { width: "30vw" } : { width: "15vw" }}
     >
-      <div className={isHovering ? "flex h-full w-42" : "flex h-full w-20"}>
-        <div className="flex flex-col text-3xl ">
+      <div className="flex h-full">
+        <div className="flex flex-col text-[2rem] ">
           <div className="font-black grow">
             {isHovering ? (
               <div className="flex justify-start p-5 -skew-x-2">MinsungK</div>
@@ -72,19 +70,15 @@ const Sidebar = () => {
                 {icons.map((icon, i) => (
                   <div key={i}>
                     <Link href={icon.location} passHref>
-                      <a className="flex hover:text-WitchingHourLight">
+                      <a className="flex w-full bg-transparent hover:bg-WitchingHourLight rounded-xl">
+                        <div className="mx-5 my-6 rounded-lg">{icon.icon}</div>
                         {isHovering ? (
-                          <div className="p-3 my-6 rounded-lg ">
-                            {icon.hoeverIcon}
-                          </div>
+                          <div className="mx-5 my-6 text-lg ">{icon.name}</div>
                         ) : (
-                          <div className="p-3 my-6 rounded-lg ">
-                            {icon.icon}
+                          <div className="hidden my-6 text-lg xl:block xl:mx-5 ">
+                            {icon.name}
                           </div>
                         )}
-                        {isHovering ? (
-                          <div className="p-3 my-6 text-lg ">{icon.name}</div>
-                        ) : null}
                       </a>
                     </Link>
                   </div>
@@ -92,18 +86,23 @@ const Sidebar = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center m-5 font-black cursor-pointer hover:text-WitchingHourLight">
-            {isHovering ? null : (
-              <BsArrowRightSquare
-                className=""
-                onClick={() => setIsHovering(true)}
-              />
-            )}
-            {isHovering ? (
-              <div className="text-lg " onClick={() => setIsHovering(false)}>
-                Close
-              </div>
-            ) : null}
+          <div className="hidden md:block xl:hidden">
+            <div className="flex justify-center m-5 font-black cursor-pointer hover:text-WitchingHourLight">
+              {isHovering ? null : (
+                <BsArrowRightSquare
+                  className=""
+                  onClick={() => setIsHovering(true)}
+                />
+              )}
+              {isHovering ? (
+                <div className="text-lg " onClick={() => setIsHovering(false)}>
+                  Close
+                </div>
+              ) : null}
+            </div>
+          </div>
+          <div className="block md:hidden xl:block">
+            <div className="flex justify-center p-4 m-5 font-black cursor-pointer hover:text-WitchingHourLight"></div>
           </div>
         </div>
       </div>

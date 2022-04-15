@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "next-themes";
 
-const ThemeToggle = () => {
+type Props = {
+  menuIsOpen: boolean;
+};
+
+const ThemeToggle = ({ menuIsOpen }) => {
   const { theme, resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -22,7 +26,11 @@ const ThemeToggle = () => {
             : "dark"
         )
       }
-      className="text-white dark:text-NavyBlueLight dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80 "
+      className={
+        menuIsOpen
+          ? "text-black dark:text-white dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+          : "text-white dark:text-black dark:hover:text-NavyBlueLight/80 hover:text-WitchingHourLight/80"
+      }
     >
       <div className="transition-colors ">
         <FaSun className="block dark:hidden" />
