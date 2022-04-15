@@ -11,7 +11,7 @@ const MenuIcon = ({ menuIsOpen, setMenuIsOpen }) => {
     setMenuIsOpen(!menuIsOpen);
   };
   return (
-    <div className="absolute z-50 sm:hidden">
+    <div className="absolute z-50 md:hidden">
       <div className="fixed right-0">
         <div className="mt-5 mr-10 text-4xl cursor-pointer ">
           <ThemeToggle menuIsOpen={menuIsOpen} />

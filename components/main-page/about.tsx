@@ -45,29 +45,30 @@ const About = () => {
               transition: { duration: 1, delay: 0.5 },
             }}
             viewport={{ once: false }}
-            className="w-3/5 mt-10 text-sm text-center text-white dark:text-black"
+            className="w-3/5 mt-10 text-center text-white text-md dark:text-black"
           >
             &nbsp; My name is{" "}
             <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
               Minsung Kim
             </span>
-            , studying Computer Science at George Mason University. Always
-            persisting in learning new things. Have a look at my work experience
-            by clicking below!
+            , studying Computer Science at George Mason University. 
+            Most of the projects I've worked on are self-taught and I'm always persist for new challenges to learn.
           </motion.h1>
-          <Link href="/aboutPage" passHref>
-            <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transform: "translateY(-10px)",
-                transition: { duration: 1, delay: 0.75 },
-              }}
-              viewport={{ once: false }}
-              className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:hover:bg-NavyBlueLight"
-            >
-              Work Experience
-            </motion.button>
+          <Link href="/resume.pdf" passHref>
+            <a target="_blank">
+              <motion.button
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transform: "translateY(-10px)",
+                  transition: { duration: 1, delay: 0.75 },
+                }}
+                viewport={{ once: false }}
+                className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:hover:bg-NavyBlueLight"
+              >
+                My Résumé
+              </motion.button>
+            </a>
           </Link>
         </div>
       </AnimatePresence>
