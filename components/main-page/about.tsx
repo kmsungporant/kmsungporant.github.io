@@ -33,7 +33,7 @@ const About = () => {
                     transition: { duration: 1.5, ease: "easeInOut" },
                   }}
                   viewport={{ once: false }}
-                  className="bg-white dark:bg-black w-0 h-[7%] "
+                  className="bg-white dark:bg-black w-0 h-[7%]"
                 ></motion.div>
               </div>
             </div>
@@ -66,7 +66,7 @@ const About = () => {
                 viewport={{ once: false }}
                 className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:hover:bg-NavyBlueLight"
               >
-                My Résumé
+                My Resume
               </motion.button>
             </a>
           </Link>
