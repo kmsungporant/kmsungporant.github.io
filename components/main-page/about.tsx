@@ -52,7 +52,7 @@ const About = () => {
               Minsung Kim
             </span>
             , studying Computer Science at George Mason University. 
-            Most of the projects I've worked on are self-taught and I'm always persist for new challenges to learn.
+            Most of the projects I&apos;ve worked on are self-taught and I&apos;m always persist for new challenges to learn.
           </motion.h1>
           <Link href="/resume.pdf" passHref>
             <a target="_blank">
@@ -66,7 +66,7 @@ const About = () => {
                 viewport={{ once: false }}
                 className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:hover:bg-NavyBlueLight"
               >
-                My Resume
+                My Résumé
               </motion.button>
             </a>
           </Link>
