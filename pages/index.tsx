@@ -23,7 +23,6 @@ export default function Home() {
       <Sidebar menuIsOpen={menuIsOpen} />
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <MenuIcon menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-
       <Hero />
       <About />
       <Portfolio />
