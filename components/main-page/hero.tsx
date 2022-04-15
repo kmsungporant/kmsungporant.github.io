@@ -13,23 +13,23 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: false }}
-            className="text-lg text-white dark:text-black"
+            className="text-xl text-white dark:text-black"
           >
-            <span className="text-3xl">Hello</span>, my name is{" "}
+            <span className="text-4xl">Hello</span>, my name is{" "}
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: false }}
-            className="mt-2 text-5xl text-WitchingHourLight dark:text-NavyBlueLight"
+            className="mt-2 text-6xl text-WitchingHourLight dark:text-NavyBlueLight"
           >
             <Typewriter
               options={{
-                strings: ["Minsung!"],
+                strings: ["Minsung"],
                 autoStart: true,
                 loop: true,
                 delay: 250,
-                cursor: "_",
+                
               }}
             />
           </motion.div>
@@ -42,10 +42,10 @@ const Hero = () => {
             }}
             viewport={{ once: false }}
           >
-            <div className="mt-3 text-white text-md dark:text-black">
-              An incoming Software Engineer
+            <div className="mt-3 text-lg text-white dark:text-black">
+              An incoming Software Engineer.
             </div>
-            <div className="text-sm text-white dark:text-black">
+            <div className="text-white text-md dark:text-black">
               <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
                 Scroll down
               </span>{" "}
