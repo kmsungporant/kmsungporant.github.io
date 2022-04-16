@@ -28,7 +28,7 @@ const Hero = () => {
                 strings: ["Minsung"],
                 autoStart: true,
                 loop: true,
-                delay: 250,
+                delay: 300,
                 cursor: "_",
               }}
             />
