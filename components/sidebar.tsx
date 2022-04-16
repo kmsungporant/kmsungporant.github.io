@@ -72,7 +72,7 @@ const Sidebar = ({ menuIsOpen }) => {
                     Minsung
                     <motion.span
                       initial={{
-                        transform: "translateX(-105px)",
+                        transform: "translateX(-90px)",
                         padding: "0rem 5.6rem 0rem 0rem",
                       }}
                       animate={{
