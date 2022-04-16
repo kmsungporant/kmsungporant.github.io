@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
@@ -37,9 +38,15 @@ const ThemeToggleButton = () => {
           onClick={toggleSwitchHandler}
         >
           {toggleSwitch ? (
-            <div className="w-2/5 ml-10 bg-white rounded-full dark:bg-black h-4/5"></div>
+            <motion.div
+              className="w-2/5 bg-white rounded-full ml-9 dark:bg-black h-4/5"
+              animate={{ transform: "translateX(5px)" }}
+            />
           ) : (
-            <div className="w-2/5 ml-1 bg-white rounded-full dark:bg-black h-4/5"></div>
+            <motion.div
+              className="w-2/5 ml-2 bg-white rounded-full dark:bg-black h-4/5"
+              animate={{ transform: "translateX(-5px)" }}
+            />
           )}
         </button>
         <FaMoon

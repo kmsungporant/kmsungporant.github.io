@@ -51,8 +51,9 @@ const About = () => {
             <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
               Minsung Kim
             </span>
-            , studying Computer Science at George Mason University. 
-            Most of the projects I&apos;ve worked on are self-taught and I&apos;m always persist for new challenges to learn.
+            , studying Computer Science at George Mason University. <br />
+            Most of the projects I&apos;ve worked on are self-taught and
+            I&apos;m always persist for new challenges to learn.
           </motion.h1>
           <Link href="/resume.pdf" passHref>
             <a target="_blank">
