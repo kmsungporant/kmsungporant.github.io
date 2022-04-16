@@ -55,7 +55,7 @@ const Sidebar = ({ menuIsOpen }) => {
     <div className="hidden md:block">
       <div className="">
         <motion.div
-          className="fixed z-50 flex justify-center h-full text-white bg-DarkGray dark:bg-DarkGray/70"
+          className="fixed z-50 flex justify-center h-full text-white bg-DarkGray "
           animate={isHovering ? { width: "20vw" } : { width: "10vw" }}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
@@ -64,9 +64,32 @@ const Sidebar = ({ menuIsOpen }) => {
             <div className="flex flex-col text-[2rem] ">
               <div className="font-black grow">
                 {isHovering ? (
-                  <div className="flex justify-start p-5 -skew-x-2">
-                    MinsungK
-                  </div>
+                  <motion.div
+                    className="fixed flex justify-start p-5 overflow-hidden -skew-x-2"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, transition: { delay: 0.1 } }}
+                  >
+                    Minsung
+                    <motion.span
+                      initial={{
+                        transform: "translateX(-105px)",
+                        padding: "0rem 5.6rem 0rem 0rem",
+                      }}
+                      animate={{
+                        transform: "translateX(0px)",
+                        padding: "0rem 0rem 0rem 0rem",
+
+                        transition: {
+                          delay: 0.5,
+                          duration: 0.3,
+                          ease: "easeInOut",
+                        },
+                      }}
+                      className="flex bg-DarkGray"
+                    >
+                      K
+                    </motion.span>
+                  </motion.div>
                 ) : (
                   <div className="flex justify-center p-5 ">MK</div>
                 )}
@@ -77,14 +100,27 @@ const Sidebar = ({ menuIsOpen }) => {
                     {icons.map((icon, i) => (
                       <div key={i}>
                         <Link href={icon.location} passHref>
-                          <a className="flex w-full bg-transparent hover:bg-WitchingHourLight rounded-xl dark:hover:bg-NavyBlueLight">
-                            <div className="mx-3 my-6 rounded-lg">
+                          <a className="flex w-full bg-transparent group hover:bg-WitchingHourLight rounded-xl dark:hover:bg-NavyBlueLight">
+                            <div className="z-10 mx-3 my-6 bg-transparent rounded-lg group-hover:bg-transparent ">
                               {icon.icon}
                             </div>
                             {isHovering ? (
-                              <div className="mx-3 my-6 text-lg ">
+                              <motion.div
+                                className="mx-3 my-6 text-lg overflow"
+                                initial={{
+                                  opacity: 0,
+                                  transform: "translateX(-20px)",
+                                }}
+                                animate={{
+                                  transition: {
+                                    ease: "easeOut",
+                                  },
+                                  opacity: 1,
+                                  transform: "translateX(0px)",
+                                }}
+                              >
                                 {icon.name}
-                              </div>
+                              </motion.div>
                             ) : null}
                           </a>
                         </Link>
