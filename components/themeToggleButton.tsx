@@ -25,7 +25,7 @@ const ThemeToggleButton = () => {
 
   return (
     <div className="">
-      <div className="flex flex-row">
+      <div className="flex flex-row items-center">
         <FaSun
           className={
             toggleSwitch
