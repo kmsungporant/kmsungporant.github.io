@@ -29,7 +29,7 @@ const Hero = () => {
                 autoStart: true,
                 loop: true,
                 delay: 250,
-                
+                cursor: "_",
               }}
             />
           </motion.div>
