@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="flex flex-col items-center justify-center h-full font-semibold snap-start"
+      className="flex flex-col items-center justify-center h-full font-semibold snap-start "
     >
       <div className="flex flex-col ">
         <AnimatePresence>
@@ -30,6 +30,7 @@ export default function Hero() {
                 loop: true,
                 delay: 300,
                 cursor: "_",
+
               }}
             />
           </motion.div>

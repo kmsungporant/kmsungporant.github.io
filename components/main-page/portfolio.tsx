@@ -48,7 +48,7 @@ export default function Portfolio() {
   const [title, setTitle] = useState(BASE_TITLE);
 
   return (
-    <div id="portfolio" className="h-full snap-start">
+    <div id="portfolio" className="h-full snap-start ">
       <AnimatePresence>
         <div className="h-full text-white dark:bg-white dark:text-black">
           <div className="flex flex-col items-center justify-center h-full font-black">

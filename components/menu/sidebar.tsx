@@ -61,12 +61,12 @@ export default function Sidebar({ menuIsOpen }) {
           onMouseLeave={() => setIsHovering(false)}
         >
           <div className="flex h-full">
-            <div className="flex flex-col text-[2rem] ">
+            <div className="flex flex-col text-[2rem]">
               <div className="font-black grow">
                 {isHovering ? (
                   <Link href={"/"}>
                     <motion.div
-                      className="fixed flex justify-start p-5 overflow-hidden -skew-x-2 cursor-pointer hover:text-WitchingHourLight  dark:hover:text-NavyBlueLight"
+                      className="fixed flex justify-start p-5 overflow-hidden -skew-x-2 cursor-pointer hover:text-WitchingHourLight dark:hover:text-NavyBlueLight"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1, transition: { delay: 0.1 } }}
                     >
@@ -86,7 +86,7 @@ export default function Sidebar({ menuIsOpen }) {
                             ease: "easeInOut",
                           },
                         }}
-                        className="flex bg-DarkGray"
+                        className="flex bg-DarkGray "
                       >
                         K
                       </motion.span>
