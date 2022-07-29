@@ -9,7 +9,7 @@ import {
   AiFillTwitterSquare,
 } from "react-icons/ai";
 
-const Contacts = () => {
+export default function Contacts() {
   const icons: {
     name: string;
     linkName: string;
@@ -25,22 +25,19 @@ const Contacts = () => {
     {
       name: "Linkedin",
       linkName: "linkedin/kmsungporant",
-      link: "https://github.com/kmsungporant/",
-
+      link: "https://www.linkedin.com/in/kmsungporant/",
       icon: <AiFillLinkedin />,
     },
     {
       name: "Twitter",
       linkName: "twitter/kmsjoseph",
-      link: "https://github.com/kmsungporant/",
-
+      link: "https://twitter.com/kmsjoseph/",
       icon: <AiFillTwitterSquare />,
     },
     {
       name: "Facebook",
       linkName: "facebook/kmsungporant",
-      link: "https://github.com/kmsungporant/",
-
+      link: "https://www.facebook.com/kmsungporant/",
       icon: <AiFillFacebook />,
     },
   ];
@@ -108,6 +105,4 @@ const Contacts = () => {
       </AnimatePresence>
     </div>
   );
-};
-
-export default Contacts;
+}

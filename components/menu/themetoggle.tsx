@@ -6,7 +6,7 @@ type Props = {
   menuIsOpen: boolean;
 };
 
-const ThemeToggle = ({ menuIsOpen }) => {
+export default function ThemeToggle({ menuIsOpen }) {
   const { theme, resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -44,6 +44,4 @@ const ThemeToggle = ({ menuIsOpen }) => {
       </div>
     </button>
   );
-};
-
-export default ThemeToggle;
+}

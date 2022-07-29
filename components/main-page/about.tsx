@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const About = () => {
+export default function About() {
   return (
     <div id="about" className="h-full snap-start">
       <AnimatePresence>
@@ -75,6 +75,4 @@ const About = () => {
       </AnimatePresence>
     </div>
   );
-};
-
-export default About;
+}

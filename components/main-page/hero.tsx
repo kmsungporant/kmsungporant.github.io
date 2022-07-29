@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
-const Hero = () => {
+export default function Hero() {
   return (
     <div
       id="hero"
@@ -56,6 +56,4 @@ const Hero = () => {
       </div>
     </div>
   );
-};
-
-export default Hero;
+}

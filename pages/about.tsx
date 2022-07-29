@@ -1,15 +1,12 @@
 import Menu from "../components/menu";
 import { useState } from "react";
 
-const AboutPage = () => {
+export default function AboutPage() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
     <div className="h-full bg-DarkGray dark:bg-white scroll-smooth font-Consolas">
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-      <div></div>
     </div>
   );
-};
-
-export default AboutPage;
+}

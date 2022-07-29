@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-const ThemeToggleButton = () => {
+export default function ThemeToggleButton() {
   const [toggleSwitch, setToggleSwitch] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -59,6 +59,5 @@ const ThemeToggleButton = () => {
       </div>
     </div>
   );
-};
+}
 
-export default ThemeToggleButton;

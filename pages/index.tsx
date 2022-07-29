@@ -8,8 +8,8 @@ import Hero from "../components/main-page/hero";
 import About from "../components/main-page/about";
 import Portfolio from "../components/main-page/portfolio";
 import Contacts from "../components/main-page/contacts";
-import Sidebar from "../components/sidebar";
-import MenuIcon from "../components/menuIcon";
+import Sidebar from "../components/menu/sidebar";
+import MenuIcon from "../components/menu/menuIcon";
 
 export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

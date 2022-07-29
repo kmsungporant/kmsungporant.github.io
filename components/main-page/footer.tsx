@@ -1,6 +1,6 @@
 import { SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <div className=" h-[10%] dark:bg-white font-yellowTail text-WitchingHourLight dark:text-NavyBlueLight">
       <div className="flex flex-col items-center justify-center h-full">
@@ -15,6 +15,5 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Footer;

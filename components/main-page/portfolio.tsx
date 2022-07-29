@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-
 import {
   SiNextdotjs,
   SiCplusplus,
@@ -7,30 +6,42 @@ import {
   SiSass,
   SiMicrosoftazure,
   SiGooglecloud,
+  SiMaterialui,
+  SiTailwindcss,
+  SiJava,
+  SiCss3,
+  SiLinux,
+  SiJavascript,
+  SiReact,
+  SiPython,
+  SiDocker,
+  SiHtml5,
 } from "react-icons/si";
-import { DiJavascript1, DiLinux, DiCss3, DiJava } from "react-icons/di";
-import { RiReactjsLine } from "react-icons/ri";
-import { FaPython, FaNode, FaAws } from "react-icons/fa";
-import { AiFillHtml5 } from "react-icons/ai";
+import { FaNode } from "react-icons/fa";
+import { MdAnimation } from "react-icons/md";
 import { ReactNode, useState } from "react";
+import Link from "next/link";
 
-const Portfolio = () => {
+export default function Portfolio() {
   const icons: { name: string; icon: ReactNode }[] = [
     { name: "NextJs", icon: <SiNextdotjs /> },
-    { name: "JavaScript", icon: <DiJavascript1 /> },
-    { name: "ReactJS", icon: <RiReactjsLine /> },
+    { name: "JavaScript", icon: <SiJavascript /> },
+    { name: "ReactJS", icon: <SiReact /> },
     { name: "C++", icon: <SiCplusplus /> },
-    { name: "Python", icon: <FaPython /> },
+    { name: "Python", icon: <SiPython /> },
     { name: "Microsoft Azure", icon: <SiMicrosoftazure /> },
-    { name: "Java", icon: <DiJava /> },
-    { name: "Linux", icon: <DiLinux /> },
-    { name: "HTML", icon: <AiFillHtml5 /> },
-    { name: "Amazon Web Services", icon: <FaAws /> },
+    { name: "Java", icon: <SiJava /> },
+    { name: "Linux", icon: <SiLinux /> },
+    { name: "HTML", icon: <SiHtml5 /> },
     { name: "Google Cloud", icon: <SiGooglecloud /> },
     { name: "Node", icon: <FaNode /> },
     { name: "GitHub Actions", icon: <SiGithubactions /> },
-    { name: "CSS", icon: <DiCss3 /> },
+    { name: "CSS", icon: <SiCss3 /> },
     { name: "SASS", icon: <SiSass /> },
+    { name: "MaterialUI", icon: <SiMaterialui /> },
+    { name: "Docker", icon: <SiDocker /> },
+    { name: "TailwindCSS", icon: <SiTailwindcss /> },
+    { name: "Framer-Motion", icon: <MdAnimation /> },
   ];
 
   const BASE_TITLE = "Skills & Experience";
@@ -70,7 +81,7 @@ const Portfolio = () => {
             </div>
 
             <div
-              className="grid grid-cols-6 gap-1 text-4xl mt-7 auto-cols-max"
+              className="grid grid-cols-6 gap-2 text-4xl mt-7 auto-cols-max"
               onPointerLeave={() => setTitle(BASE_TITLE)}
             >
               {icons.map((icon, i) => (
@@ -90,23 +101,23 @@ const Portfolio = () => {
                 </motion.div>
               ))}
             </div>
-            <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transform: "translateY(-10px)",
-                transition: { duration: 1, delay: 1 },
-              }}
-              viewport={{ once: false }}
-              className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:bg-NavyBlueLight"
-            >
-              My Portfolio
-            </motion.button>
+            <Link href="/about">
+              <motion.button
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transform: "translateY(-10px)",
+                  transition: { duration: 1, delay: 1 },
+                }}
+                viewport={{ once: false }}
+                className="px-4 py-2 m-4 mt-10 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:bg-NavyBlueLight"
+              >
+                My Portfolio
+              </motion.button>
+            </Link>
           </div>
         </div>
       </AnimatePresence>
     </div>
   );
-};
-
-export default Portfolio;
+}

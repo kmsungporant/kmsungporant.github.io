@@ -16,7 +16,7 @@ type Props = {
   menuIsOpen: boolean;
 };
 
-const Sidebar = ({ menuIsOpen }) => {
+export default function Sidebar({ menuIsOpen }) {
   const [isHovering, setIsHovering] = useState(false);
 
   const icons: {
@@ -64,32 +64,34 @@ const Sidebar = ({ menuIsOpen }) => {
             <div className="flex flex-col text-[2rem] ">
               <div className="font-black grow">
                 {isHovering ? (
-                  <motion.div
-                    className="fixed flex justify-start p-5 overflow-hidden -skew-x-2"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { delay: 0.1 } }}
-                  >
-                    Minsung
-                    <motion.span
-                      initial={{
-                        transform: "translateX(-90px)",
-                        padding: "0rem 5.6rem 0rem 0rem",
-                      }}
-                      animate={{
-                        transform: "translateX(0px)",
-                        padding: "0rem 0rem 0rem 0rem",
-
-                        transition: {
-                          delay: 0.5,
-                          duration: 0.3,
-                          ease: "easeInOut",
-                        },
-                      }}
-                      className="flex bg-DarkGray"
+                  <Link href={"/"}>
+                    <motion.div
+                      className="fixed flex justify-start p-5 overflow-hidden -skew-x-2 cursor-pointer hover:text-WitchingHourLight  dark:hover:text-NavyBlueLight"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1, transition: { delay: 0.1 } }}
                     >
-                      K
-                    </motion.span>
-                  </motion.div>
+                      Minsung
+                      <motion.span
+                        initial={{
+                          transform: "translateX(-90px)",
+                          padding: "0rem 5.6rem 0rem 0rem",
+                        }}
+                        animate={{
+                          transform: "translateX(0px)",
+                          padding: "0rem 0rem 0rem 0rem",
+
+                          transition: {
+                            delay: 0.5,
+                            duration: 0.3,
+                            ease: "easeInOut",
+                          },
+                        }}
+                        className="flex bg-DarkGray"
+                      >
+                        K
+                      </motion.span>
+                    </motion.div>
+                  </Link>
                 ) : (
                   <div className="flex justify-center p-5 ">MK</div>
                 )}
@@ -99,8 +101,8 @@ const Sidebar = ({ menuIsOpen }) => {
                   <div className="">
                     {icons.map((icon, i) => (
                       <div key={i}>
-                        <Link href={icon.location} passHref>
-                          <a className="flex w-full bg-transparent group hover:bg-WitchingHourLight rounded-xl dark:hover:bg-NavyBlueLight">
+                        <Link href={icon.location}>
+                          <a className="flex w-full bg-transparent group hover:text-WitchingHourLight  dark:hover:text-NavyBlueLight">
                             <div className="z-10 mx-3 my-6 bg-transparent rounded-lg group-hover:bg-transparent ">
                               {icon.icon}
                             </div>
@@ -142,6 +144,4 @@ const Sidebar = ({ menuIsOpen }) => {
       </div>
     </div>
   );
-};
-
-export default Sidebar;
+}

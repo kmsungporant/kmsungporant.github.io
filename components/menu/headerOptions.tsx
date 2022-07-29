@@ -12,7 +12,7 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-const HeaderOptions: React.FC<Props> = ({ setMenuIsOpen }) => {
+export default function HeaderOptions({ setMenuIsOpen }) {
   let handleClick = () => {
     setMenuIsOpen(false);
   };
@@ -64,6 +64,4 @@ const HeaderOptions: React.FC<Props> = ({ setMenuIsOpen }) => {
       </ul>
     </div>
   );
-};
-
-export default HeaderOptions;
+}

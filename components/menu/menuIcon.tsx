@@ -6,7 +6,7 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-const MenuIcon = ({ menuIsOpen, setMenuIsOpen }) => {
+export default function MenuIcon({ menuIsOpen, setMenuIsOpen }) {
   const toggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);
   };
@@ -50,6 +50,5 @@ const MenuIcon = ({ menuIsOpen, setMenuIsOpen }) => {
       </div>
     </div>
   );
-};
+}
 
-export default MenuIcon;

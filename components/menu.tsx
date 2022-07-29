@@ -1,4 +1,4 @@
-import HeaderOptions from "./headerOptions";
+import HeaderOptions from "./menu/headerOptions";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-const Menu: React.FC<Props> = ({ menuIsOpen, setMenuIsOpen }) => {
+export default function Menu({ menuIsOpen, setMenuIsOpen }) {
   return (
     <div className="">
       <AnimatePresence>
@@ -39,6 +39,4 @@ const Menu: React.FC<Props> = ({ menuIsOpen, setMenuIsOpen }) => {
       </AnimatePresence>
     </div>
   );
-};
-
-export default Menu;
+}
