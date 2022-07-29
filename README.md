@@ -1,4 +1,4 @@
-##Personal Portfolio made with ReactJS
+## Personal Portfolio made with ReactJS
 
 - Framework used: NextJS https://nextjs.org/
 - Styling used: TailwindCSS https://tailwindcss.com/
