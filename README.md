@@ -1,7 +1,15 @@
-## Personal Portfolio made with ReactJS
+# Personal Portfolio made with ReactJS
 
-- Framework used: NextJS https://nextjs.org/
-- Styling used: TailwindCSS https://tailwindcss.com/
-- Animation used: Framer Motion https://www.framer.com/
+A personal portfolio website documenting all personal projects and achievements. 
 
-Link to website - https://MinsungK.com/
+### Source
+
+- Framework: **NextJS** [https://nextjs.org/]
+- Styling: **TailwindCSS** [https://tailwindcss.com/]
+- Animation: **Framer Motion** [https://www.framer.com/]
+
+
+- Hosted via **Github Pages** [https://pages.github.com/]
+- Domain registered via **Google Doamins** [https://domains.google/]
+
+#### Link to website - https://MinsungK.com/
