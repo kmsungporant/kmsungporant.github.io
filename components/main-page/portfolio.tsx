@@ -34,28 +34,28 @@ const onHoverAnimation = {
   },
 };
 
-export default function Portfolio() {
-  const icons: { name: string; icon: ReactNode }[] = [
-    { name: "NextJs", icon: <SiNextdotjs /> },
-    { name: "JavaScript", icon: <SiJavascript /> },
-    { name: "ReactJS", icon: <SiReact /> },
-    { name: "C++", icon: <SiCplusplus /> },
-    { name: "Python", icon: <SiPython /> },
-    { name: "Microsoft Azure", icon: <SiMicrosoftazure /> },
-    { name: "Java", icon: <SiJava /> },
-    { name: "Linux", icon: <SiLinux /> },
-    { name: "HTML", icon: <SiHtml5 /> },
-    { name: "Google Cloud", icon: <SiGooglecloud /> },
-    { name: "Node", icon: <FaNode /> },
-    { name: "GitHub Actions", icon: <SiGithubactions /> },
-    { name: "CSS", icon: <SiCss3 /> },
-    { name: "SASS", icon: <SiSass /> },
-    { name: "MaterialUI", icon: <SiMaterialui /> },
-    { name: "Docker", icon: <SiDocker /> },
-    { name: "TailwindCSS", icon: <SiTailwindcss /> },
-    { name: "Framer-Motion", icon: <MdAnimation /> },
-  ];
+const icons: { name: string; icon: ReactNode }[] = [
+  { name: "NextJs", icon: <SiNextdotjs /> },
+  { name: "JavaScript", icon: <SiJavascript /> },
+  { name: "ReactJS", icon: <SiReact /> },
+  { name: "C++", icon: <SiCplusplus /> },
+  { name: "Python", icon: <SiPython /> },
+  { name: "Microsoft Azure", icon: <SiMicrosoftazure /> },
+  { name: "Java", icon: <SiJava /> },
+  { name: "Linux", icon: <SiLinux /> },
+  { name: "HTML", icon: <SiHtml5 /> },
+  { name: "Google Cloud", icon: <SiGooglecloud /> },
+  { name: "Node", icon: <FaNode /> },
+  { name: "GitHub Actions", icon: <SiGithubactions /> },
+  { name: "CSS", icon: <SiCss3 /> },
+  { name: "SASS", icon: <SiSass /> },
+  { name: "MaterialUI", icon: <SiMaterialui /> },
+  { name: "Docker", icon: <SiDocker /> },
+  { name: "TailwindCSS", icon: <SiTailwindcss /> },
+  { name: "Framer-Motion", icon: <MdAnimation /> },
+];
 
+export default function Portfolio() {
   const BASE_TITLE = "Skills & Experiences";
   const BASE_ICON = <div />;
   const [title, setTitle] = useState(BASE_TITLE);
@@ -140,7 +140,7 @@ export default function Portfolio() {
                         </motion.div>
                       ))}
                     </div>
-                    <Link href="/about" passHref>
+                    <Link href="/portfolio" passHref>
                       <motion.button
                         initial={{ opacity: 0 }}
                         whileInView={{
@@ -157,18 +157,20 @@ export default function Portfolio() {
                   </motion.span>
                 </div>
               </div>
-              <div className="w-full h-full text-WitchingHourLight dark:text-NavyBlueLight">
-                <div className="flex flex-col items-center justify-center h-full ">
-                  <motion.div variants={hoveringAnimation} animate="hover">
-                    <span className="text-9xl">{icon}</span>
-                  </motion.div>
-                  <motion.div
-                    variants={hoveringAnimation}
-                    animate="hover"
-                    className="mt-10 text-3xl font-black underline "
-                  >
-                    {title}
-                  </motion.div>
+              <div className="flex items-center justify-center w-full h-full ">
+                <div className="w-3/5 border-4 border-white rounded-full h-2/5">
+                  <div className="flex flex-col items-center justify-center h-full text-WitchingHourLight dark:text-NavyBlueLight">
+                    <motion.div variants={hoveringAnimation} animate="hover">
+                      <span className="text-9xl">{icon}</span>
+                    </motion.div>
+                    <motion.div
+                      variants={hoveringAnimation}
+                      animate="hover"
+                      className="mt-10 text-3xl font-black underline "
+                    >
+                      {title}
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -224,7 +226,7 @@ export default function Portfolio() {
                   </motion.div>
                 ))}
               </div>
-              <Link href="/about" passHref>
+              <Link href="/portfolio" passHref>
                 <motion.button
                   initial={{ opacity: 0 }}
                   whileInView={{
