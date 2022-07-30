@@ -69,8 +69,8 @@ export default function Portfolio() {
         <div className="flex items-start justify-center h-full">
           <div className="hidden w-4/5 h-full lg:block">
             <div className="flex items-start justify-start h-full">
-              <div className="flex flex-col items-center justify-center w-[120%] h-full text-white">
-                <div className="flex flex-col items-start text-5xl font-black">
+              <div className="flex flex-col items-end justify-center w-[120%] h-full text-white">
+                <div className="flex flex-col items-end text-5xl font-black">
                   <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, transition: { duration: 1 } }}
@@ -104,7 +104,7 @@ export default function Portfolio() {
                     </div>
                   </motion.span>
                 </div>
-                <div className="py-10 text-lg font-black">
+                <div className="py-10 mx-8 text-lg font-black">
                   <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{
