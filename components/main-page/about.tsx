@@ -61,7 +61,7 @@ export default function About() {
                     </div>
                   </motion.span>
                 </div>
-                <div className="py-10 pl-64 text-lg font-black text-right ">
+                <div className="py-10 pl-32 text-lg font-black text-right ">
                   <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{
@@ -75,9 +75,8 @@ export default function About() {
                     <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
                       Minsung Kim
                     </span>
-                    , studying Computer Science at George Mason University.
-                    <br />
-                    Most of the projects I&apos;ve worked on are self-taught and
+                    , studying Computer Science at George Mason University. Most
+                    of the projects I&apos;ve worked on are self-taught and
                     I&apos;m always persist for new challenges to learn.
                   </motion.span>
                 </div>
@@ -148,10 +147,9 @@ export default function About() {
               <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
                 Minsung Kim
               </span>
-              , studying Computer Science at George Mason University.
-              <br />
-              Most of the projects I&apos;ve worked on are self-taught and
-              I&apos;m always persist for new challenges to learn.
+              , studying Computer Science at George Mason University. Most of
+              the projects I&apos;ve worked on are self-taught and I&apos;m
+              always persist for new challenges to learn.
             </motion.h1>
             <Link href="/resume.pdf" passHref>
               <a target="_blank">
