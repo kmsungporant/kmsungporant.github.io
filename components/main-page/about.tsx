@@ -16,15 +16,21 @@ export default function About() {
                 }}
                 viewport={{ once: false }}
               >
-                <div className="transition-all duration-500 hover:scale-125 -rotate-3 hover:rotate-0">
+                <motion.div
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 3,
+                    transition: { type: "spring", stiffness: 125 },
+                  }}
+                >
                   <img
                     alt="MinsungsFace"
                     src="/MinsungFace.jpg"
                     width={350}
                     height={350}
-                    className="object-cover h-auto width-full rounded-tl-[30%] rounded-bl-[30%] rounded-tr-[45%] rounded-br-3xl"
+                    className="object-cover h-auto width-full rounded-tl-[30%] rounded-bl-[30%] rounded-tr-[45%] rounded-br-3xl border-4 border-white dark:border-black"
                   />
-                </div>
+                </motion.div>
               </motion.div>
               <div className="flex flex-col items-end justify-center w-1/2 h-full text-white">
                 <div className="flex flex-col items-end text-5xl font-black">

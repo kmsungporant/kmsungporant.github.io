@@ -100,7 +100,7 @@ export default function Sidebar({ menuIsOpen }) {
                 <div className="flex justify-center">
                   <div className="">
                     {icons.map((icon, i) => (
-                      <div key={i}>
+                      <motion.div key={i} whileHover={{ scale: 1.2, x: 20 }}>
                         <Link href={icon.location}>
                           <a className="flex w-full bg-transparent group hover:text-WitchingHourLight  dark:hover:text-NavyBlueLight">
                             <div className="z-10 mx-3 my-6 bg-transparent rounded-lg group-hover:bg-transparent ">
@@ -116,17 +116,19 @@ export default function Sidebar({ menuIsOpen }) {
                                 animate={{
                                   transition: {
                                     ease: "easeOut",
+                                    duration: 1,
                                   },
                                   opacity: 1,
                                   transform: "translateX(0px)",
                                 }}
+                                
                               >
                                 {icon.name}
                               </motion.div>
                             ) : null}
                           </a>
                         </Link>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>

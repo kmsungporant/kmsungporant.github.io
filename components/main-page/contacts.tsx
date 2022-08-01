@@ -83,7 +83,11 @@ export default function Contacts() {
             className="space-y-3"
           >
             {icons.map((icon, i) => (
-              <div key={i} className="text-5xl">
+              <motion.div
+                key={i}
+                className="text-5xl"
+                whileHover={{ scale: 1.1, x: 30 }}
+              >
                 <Link href={icon.link} passHref>
                   <a
                     target="_blank"
@@ -95,7 +99,7 @@ export default function Contacts() {
                     </a>
                   </a>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

@@ -56,7 +56,7 @@ const icons: { name: string; icon: ReactNode }[] = [
 ];
 
 export default function Portfolio() {
-  const BASE_TITLE = "Skills & Experiences";
+  const BASE_TITLE = "";
   const BASE_ICON = <div />;
   const [title, setTitle] = useState(BASE_TITLE);
   const [icon, setIcon] = useState<ReactNode>(BASE_ICON);
@@ -158,7 +158,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="flex items-center justify-center w-full h-full ">
-                <div className="w-3/5 border-4 border-white rounded-full h-2/5">
+                <div className="w-3/5 border-4 border-white rounded-full h-2/5 dark:border-black">
                   <div className="flex flex-col items-center justify-center h-full text-WitchingHourLight dark:text-NavyBlueLight">
                     <motion.div variants={hoveringAnimation} animate="hover">
                       <span className="text-9xl">{icon}</span>
