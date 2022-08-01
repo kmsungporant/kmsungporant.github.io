@@ -56,9 +56,10 @@ const icons: { name: string; icon: ReactNode }[] = [
 ];
 
 export default function Portfolio() {
-  const BASE_TITLE = "";
+  const BASE_TITLE = "Skills & Experience";
   const BASE_ICON = <div />;
   const [title, setTitle] = useState(BASE_TITLE);
+  const [titleBig, setTitleBig] = useState("");
   const [icon, setIcon] = useState<ReactNode>(BASE_ICON);
   const [hoveringAnimation, setHoveringAnimation] =
     useState(notOnHoverAnimation);
@@ -128,10 +129,10 @@ export default function Portfolio() {
                           onPointerEnter={() => {
                             setIcon(icon.icon);
                             setHoveringAnimation(onHoverAnimation);
-                            setTitle(icon.name);
+                            setTitleBig(icon.name);
                           }}
                           onPointerLeave={() => {
-                            setTitle(BASE_TITLE);
+                            setTitleBig("");
                             setIcon(BASE_ICON);
                             setHoveringAnimation(notOnHoverAnimation);
                           }}
@@ -168,7 +169,7 @@ export default function Portfolio() {
                       animate="hover"
                       className="mt-10 text-3xl font-black underline "
                     >
-                      {title}
+                      {titleBig}
                     </motion.div>
                   </div>
                 </div>
