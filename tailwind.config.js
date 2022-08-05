@@ -16,12 +16,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        WitchingHourLight: "#c31432",
-        NavyBlueLight: "#0047AB",
-        WitchingHourDark: "#240b36",
-        SambucusDark: "#181830",
-        SambucusLight: "#a1a1cf",
-        DarkGray: "#1e1e1e",
+        Cream: "F6E3BA",
       },
       fontFamily: {
         Consolas: ["Consolas"],
@@ -31,6 +26,6 @@ module.exports = {
     },
   },
 
-  plugins: [require("tailwind-scrollbar-hide"), require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar")],
   variants: { scrollbar: ["dark"] },
 };
