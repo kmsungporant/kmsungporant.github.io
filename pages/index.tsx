@@ -10,7 +10,7 @@ export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
-    <div className="w-full h-full bg-dark-background dark:bg-light-background">
+    <div className="w-full h-full bg-dark-background dark:bg-light-background font-Consolas">
       <SideInfo />
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <Header menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
