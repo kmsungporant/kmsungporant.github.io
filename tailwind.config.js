@@ -17,16 +17,16 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          primary: "#2C3639",
-          secondary: "#3F4E4F",
-          tertiary: "#A27B5C",
-          quaternary: "#DCD7C9",
+          primary: "#A27B5C",
+          secondary: "#DCD7C9",
+          tertiary: "#3F4E4F",
+          background: "#2C3639",
         },
         light: {
-          Primary: "2C3333",
-          Secondary: "395B64",
-          Tertiary: "A5C9CA",
-          Quaternary: "E7F6F2",
+          primary: "#2C3333",
+          secondary: "#395B64",
+          tertiary: "#A5C9CA",
+          background: "#E7F6F2",
         },
       },
       fontFamily: {
