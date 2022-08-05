@@ -16,7 +16,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        Cream: "F6E3BA",
+        dark: {
+          primary: "#2C3639",
+          secondary: "#3F4E4F",
+          tertiary: "#A27B5C",
+          quaternary: "#DCD7C9",
+        },
+        light: {
+          Primary: "2C3333",
+          Secondary: "395B64",
+          Tertiary: "A5C9CA",
+          Quaternary: "E7F6F2",
+        },
       },
       fontFamily: {
         Consolas: ["Consolas"],
