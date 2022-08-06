@@ -44,28 +44,26 @@ const icons: { name: string; icon: ReactNode }[] = [
 export default function Icons() {
   return (
     <div className="flex flex-col items-center">
-      <motion.div
-        className="grid grid-cols-12"
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "easeInOut",
-            delay: 1,
-          },
-        }}
-        viewport={{ once: true }}
-      >
+      <div className="grid grid-cols-12">
         {icons.map((icon, i) => (
-          <div
+          <motion.div
             key={i}
-            className="m-4 text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary "
+            className="m-4 text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeInOut",
+                delay: i * 0.1,
+              },
+            }}
+            viewport={{ once: true }}
           >
             {icon.icon}
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
