@@ -10,7 +10,7 @@ export default function SmallTitle() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: false }}
-            className="z-20 justify-center text-5xl font-semibold text-white lg:text-6xl dark:text-black"
+            className="z-20 justify-center text-5xl font-semibold text-dark-primary dark:text-light-primary lg:text-6xl "
           >
             Who am I?
             <div className="flex flex-col justify-center h-full mt-2 ">
@@ -22,7 +22,7 @@ export default function SmallTitle() {
                     transition: { duration: 1.5, ease: "easeInOut" },
                   }}
                   viewport={{ once: false }}
-                  className="bg-white dark:bg-black w-full h-[7%] "
+                  className="bg-dark-secondary dark:bg-light-secondary w-full h-[7%] "
                 ></motion.div>
               </div>
               <div className="flex justify-center w-full h-full">
@@ -33,7 +33,7 @@ export default function SmallTitle() {
                     transition: { duration: 2, ease: "easeInOut" },
                   }}
                   viewport={{ once: false }}
-                  className="bg-white dark:bg-black w-0 h-[7%]"
+                  className="bg-dark-secondary dark:bg-light-secondary w-0 h-[7%]"
                 ></motion.div>
               </div>
             </div>
@@ -45,13 +45,11 @@ export default function SmallTitle() {
               transition: { duration: 1, delay: 0.5 },
             }}
             viewport={{ once: false }}
-            className="w-3/5 mt-10 text-center text-white text-md dark:text-black"
+            className="w-3/5 mt-10 text-center text-dark-secondary dark:text-light-secondary text-md"
           >
             &nbsp; My name is{" "}
-            <span className="underline text-WitchingHourLight dark:text-NavyBlueLight">
-              Minsung Kim
-            </span>
-            , studying Computer Science at George Mason University. Most of the
+            <span className="underline text-dark-primary">Minsung Kim</span>,
+            studying Computer Science at George Mason University. Most of the
             projects I&apos;ve worked on are self-taught and I&apos;m always
             persist for new challenges to learn.
           </motion.h1>

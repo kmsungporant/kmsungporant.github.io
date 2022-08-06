@@ -6,6 +6,9 @@ import MainPage from "../components/mainPage";
 import AboutPage from "../components/aboutPage";
 import Header from "../components/menu/header";
 import PorfolioPage from "../components/portfolioPage";
+import TimelinePage from "../components/timelinePage";
+import Contacts from "../components/contactPage";
+import Footer from "../components/footer";
 
 export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -18,6 +21,9 @@ export default function Home() {
       <MainPage />
       <AboutPage />
       <PorfolioPage />
+      <TimelinePage />
+      <Contacts />
+      <Footer />
     </div>
   );
 }
