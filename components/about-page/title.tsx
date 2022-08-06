@@ -30,6 +30,7 @@ export default function Title() {
               delay: 0.2,
             },
           }}
+          viewport={{ once: true }}
         >
           {"<AboutMe>"}
         </motion.h1>
@@ -41,6 +42,7 @@ export default function Title() {
                 opacity: 1,
                 transition: { duration: 1, delay: 0.6 },
               }}
+              viewport={{ once: true }}
               className="z-20 justify-center text-5xl font-semibold text-dark-primary dark:text-light-primary"
             >
               Who am I?
@@ -50,6 +52,7 @@ export default function Title() {
                     variants={Bar}
                     initial="initial"
                     whileInView="upper"
+                    viewport={{ once: true }}
                     className=" w-full h-[7%] bg-dark-secondary dark:bg-light-secondary"
                   />
                 </div>
@@ -58,6 +61,7 @@ export default function Title() {
                     variants={Bar}
                     initial="initial"
                     whileInView="lower"
+                    viewport={{ once: true }}
                     className=" w-0 h-[7%] bg-dark-secondary dark:bg-light-secondary"
                   />
                 </div>
@@ -72,6 +76,7 @@ export default function Title() {
             opacity: 1,
             transition: { duration: 1, delay: 1 },
           }}
+          viewport={{ once: true }}
         >
           <span className="text-lg">
             My name is{" "}
@@ -90,7 +95,7 @@ export default function Title() {
                 transition: { duration: 1, delay: 0.75 },
               }}
               whileHover={{ scale: 1.1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-secondary dark:text-light-primary "
             >
               My Résumé
@@ -108,6 +113,7 @@ export default function Title() {
               delay: 0.2,
             },
           }}
+          viewport={{ once: true }}
         >
           {"</AboutMe>"}
         </motion.h1>

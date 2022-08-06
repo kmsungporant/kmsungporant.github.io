@@ -1,3 +1,7 @@
 export default function TimelinePage() {
-  return <div>Timeline Page</div>;
+  return (
+    <div className="bg-dark-background dark:bg-light-background">
+      Timeline Page
+    </div>
+  );
 }

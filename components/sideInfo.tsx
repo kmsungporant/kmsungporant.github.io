@@ -23,6 +23,7 @@ export default function SideInfo() {
       variants={fromLeft}
       initial="initial"
       animate="animate"
+      viewport={{ once: true }}
     >
       <Link href="https://github.com/kmsungporant/minsung-web" passHref>
         <a target="_blank">

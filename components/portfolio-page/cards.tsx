@@ -19,6 +19,7 @@ import {
   SiDocker,
   SiHtml5,
   SiNodedotjs,
+  SiGithub,
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
@@ -34,6 +35,20 @@ const projects: {
   delay: any;
 }[] = [
   {
+    name: "Discord [Moon] Bot",
+    description:
+      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features forthe server: music player for YouTube, mini games, shortcut commands and more!",
+    link: "https://github.com/kmsungporant/Moon-Bot",
+    image: "discord.gif",
+    icons: [
+      <SiPython key="first" />,
+      <SiMicrosoftazure key="second" />,
+      <SiLinux key="third" />,
+      <VscRemoteExplorer key="fourth" />,
+    ],
+    delay: 0.7,
+  },
+  {
     name: "Personal Portfolio Website",
     description:
       "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
@@ -47,26 +62,13 @@ const projects: {
       <SiGithubactions key="fifth" />,
       <MdAnimation key="sixth" />,
     ],
-    delay: 0.7,
-  },
-  {
-    name: "Discord [Moon] Bot",
-    description:
-      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features forthe server: music player for YouTube, mini games, shortcut commands and more!",
-    link: "https://github.com/kmsungporant/Moon-Bot",
-    image: "discord.gif",
-    icons: [
-      <SiPython key="first" />,
-      <SiMicrosoftazure key="second" />,
-      <SiLinux key="third" />,
-      <VscRemoteExplorer key="fourth" />,
-    ],
     delay: 1,
   },
+
   {
     name: "Private Minecraft Server",
     description:
-      "Hosted and managed a Minecraft Server on Azure and Remote SSH Terminal.",
+      "Hosted and managed a Private Minecraft Server on Azure and Remote SSH Terminal.",
     link: "https://github.com/kmsungporant/kmsungporant.github.io",
     image: "server.gif",
     icons: [
@@ -93,6 +95,7 @@ export default function Cards() {
               delay: `${project.delay}`,
             },
           }}
+          viewport={{ once: true }}
         >
           <div className="flex flex-col items-center m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-96 rounded-3xl">
             <h1 className="mt-5 text-xl font-black underline">
@@ -118,9 +121,12 @@ export default function Cards() {
             <Link passHref href={project.link}>
               <a
                 target="_blank"
-                className="m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-tertiary"
+                className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-tertiary"
               >
-                Link to Github
+                <span className="mr-2">View on</span>
+                <span className="text-2xl">
+                  <SiGithub />
+                </span>
               </a>
             </Link>
           </div>

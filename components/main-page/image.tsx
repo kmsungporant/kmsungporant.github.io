@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const animatedImage = {
   initial: {
@@ -20,21 +20,19 @@ const animatedImage = {
 
 export default function ImageLogo() {
   return (
-    <AnimatePresence>
-      <motion.div
-        className="flex flex-col items-end w-1/2 mx-24"
-        variants={animatedImage}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: false }}
-      >
-        <div className="block dark:hidden">
-          <img src="/logo.png" alt="logo" width={500} height={500} />
-        </div>
-        <div className="hidden dark:block">
-          <img src="/logoLight.png" alt="logo" width={500} height={500} />
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      className="flex flex-col items-end w-1/2 mx-24"
+      variants={animatedImage}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
+      <div className="block dark:hidden">
+        <img src="/logo.png" alt="logo" width={500} height={500} />
+      </div>
+      <div className="hidden dark:block">
+        <img src="/logoLight.png" alt="logo" width={500} height={500} />
+      </div>
+    </motion.div>
   );
 }

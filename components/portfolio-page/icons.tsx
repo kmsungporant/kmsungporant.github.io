@@ -18,8 +18,7 @@ import {
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
-import { ReactNode, useState } from "react";
-import Link from "next/link";
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 const icons: { name: string; icon: ReactNode }[] = [
@@ -56,6 +55,7 @@ export default function Icons() {
             delay: 1,
           },
         }}
+        viewport={{ once: true }}
       >
         {icons.map((icon, i) => (
           <div
