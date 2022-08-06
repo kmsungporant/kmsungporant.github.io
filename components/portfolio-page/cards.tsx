@@ -66,7 +66,7 @@ const projects: {
     name: "Private Minecraft Server",
     description:
       "Hosted and managed a Private Minecraft Server on Azure and Remote SSH Terminal.",
-    link: "https://github.com/kmsungporant/kmsungporant.github.io",
+    link: "",
     image: "server.gif",
     icons: [
       <SiGooglecloud key="first" />,
@@ -114,17 +114,21 @@ export default function Cards() {
                 </div>
               ))}
             </div>
-            <Link passHref href={project.link}>
-              <a
-                target="_blank"
-                className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-tertiary"
-              >
-                <span className="mr-2">View on</span>
-                <span className="text-2xl">
-                  <SiGithub />
-                </span>
-              </a>
-            </Link>
+            {project.link ? (
+              <Link passHref href={project.link}>
+                <a
+                  target="_blank"
+                  className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-tertiary"
+                >
+                  <span className="mr-2">View on</span>
+                  <span className="text-2xl">
+                    <SiGithub />
+                  </span>
+                </a>
+              </Link>
+            ) : (
+              <div className="m-5" />
+            )}
           </div>
         </motion.div>
       ))}
