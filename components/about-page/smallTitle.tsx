@@ -48,8 +48,10 @@ export default function SmallTitle() {
             className="w-3/5 mt-10 text-center text-dark-secondary dark:text-light-secondary text-md"
           >
             &nbsp; My name is{" "}
-            <span className="underline text-dark-primary">Minsung Kim</span>,
-            studying Computer Science at George Mason University. Most of the
+            <span className="underline text-dark-primary dark:text-light-primary ">
+              Minsung Kim
+            </span>
+            , studying Computer Science at George Mason University. Most of the
             projects I&apos;ve worked on are self-taught and I&apos;m always
             persist for new challenges to learn.
           </motion.h1>
