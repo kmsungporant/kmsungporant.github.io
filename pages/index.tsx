@@ -5,6 +5,7 @@ import MenuIcon from "../components/menu/menuIcon";
 import MainPage from "../components/mainPage";
 import AboutPage from "../components/aboutPage";
 import Header from "../components/menu/header";
+import PorfolioPage from "../components/portfolioPage";
 
 export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function Home() {
       <Header menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <MainPage />
       <AboutPage />
+      <PorfolioPage />
     </div>
   );
 }
