@@ -31,6 +31,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
     { name: "Home", link: "#hero" },
     { name: "About", link: "#about" },
     { name: "Portfolio", link: "#portfolio" },
+    { name: "Timeline", link: "#timeline" },
     { name: "Contacts", link: "#contacts" },
   ];
 
