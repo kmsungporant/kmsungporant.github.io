@@ -19,7 +19,22 @@ export default function Title() {
   return (
     <div className="hidden w-1/2 h-full lg:block">
       <div className="flex flex-col justify-center h-full">
-        <div className="flex flex-col justify-center w-full h-24 ">
+        <div className="flex flex-col justify-center w-full h-40 ">
+          <motion.h1
+            className="text-2xl text-dark-tertiary dark:text-light-tertiary"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeInOut",
+                delay: 0.2,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            {"<AboutMe>"}
+          </motion.h1>
           <div className="flex flex-col items-start font-black">
             <motion.span
               initial={{ opacity: 0 }}
@@ -30,7 +45,7 @@ export default function Title() {
               viewport={{ once: true }}
               className="z-20 justify-center text-5xl font-semibold text-dark-primary dark:text-light-primary"
             >
-              {"<AboutMe/>"}
+              About Me
               <div className="flex flex-col justify-center h-full mt-2 ">
                 <div className="flex justify-start w-full h-full -mb-9">
                   <motion.div
@@ -89,6 +104,21 @@ export default function Title() {
             </motion.button>
           </a>
         </Link>
+        <motion.h1
+          className="mt-5 text-2xl text-dark-tertiary dark:text-light-tertiary"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 1,
+              ease: "easeInOut",
+              delay: 0.2,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          {"</AboutMe>"}
+        </motion.h1>
       </div>
     </div>
   );
