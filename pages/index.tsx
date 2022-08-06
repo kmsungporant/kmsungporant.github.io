@@ -21,7 +21,6 @@ export default function Home() {
       <MainPage />
       <AboutPage />
       <PorfolioPage />
-      <TimelinePage />
       <Contacts />
       <Footer />
     </div>
