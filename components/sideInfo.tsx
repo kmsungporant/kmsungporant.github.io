@@ -25,7 +25,10 @@ export default function SideInfo() {
       animate="animate"
       viewport={{ once: true }}
     >
-      <Link href="https://github.com/kmsungporant/minsung-web" passHref>
+      <Link
+        href="https://github.com/kmsungporant/kmsungporant.github.io"
+        passHref
+      >
         <a target="_blank">
           <h1 className="-rotate-90 text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75">
             {"</> by Minsung Kim"}
