@@ -32,7 +32,6 @@ const projects: {
   link: string;
   image: string;
   icons: ReactNode[];
-  delay: any;
 }[] = [
   {
     name: "Discord [Moon] Bot",
@@ -46,7 +45,6 @@ const projects: {
       <SiLinux key="third" />,
       <VscRemoteExplorer key="fourth" />,
     ],
-    delay: 0.7,
   },
   {
     name: "Personal Portfolio Website",
@@ -62,7 +60,6 @@ const projects: {
       <SiGithubactions key="fifth" />,
       <MdAnimation key="sixth" />,
     ],
-    delay: 1,
   },
 
   {
@@ -76,7 +73,6 @@ const projects: {
       <SiLinux key="second" />,
       <SiJava key="third" />,
     ],
-    delay: 1.3,
   },
 ];
 
@@ -92,7 +88,7 @@ export default function Cards() {
             transition: {
               duration: 1,
               ease: "easeInOut",
-              delay: `${project.delay}`,
+              delay: i * 0.3,
             },
           }}
           viewport={{ once: true }}
