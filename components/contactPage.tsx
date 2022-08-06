@@ -49,7 +49,7 @@ export default function Contacts() {
       <div className="flex items-center justify-center h-[95%] space-x-5  ">
         <div className="flex justify-center w-[3%]">
           <div className="flex justify-end w-[20%] space-x-5">
-            <div className="flex flex-row items-center justify-center w-[15%] text-7xl font-black -rotate-90 ">
+            <div className="flex flex-row items-center justify-center w-[15%] text-5xl font-black -rotate-90 ">
               <motion.div
                 initial={{ opacity: 0, transform: "translateY(-10px)" }}
                 whileInView={{
@@ -60,7 +60,7 @@ export default function Contacts() {
                 viewport={{ once: true }}
                 className="text-dark-primary dark:text-light-primary"
               >
-                Contacts
+                {"<Contacts/>"}
               </motion.div>
             </div>
           </div>

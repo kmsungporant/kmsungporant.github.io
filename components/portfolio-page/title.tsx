@@ -27,7 +27,7 @@ export default function Title() {
           viewport={{ once: true }}
           className="z-20 justify-center text-6xl font-semibold text-dark-primary dark:text-light-primary"
         >
-          My Portfolio
+          {"<MyPortfolio/>"}
         </motion.span>
       </div>
     </div>

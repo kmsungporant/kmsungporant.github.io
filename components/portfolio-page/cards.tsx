@@ -118,7 +118,7 @@ export default function Cards() {
               <Link passHref href={project.link}>
                 <a
                   target="_blank"
-                  className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-tertiary"
+                  className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
                 >
                   <span className="mr-2">View on</span>
                   <span className="text-2xl">
