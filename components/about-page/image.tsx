@@ -25,7 +25,7 @@ export default function ImageLogo() {
               alt="logo"
               width={500}
               height={500}
-              className="object-cover h-auto width-full rounded-tl-[30%] rounded-bl-[30%] rounded-tr-[45%] rounded-br-3xl border-4 border-white dark:border-black"
+              className="object-cover h-auto width-full rounded-tl-[30%] rounded-bl-[30%] rounded-tr-[45%] rounded-br-3xl border-4 border-dark-primary dark:border-light-primary"
             />
           </motion.div>
         </motion.div>
