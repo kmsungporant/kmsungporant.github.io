@@ -33,7 +33,7 @@ export default function SmallTitle() {
                     transition: { duration: 2, ease: "easeInOut" },
                   }}
                   viewport={{ once: true }}
-                  className="bg-dark-secondary dark:bg-light-secondary w-0 h-[7%]"
+                  className="bg-dark-secondary dark:bg-light-secondary h-[7%]"
                 ></motion.div>
               </div>
             </div>

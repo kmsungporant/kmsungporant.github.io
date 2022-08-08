@@ -93,7 +93,7 @@ export default function Cards() {
           }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col items-center m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-96 rounded-3xl">
+          <div className="flex flex-col items-center my-5 lg:m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-96 rounded-3xl">
             <h1 className="mt-5 text-xl font-black underline">
               {project.name}
             </h1>
@@ -114,6 +114,7 @@ export default function Cards() {
                 </div>
               ))}
             </div>
+
             {project.link ? (
               <Link passHref href={project.link}>
                 <a

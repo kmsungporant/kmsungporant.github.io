@@ -41,7 +41,7 @@ export default function Title() {
         </motion.span>
       </h1>
       <motion.h2
-        className="font-black text-7xl text-dark-primary dark:text-light-primary"
+        className="text-5xl font-black lg:text-7xl text-dark-primary dark:text-light-primary"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,

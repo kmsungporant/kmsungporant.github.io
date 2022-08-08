@@ -44,11 +44,11 @@ const icons: { name: string; icon: ReactNode }[] = [
 export default function Icons() {
   return (
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-5 lg:grid-cols-12">
         {icons.map((icon, i) => (
           <motion.div
             key={i}
-            className="m-4 text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary"
+            className="m-4 text-3xl lg:text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
