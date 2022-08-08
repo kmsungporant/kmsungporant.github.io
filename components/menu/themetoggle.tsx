@@ -33,8 +33,8 @@ export default function ThemeToggle({ menuIsOpen }) {
       }
     >
       <div>
-        <FaSun className="hidden dark:block" />
-        <FaMoon className="block dark:hidden" />
+        <FaSun className="hidden mx-2 dark:block" />
+        <FaMoon className="block mx-2 dark:hidden" />
       </div>
     </button>
   );
