@@ -1,12 +1,12 @@
-import SideInfo from "../components/sideInfo";
-import Menu from "../components/menu";
 import { useState } from "react";
-import MainPage from "../components/mainPage";
 import AboutPage from "../components/aboutPage";
-import Header from "../components/menu/header";
-import PorfolioPage from "../components/portfolioPage";
 import Contacts from "../components/contactPage";
 import Footer from "../components/footer";
+import MainPage from "../components/mainPage";
+import Menu from "../components/menu";
+import Header from "../components/menu/header";
+import PorfolioPage from "../components/portfolioPage";
+import SideInfo from "../components/sideInfo";
 
 export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
