@@ -1,30 +1,21 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ReactNode } from "react";
-
-import {
-  SiNextdotjs,
-  SiCplusplus,
-  SiGithubactions,
-  SiSass,
-  SiMicrosoftazure,
-  SiGooglecloud,
-  SiMaterialui,
-  SiTailwindcss,
-  SiJava,
-  SiCss3,
-  SiLinux,
-  SiJavascript,
-  SiReact,
-  SiPython,
-  SiDocker,
-  SiHtml5,
-  SiNodedotjs,
-  SiGithub,
-} from "react-icons/si";
-import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
+import {
+  SiGithub,
+  SiGithubactions,
+  SiGooglecloud,
+  SiJava,
+  SiLinux,
+  SiMicrosoftazure,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+} from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
-import { motion } from "framer-motion";
 
 const projects: {
   name: string;
@@ -108,7 +99,7 @@ export default function Cards() {
               {project.icons.map((icon, i) => (
                 <div
                   key={i}
-                  className="mx-1 text-3xl text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
+                  className="m-1 text-3xl text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
                 >
                   {icon}
                 </div>
