@@ -1,12 +1,12 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillMail,
-  AiFillFacebook,
-} from "react-icons/ai";
+import Link from "next/link";
 import { ReactNode } from "react";
+import {
+  AiFillFacebook,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillMail,
+} from "react-icons/ai";
 
 type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
@@ -46,6 +46,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
               x: 0,
               transition: { duration: 0.5, ease: "easeInOut", delay: i * 0.15 },
             }}
+            whileHover={{ scale: 1.1 }}
           >
             <Link href={name.link} passHref>
               <li
@@ -74,6 +75,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
                     delay: i * 0.15,
                   },
                 }}
+                whileHover={{ scale: 1.1 }}
               >
                 <motion.div>{icon.icon}</motion.div>
               </motion.a>

@@ -53,7 +53,7 @@ export default function Title() {
                     initial="initial"
                     whileInView="upper"
                     viewport={{ once: true }}
-                    className=" w-full h-[7%] bg-dark-secondary dark:bg-light-secondary"
+                    className=" w-full h-[7%] bg-dark-primary dark:bg-light-secondary"
                   />
                 </div>
                 <div className="flex justify-start w-full h-full ">
@@ -62,7 +62,7 @@ export default function Title() {
                     initial="initial"
                     whileInView="lower"
                     viewport={{ once: true }}
-                    className=" w-0 h-[7%] bg-dark-secondary dark:bg-light-secondary"
+                    className=" w-0 h-[7%] bg-dark-primary dark:bg-light-secondary"
                   />
                 </div>
               </div>

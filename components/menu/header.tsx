@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import MenuIcon from "./menuIcon";
 import ThemeToggle from "./themetoggle";
@@ -26,7 +27,8 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
               <div className="text-4xl font-black">
                 <Link href={"/"} passHref>
                   <div className="fixed flex justify-start p-5 overflow-hidden cursor-pointer -skew-x-2 text-dark-secondary dark:text-light-secondary">
-                    <span
+                    <motion.span
+                      whileHover={{ scale: 1.1 }}
                       className={
                         menuIsOpen
                           ? " text-light-secondary dark:text-dark-secondary hover:text-light-secondary/75 hover:dark:text-dark-secondary/75"
@@ -34,7 +36,7 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
                       }
                     >
                       Minsung
-                    </span>
+                    </motion.span>
                   </div>
                 </Link>
               </div>

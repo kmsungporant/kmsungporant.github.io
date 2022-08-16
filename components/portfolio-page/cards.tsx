@@ -88,35 +88,41 @@ export default function Cards() {
             <h1 className="mt-5 text-xl font-black underline">
               {project.name}
             </h1>
-            <div className="w-[90%] mt-5 ">
-              <img src={project.image} alt={project.name} />
-            </div>
+            <motion.div className="w-[90%] mt-5 " whileHover={{ scale: 1.5 }}>
+              <img
+                src={project.image}
+                alt={project.name}
+                className="border-2 rounded-2xl border-dark-tertiary dark:border-light-tertiary"
+              />
+            </motion.div>
 
             <h2 className="p-2 text-center text-dark-tertiary dark:text-light-tertiary">
               {project.description}
             </h2>
             <div className="grid grid-cols-3 ">
               {project.icons.map((icon, i) => (
-                <div
+                <motion.div
                   key={i}
                   className="m-1 text-3xl text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
+                  whileHover={{ scale: 1.2 }}
                 >
                   {icon}
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {project.link ? (
               <Link passHref href={project.link}>
-                <a
+                <motion.a
                   target="_blank"
                   className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
+                  whileHover={{ scale: 1.2 }}
                 >
                   <span className="mr-2">View on</span>
                   <span className="text-2xl">
                     <SiGithub />
                   </span>
-                </a>
+                </motion.a>
               </Link>
             ) : (
               <div className="m-5" />

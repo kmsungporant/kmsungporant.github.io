@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { CgClose, CgMenuRight } from "react-icons/cg";
 
 export default function MenuIcon({ menuIsOpen, setMenuIsOpen }) {
@@ -17,9 +18,9 @@ export default function MenuIcon({ menuIsOpen, setMenuIsOpen }) {
             : " text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75"
         }
       >
-        <button onClick={handleMenuChange}>
+        <motion.button onClick={handleMenuChange} whileHover={{ scale: 1.1 }}>
           {menuIsOpen ? <CgClose /> : <CgMenuRight />}
-        </button>
+        </motion.button>
       </div>
     </div>
   );

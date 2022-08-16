@@ -1,25 +1,25 @@
-import {
-  SiNextdotjs,
-  SiCplusplus,
-  SiGithubactions,
-  SiSass,
-  SiMicrosoftazure,
-  SiGooglecloud,
-  SiMaterialui,
-  SiTailwindcss,
-  SiJava,
-  SiCss3,
-  SiLinux,
-  SiJavascript,
-  SiReact,
-  SiPython,
-  SiDocker,
-  SiHtml5,
-} from "react-icons/si";
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
 import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import {
+  SiCplusplus,
+  SiCss3,
+  SiDocker,
+  SiGithubactions,
+  SiGooglecloud,
+  SiHtml5,
+  SiJava,
+  SiJavascript,
+  SiLinux,
+  SiMaterialui,
+  SiMicrosoftazure,
+  SiNextdotjs,
+  SiPython,
+  SiReact,
+  SiSass,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const icons: { name: string; icon: ReactNode }[] = [
   { name: "NextJs", icon: <SiNextdotjs /> },
@@ -58,6 +58,7 @@ export default function Icons() {
                 delay: i * 0.1,
               },
             }}
+            whileHover={{ scale: 1.2 }}
             viewport={{ once: true }}
           >
             {icon.icon}
