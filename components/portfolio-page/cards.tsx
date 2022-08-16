@@ -88,7 +88,7 @@ export default function Cards() {
             <h1 className="mt-5 text-xl font-black underline">
               {project.name}
             </h1>
-            <motion.div className="w-[90%] mt-5 " whileHover={{ scale: 1.5 }}>
+            <motion.div className="w-[90%] mt-5 " whileHover={{ scale: 1.3 }}>
               <img
                 src={project.image}
                 alt={project.name}
