@@ -20,7 +20,7 @@ export default function Home() {
           name="MinsungK"
           content="</> by Minsung using Next.JS and TailwindCSS"
         />
-        <link rel="icon" href="/logo" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <SideInfo />
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
