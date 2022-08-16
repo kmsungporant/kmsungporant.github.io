@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import { useState } from "react";
 import AboutPage from "../components/aboutPage";
 import Contacts from "../components/contactPage";
@@ -15,8 +15,11 @@ export default function Home() {
   return (
     <div className="h-full bg-dark-background dark:bg-light-background font-Consolas">
       <Head>
-        <title>Create Next App</title>
-        <meta name="MinsungK" content="</> by Minsung using Next.JS and TailwindCSS" />
+        <title>MinsungK</title>
+        <meta
+          name="MinsungK"
+          content="</> by Minsung using Next.JS and TailwindCSS"
+        />
         <link rel="icon" href="/M.ico" />
       </Head>
       <SideInfo />
