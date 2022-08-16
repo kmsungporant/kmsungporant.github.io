@@ -4,7 +4,8 @@ A personal portfolio website documenting all personal projects and achievements.
 
 ### Source
 
-- Framework: **NextJS** [https://nextjs.org/]
+- Library: **React.JS** [https://reactjs.org/]
+- Framework: **Next.JS** [https://nextjs.org/]
 - Styling: **TailwindCSS** [https://tailwindcss.com/]
 - Animation: **Framer Motion** [https://www.framer.com/]
 
