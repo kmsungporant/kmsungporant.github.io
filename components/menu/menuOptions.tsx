@@ -61,7 +61,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
 
         <div className="flex flex-row mt-4 space-x-4 ">
           {icons.map((icon, i) => (
-            <Link href={icon.link} key={i}>
+            <Link href={icon.link} key={i} passHref>
               <motion.a
                 target="_blank"
                 className="cursor-pointer hover:dark:text-dark-secondary/75 hover:text-light-secondary/75 "
