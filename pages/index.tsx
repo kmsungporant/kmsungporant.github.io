@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from "react";
 import AboutPage from "../components/aboutPage";
 import Contacts from "../components/contactPage";
@@ -12,7 +13,12 @@ export default function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
-    <div className="h-full bg-dark-background dark:bg-light-background font-Consolas ">
+    <div className="h-full bg-dark-background dark:bg-light-background font-Consolas">
+      <Head>
+        <title>Create Next App</title>
+        <meta name="MinsungK" content="</> by Minsung using Next.JS and TailwindCSS" />
+        <link rel="icon" href="/M.ico" />
+      </Head>
       <SideInfo />
       <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <Header menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
