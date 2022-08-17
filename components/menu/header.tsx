@@ -13,7 +13,7 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
     setMenuIsOpen(!menuIsOpen);
   };
   return (
-    <div className="fixed z-50 w-full h-20 ">
+    <div className="fixed z-50 w-full h-20 drop-shadow-2xl ">
       <div
         className={
           menuIsOpen
