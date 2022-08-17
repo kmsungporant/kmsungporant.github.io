@@ -27,10 +27,16 @@ export default function ImageLogo() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <motion.div className="block dark:hidden" whileHover={{ scale: 1.1 }}>
+      <motion.div
+        className="block dark:hidden"
+        whileHover={{ scale: 1.1, rotate: 3 }}
+      >
         <img src="/logo.png" alt="logo" width={500} height={500} />
       </motion.div>
-      <motion.div className="hidden dark:block" whileHover={{ scale: 1.1 }}>
+      <motion.div
+        className="hidden dark:block"
+        whileHover={{ scale: 1.1, rotate: 3 }}
+      >
         <img src="/logoLight.png" alt="logo" width={500} height={500} />
       </motion.div>
     </motion.div>

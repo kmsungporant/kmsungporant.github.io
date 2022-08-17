@@ -28,7 +28,7 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
                 <Link href={"/"} passHref>
                   <div className="fixed flex justify-start p-5 overflow-hidden cursor-pointer -skew-x-2 text-dark-secondary dark:text-light-secondary">
                     <motion.span
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.1, rotate: 1 }}
                       className={
                         menuIsOpen
                           ? " text-light-secondary dark:text-dark-secondary hover:text-light-secondary/75 hover:dark:text-dark-secondary/75"
