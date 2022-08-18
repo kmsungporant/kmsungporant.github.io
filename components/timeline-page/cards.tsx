@@ -35,7 +35,7 @@ const projects: {
     title: "Shift Manager",
     description: [
       "Practicing various responsibilities such as creating a friendly environment for the employees and the customers",
-      "Managing and precisely calculating the finalrevenue gained at the end of the day",
+      "Managing and precisely calculating the final revenue gained at the end of the day",
     ],
     location: "Centreville, VA",
     startDate: "Sept 2021",
@@ -68,7 +68,7 @@ export default function Cards() {
             {project.icon}
           </div>
 
-          <Card project={project} />
+          <Card project={project} i={i} />
         </motion.div>
       ))}
     </div>

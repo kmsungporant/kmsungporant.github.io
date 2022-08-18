@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Cards from "./portfolio-page/cards";
 import Icons from "./portfolio-page/icons";
-import Title from "./portfolio-page/title";
 
 export default function PorfolioPage() {
   return (

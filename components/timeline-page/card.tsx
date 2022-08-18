@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
 import { BsFillCalendarDateFill, BsPersonFill } from "react-icons/bs";
-import { GrUserManager } from "react-icons/gr";
 import { MdLocationPin } from "react-icons/md";
-import { RiComputerLine } from "react-icons/ri";
 
-export default function Card({ project }) {
+export default function Card({ project, i }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: 200 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+          ease: "easeInOut",
+          delay: i * 0.3,
+        },
+      }}
       className=" w-[50rem] rounded-3xl bg-dark-secondary"
       viewport={{ once: true }}
     >
