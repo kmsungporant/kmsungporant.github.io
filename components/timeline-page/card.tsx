@@ -15,7 +15,7 @@ export default function Card({ project, i }) {
           delay: i * 0.2,
         },
       }}
-      className="lg:w-[50rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary"
+      className="lg:w-[50rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary dark:bg-light-secondary"
       viewport={{ once: true }}
     >
       <div className="flex flex-col items-center p-3 sm:flex-row">
@@ -24,8 +24,8 @@ export default function Card({ project, i }) {
           alt={project.company}
           className="w-4/5 mx-0 sm:w-1/3 sm:mx-7 h-1/3"
         />
-        <div className="text-lg text-dark-tertiary">
-          <h3 className="text-3xl font-black underline text-dark-primary">
+        <div className="text-lg text-dark-tertiary dark:text-light-tertiary">
+          <h3 className="text-3xl font-black underline text-dark-primary dark:text-light-primary">
             {project.company}
           </h3>
           <h4 className="flex items-center gap-1 font-semibold">
@@ -40,7 +40,7 @@ export default function Card({ project, i }) {
             <BsFillCalendarDateFill />
             {project.startDate} - {project.endDate}
           </h6>
-          <ul className="text-sm w-[95%] list-disc my-3 pl-4">
+          <ul className="text-sm w-[95%] list-disc my-3 pl-4 ">
             {project.description.map((description, i) => (
               <li key={i}>{description}</li>
             ))}

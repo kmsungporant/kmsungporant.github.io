@@ -44,7 +44,7 @@ const icons: { name: string; icon: ReactNode }[] = [
 export default function Icons() {
   return (
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-5 lg:grid-cols-12">
+      <div className="grid grid-cols-5 place-self-center lg:grid-cols-12">
         {icons.map((icon, i) => (
           <motion.div
             key={i}
@@ -53,7 +53,7 @@ export default function Icons() {
             whileInView={{
               opacity: 1,
               transition: {
-                duration: 0.5,
+                duration: 0.2,
                 ease: "easeInOut",
                 delay: i * 0.1,
               },

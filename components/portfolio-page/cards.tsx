@@ -25,19 +25,6 @@ const projects: {
   icons: ReactNode[];
 }[] = [
   {
-    name: "Discord [Moon] Bot",
-    description:
-      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features forthe server: music player for YouTube, mini games, shortcut commands and more!",
-    link: "https://github.com/kmsungporant/Moon-Bot",
-    image: "discord.gif",
-    icons: [
-      <SiPython key="first" />,
-      <SiMicrosoftazure key="second" />,
-      <SiLinux key="third" />,
-      <VscRemoteExplorer key="fourth" />,
-    ],
-  },
-  {
     name: "Personal Portfolio Website",
     description:
       "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
@@ -50,6 +37,19 @@ const projects: {
       <SiTailwindcss key="fourth" />,
       <SiGithubactions key="fifth" />,
       <MdAnimation key="sixth" />,
+    ],
+  },
+  {
+    name: "Discord [Moon] Bot",
+    description:
+      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features forthe server: music player for YouTube, mini games, shortcut commands and more!",
+    link: "https://github.com/kmsungporant/Moon-Bot",
+    image: "discord.gif",
+    icons: [
+      <SiPython key="first" />,
+      <SiMicrosoftazure key="second" />,
+      <SiLinux key="third" />,
+      <VscRemoteExplorer key="fourth" />,
     ],
   },
 

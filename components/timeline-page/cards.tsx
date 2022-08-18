@@ -63,8 +63,8 @@ export default function Cards() {
           viewport={{ once: true }}
           className="relative h-full py-5"
         >
-          <div className="absolute w-1 h-full bg-dark-secondary -left-[5.1rem]" />
-          <div className="absolute p-5 text-2xl rounded-full bg-dark-primary -left-28">
+          <div className="absolute w-1 h-full bg-dark-secondary dark:bg-light-secondary -left-[5.1rem]" />
+          <div className="absolute p-5 text-2xl rounded-full bg-dark-primary dark:bg-light-primary -left-28">
             {project.icon}
           </div>
 

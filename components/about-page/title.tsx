@@ -78,9 +78,9 @@ export default function Title() {
           }}
           viewport={{ once: true }}
         >
-          <span className="text-lg">
+          <span className="text-2xl font-medium">
             My name is{" "}
-            <span className="underline text-dark-primary dark:text-light-primary ">
+            <span className="font-black underline text-dark-primary dark:text-light-primary ">
               Minsung Kim
             </span>
             , studying Computer Science at George Mason University. Most of the
@@ -88,22 +88,20 @@ export default function Title() {
             persist for new challenges to learn.
           </span>
         </motion.div>
-        <Link href="/resume.pdf" passHref>
-          <a target="_blank">
-            <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 0.5, delay: 0.35 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              viewport={{ once: true }}
-              className="px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
-            >
-              My Résumé
-            </motion.button>
-          </a>
-        </Link>
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.5, delay: 0.35 },
+          }}
+          whileHover={{ scale: 1.1 }}
+          viewport={{ once: true }}
+          className="w-32 px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
+        >
+          <Link href="/resume.pdf" passHref>
+            <a target="_blank">My Resume</a>
+          </Link>
+        </motion.button>
         <motion.h1
           className="mt-5 text-2xl text-dark-tertiary dark:text-light-tertiary"
           initial={{ opacity: 0 }}
