@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
-import Cards from "./portfolio-page/cards";
-import Icons from "./portfolio-page/icons";
-import Title from "./portfolio-page/title";
+import Cards from "./timeline-page/cards";
 
-export default function PorfolioPage() {
+export default function Timeline() {
   return (
     <div
-      id="portfolio"
-      className="flex flex-col items-center justify-center bg-dark-background dark:bg-light-background font-Consolas"
+      id="timeline"
+      className="flex flex-col items-center justify-center h-full bg-dark-background dark:bg-light-background font-Consolas"
     >
       <motion.h1
         className="text-2xl text-dark-tertiary dark:text-light-tertiary"
@@ -22,12 +20,10 @@ export default function PorfolioPage() {
         }}
         viewport={{ once: true }}
       >
-        {"<Portfolio>"}
+        {"<Timeline>"}
       </motion.h1>
-      <div className="flex items-center justify-center">
-        <Cards />
-      </div>
-      <Icons />
+
+      <Cards />
       <motion.h1
         className="text-2xl text-dark-tertiary dark:text-light-tertiary"
         initial={{ opacity: 0 }}
@@ -41,7 +37,7 @@ export default function PorfolioPage() {
         }}
         viewport={{ once: true }}
       >
-        {"</Portfolio>"}
+        {"</Timeline>"}
       </motion.h1>
     </div>
   );

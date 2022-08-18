@@ -53,7 +53,7 @@ export default function Icons() {
             whileInView={{
               opacity: 1,
               transition: {
-                duration: 1,
+                duration: 0.5,
                 ease: "easeInOut",
                 delay: i * 0.1,
               },

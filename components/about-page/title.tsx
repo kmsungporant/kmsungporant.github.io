@@ -7,11 +7,11 @@ const Bar = {
   },
   upper: {
     width: "100%",
-    transition: { duration: 1.5, ease: "easeInOut", delay: 0.8 },
+    transition: { duration: 0.75, ease: "easeInOut", delay: 0.4 },
   },
   lower: {
     width: "70%",
-    transition: { duration: 2, ease: "easeInOut", delay: 0.8 },
+    transition: { duration: 1, ease: "easeInOut", delay: 0.4 },
   },
 };
 
@@ -26,9 +26,9 @@ export default function Title() {
             whileInView={{
               opacity: 1,
               transition: {
-                duration: 1,
+                duration: 0.5,
                 ease: "easeInOut",
-                delay: 0.2,
+                delay: 0.1,
               },
             }}
             viewport={{ once: true }}
@@ -40,7 +40,7 @@ export default function Title() {
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                transition: { duration: 1, delay: 0.6 },
+                transition: { duration: 0.5, delay: 0.3 },
               }}
               viewport={{ once: true }}
               className="z-20 justify-center text-5xl font-semibold text-dark-primary dark:text-light-primary"
@@ -74,7 +74,7 @@ export default function Title() {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-            transition: { duration: 1, delay: 1 },
+            transition: { duration: 0.5, delay: 0.5 },
           }}
           viewport={{ once: true }}
         >
@@ -94,7 +94,7 @@ export default function Title() {
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                transition: { duration: 1, delay: 0.75 },
+                transition: { duration: 0.5, delay: 0.35 },
               }}
               whileHover={{ scale: 1.1 }}
               viewport={{ once: true }}
@@ -110,9 +110,9 @@ export default function Title() {
           whileInView={{
             opacity: 1,
             transition: {
-              duration: 1,
+              duration: 0.5,
               ease: "easeInOut",
-              delay: 0.2,
+              delay: 0.1,
             },
           }}
           viewport={{ once: true }}

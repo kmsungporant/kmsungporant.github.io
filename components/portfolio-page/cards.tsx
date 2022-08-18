@@ -77,14 +77,14 @@ export default function Cards() {
           whileInView={{
             opacity: 1,
             transition: {
-              duration: 1,
+              duration: 0.5,
               ease: "easeInOut",
-              delay: i * 0.3,
+              delay: i * 0.2,
             },
           }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col items-center my-5 lg:m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-96 rounded-3xl">
+          <div className="flex flex-col items-center my-5 lg:m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-80 rounded-3xl">
             <h1 className="mt-5 text-xl font-black underline">
               {project.name}
             </h1>

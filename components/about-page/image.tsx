@@ -8,7 +8,7 @@ export default function ImageLogo() {
           className=""
           whileInView={{
             x: 75,
-            transition: { duration: 1.5, ease: "easeInOut" },
+            transition: { duration: 1.2, ease: "easeInOut" },
           }}
           viewport={{ once: true }}
         >

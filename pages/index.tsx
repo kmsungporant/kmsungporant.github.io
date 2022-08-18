@@ -3,6 +3,7 @@ import Contacts from "../components/contactPage";
 import Footer from "../components/footer";
 import MainPage from "../components/mainPage";
 import PorfolioPage from "../components/portfolioPage";
+import Timeline from "../components/timeline";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <MainPage />
       <AboutPage />
       <PorfolioPage />
+      <Timeline />
       <Contacts />
       <Footer />
     </div>
