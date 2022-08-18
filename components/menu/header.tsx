@@ -18,7 +18,7 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
         className={
           menuIsOpen
             ? "bg-dark-secondary dark:bg-light-secondary h-full"
-            : "bg-dark-background dark:bg-light-background h-full"
+            : "bg-gray-800 dark:bg-light-background h-full"
         }
       >
         <div className="flex justify-center h-full ">

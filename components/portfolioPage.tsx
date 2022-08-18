@@ -6,7 +6,7 @@ export default function PorfolioPage() {
   return (
     <div
       id="portfolio"
-      className="flex flex-col items-center justify-center bg-dark-background dark:bg-light-background font-Consolas"
+      className="flex flex-col items-center justify-center bg-gray-800 dark:bg-light-background font-Consolas"
     >
       <motion.h1
         className="text-2xl text-dark-tertiary dark:text-light-tertiary"

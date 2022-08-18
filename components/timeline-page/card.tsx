@@ -5,17 +5,17 @@ import { MdLocationPin } from "react-icons/md";
 export default function Card({ project, i }) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 200 }}
+      initial={{ opacity: 0, x: 40 }}
       whileInView={{
         opacity: 1,
         x: 0,
         transition: {
           duration: 1,
           ease: "easeInOut",
-          delay: i * 0.3,
+          delay: i * 0.2,
         },
       }}
-      className=" w-[50rem] rounded-3xl bg-dark-secondary"
+      className="lg:w-[50rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary"
       viewport={{ once: true }}
     >
       <div className="flex flex-col items-center p-3 sm:flex-row">

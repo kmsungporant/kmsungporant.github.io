@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ReactNode } from "react";
 import {
-  AiFillLinkedin,
-  AiFillGithub,
   AiFillFacebook,
+  AiFillGithub,
+  AiFillLinkedin,
   AiFillTwitterSquare,
 } from "react-icons/ai";
 
@@ -42,10 +42,7 @@ export default function Contacts() {
   ];
 
   return (
-    <div
-      id="contacts"
-      className="h-full bg-dark-background dark:bg-light-background "
-    >
+    <div id="contacts" className="h-full bg-gray-800 dark:bg-light-background ">
       <div className="flex items-center justify-center h-[95%] space-x-5  ">
         <div className="flex justify-center w-[3%]">
           <div className="flex justify-end w-[20%] space-x-5">

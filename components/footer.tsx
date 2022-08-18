@@ -2,7 +2,7 @@ import { SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <div className=" h-[8%] font-yellowTail text-dark-primary dark:text-light-primary bg-dark-background dark:bg-light-background ">
+    <div className=" h-[8%] font-yellowTail text-dark-primary dark:text-light-primary bg-gray-800 dark:bg-light-background ">
       <div className="flex flex-col items-center justify-center h-full">
         <span className="text-xs text-center">
           Copyright © 2022 Minsung Kim. All rights reserved.

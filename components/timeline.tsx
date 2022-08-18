@@ -5,7 +5,7 @@ export default function Timeline() {
   return (
     <div
       id="timeline"
-      className="flex flex-col items-center justify-center h-full bg-dark-background dark:bg-light-background font-Consolas"
+      className="flex flex-col items-center justify-center h-full bg-gray-800 dark:bg-light-background font-Consolas"
     >
       <motion.h1
         className="text-2xl text-dark-tertiary dark:text-light-tertiary"
