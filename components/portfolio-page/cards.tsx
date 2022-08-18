@@ -29,7 +29,7 @@ const projects: {
     description:
       "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
     link: "https://github.com/kmsungporant/kmsungporant.github.io",
-    image: "website.gif",
+    image: "websiteVid.gif",
     icons: [
       <SiNextdotjs key="first" />,
       <SiReact key="second" />,
