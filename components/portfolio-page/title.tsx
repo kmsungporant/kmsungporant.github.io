@@ -25,9 +25,9 @@ export default function Title() {
             transition: { duration: 1, delay: 0.6 },
           }}
           viewport={{ once: true }}
-          className="z-20 justify-center text-6xl font-semibold text-dark-primary dark:text-light-primary"
+          className="z-20 justify-center text-3xl font-semibold text-dark-primary dark:text-light-primary"
         >
-          My Portfolio
+          {"MyPortfolio"}
         </motion.span>
       </div>
     </div>

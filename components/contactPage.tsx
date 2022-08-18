@@ -49,7 +49,7 @@ export default function Contacts() {
       <div className="flex items-center justify-center h-[95%] space-x-5  ">
         <div className="flex justify-center w-[3%]">
           <div className="flex justify-end w-[20%] space-x-5">
-            <div className="flex flex-row items-center justify-center w-[15%] text-7xl font-black -rotate-90 ">
+            <div className="flex flex-row items-center justify-center w-[15%] text-4xl lg:text-5xl font-black -rotate-90 ">
               <motion.div
                 initial={{ opacity: 0, transform: "translateY(-10px)" }}
                 whileInView={{
@@ -60,7 +60,7 @@ export default function Contacts() {
                 viewport={{ once: true }}
                 className="text-dark-primary dark:text-light-primary"
               >
-                Contacts
+                {"Contacts"}
               </motion.div>
             </div>
           </div>
@@ -73,39 +73,70 @@ export default function Contacts() {
             transition: { duration: 1 },
           }}
           viewport={{ once: true }}
-          className="flex w-2 h-80 bg-dark-secondary dark:bg-light-secondary"
+          className="flex w-2 h-60 lg:h-80 bg-dark-secondary dark:bg-light-secondary"
         />
-
-        <motion.div
-          initial={{ opacity: 0, transform: "translateX(10px)" }}
-          whileInView={{
-            opacity: 1,
-            transform: "translateX(0px)",
-            transition: { duration: 1, delay: 0.75 },
-          }}
-          viewport={{ once: true }}
-          className="space-y-3"
-        >
-          {icons.map((icon, i) => (
-            <motion.div
-              key={i}
-              className="text-7xl"
-              whileHover={{ scale: 1.1, x: 30 }}
-            >
-              <Link href={icon.link} passHref>
-                <a
-                  target="_blank"
-                  className="flex flex-row items-center space-x-2 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary"
-                >
-                  {icon.icon}
-                  <a className="flex flex-col text-3xl font-black">
-                    {icon.linkName}
+        <div>
+          <motion.h1
+            className="text-2xl text-dark-tertiary dark:text-light-tertiary"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeInOut",
+                delay: 0.2,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            {"<Contacts>"}
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, transform: "translateX(10px)" }}
+            whileInView={{
+              opacity: 1,
+              transform: "translateX(0px)",
+              transition: { duration: 1, delay: 0.75 },
+            }}
+            viewport={{ once: true }}
+            className="space-y-3"
+          >
+            {icons.map((icon, i) => (
+              <motion.div
+                key={i}
+                className="text-5xl"
+                whileHover={{ scale: 1.1, x: 30 }}
+              >
+                <Link href={icon.link} passHref>
+                  <a
+                    target="_blank"
+                    className="flex flex-row items-center space-x-2 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary"
+                  >
+                    {icon.icon}
+                    <a className="flex flex-col text-xl font-black lg:text-3xl">
+                      {icon.linkName}
+                    </a>
                   </a>
-                </a>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.h1
+            className="text-2xl text-dark-tertiary dark:text-light-tertiary"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeInOut",
+                delay: 0.2,
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            {"</Contacts>"}
+          </motion.h1>
+        </div>
       </div>
     </div>
   );

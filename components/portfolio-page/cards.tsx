@@ -1,30 +1,21 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ReactNode } from "react";
-
-import {
-  SiNextdotjs,
-  SiCplusplus,
-  SiGithubactions,
-  SiSass,
-  SiMicrosoftazure,
-  SiGooglecloud,
-  SiMaterialui,
-  SiTailwindcss,
-  SiJava,
-  SiCss3,
-  SiLinux,
-  SiJavascript,
-  SiReact,
-  SiPython,
-  SiDocker,
-  SiHtml5,
-  SiNodedotjs,
-  SiGithub,
-} from "react-icons/si";
-import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
+import {
+  SiGithub,
+  SiGithubactions,
+  SiGooglecloud,
+  SiJava,
+  SiLinux,
+  SiMicrosoftazure,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+} from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
-import { motion } from "framer-motion";
 
 const projects: {
   name: string;
@@ -32,7 +23,6 @@ const projects: {
   link: string;
   image: string;
   icons: ReactNode[];
-  delay: any;
 }[] = [
   {
     name: "Discord [Moon] Bot",
@@ -46,7 +36,6 @@ const projects: {
       <SiLinux key="third" />,
       <VscRemoteExplorer key="fourth" />,
     ],
-    delay: 0.7,
   },
   {
     name: "Personal Portfolio Website",
@@ -62,21 +51,19 @@ const projects: {
       <SiGithubactions key="fifth" />,
       <MdAnimation key="sixth" />,
     ],
-    delay: 1,
   },
 
   {
     name: "Private Minecraft Server",
     description:
       "Hosted and managed a Private Minecraft Server on Azure and Remote SSH Terminal.",
-    link: "https://github.com/kmsungporant/kmsungporant.github.io",
+    link: "",
     image: "server.gif",
     icons: [
       <SiGooglecloud key="first" />,
       <SiLinux key="second" />,
       <SiJava key="third" />,
     ],
-    delay: 1.3,
   },
 ];
 
@@ -92,43 +79,54 @@ export default function Cards() {
             transition: {
               duration: 1,
               ease: "easeInOut",
-              delay: `${project.delay}`,
+              delay: i * 0.3,
             },
           }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col items-center m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-96 rounded-3xl">
+          <div className="flex flex-col items-center my-5 lg:m-5 text-dark-primary bg-dark-secondary dark:text-light-primary dark:bg-light-secondary w-96 rounded-3xl">
             <h1 className="mt-5 text-xl font-black underline">
               {project.name}
             </h1>
-            <div className="w-[90%] mt-5 ">
-              <img src={project.image} alt={project.name} />
-            </div>
+            <motion.div className="w-[90%] mt-5 " whileHover={{ scale: 1.3 }}>
+              <img
+                src={project.image}
+                alt={project.name}
+                className="border-2 rounded-2xl border-dark-tertiary dark:border-light-tertiary"
+              />
+            </motion.div>
 
             <h2 className="p-2 text-center text-dark-tertiary dark:text-light-tertiary">
               {project.description}
             </h2>
             <div className="grid grid-cols-3 ">
               {project.icons.map((icon, i) => (
-                <div
+                <motion.div
                   key={i}
-                  className="mx-1 text-3xl text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
+                  className="m-1 text-3xl text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
+                  whileHover={{ scale: 1.2 }}
                 >
                   {icon}
-                </div>
+                </motion.div>
               ))}
             </div>
-            <Link passHref href={project.link}>
-              <a
-                target="_blank"
-                className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-tertiary"
-              >
-                <span className="mr-2">View on</span>
-                <span className="text-2xl">
-                  <SiGithub />
-                </span>
-              </a>
-            </Link>
+
+            {project.link ? (
+              <Link passHref href={project.link}>
+                <motion.a
+                  target="_blank"
+                  className="flex flex-row items-center m-5 text-lg font-black text-dark-tertiary hover:text-dark-primary dark:text-light-tertiary hover:dark:text-light-primary"
+                  whileHover={{ scale: 1.2 }}
+                >
+                  <span className="mr-2">View on</span>
+                  <span className="text-2xl">
+                    <SiGithub />
+                  </span>
+                </motion.a>
+              </Link>
+            ) : (
+              <div className="m-5" />
+            )}
           </div>
         </motion.div>
       ))}

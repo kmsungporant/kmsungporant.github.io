@@ -1,25 +1,25 @@
-import {
-  SiNextdotjs,
-  SiCplusplus,
-  SiGithubactions,
-  SiSass,
-  SiMicrosoftazure,
-  SiGooglecloud,
-  SiMaterialui,
-  SiTailwindcss,
-  SiJava,
-  SiCss3,
-  SiLinux,
-  SiJavascript,
-  SiReact,
-  SiPython,
-  SiDocker,
-  SiHtml5,
-} from "react-icons/si";
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
 import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import {
+  SiCplusplus,
+  SiCss3,
+  SiDocker,
+  SiGithubactions,
+  SiGooglecloud,
+  SiHtml5,
+  SiJava,
+  SiJavascript,
+  SiLinux,
+  SiMaterialui,
+  SiMicrosoftazure,
+  SiNextdotjs,
+  SiPython,
+  SiReact,
+  SiSass,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const icons: { name: string; icon: ReactNode }[] = [
   { name: "NextJs", icon: <SiNextdotjs /> },
@@ -44,28 +44,27 @@ const icons: { name: string; icon: ReactNode }[] = [
 export default function Icons() {
   return (
     <div className="flex flex-col items-center">
-      <motion.div
-        className="grid grid-cols-12"
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "easeInOut",
-            delay: 1,
-          },
-        }}
-        viewport={{ once: true }}
-      >
+      <div className="grid grid-cols-5 lg:grid-cols-12">
         {icons.map((icon, i) => (
-          <div
+          <motion.div
             key={i}
-            className="m-4 text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary "
+            className="m-4 text-3xl lg:text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeInOut",
+                delay: i * 0.1,
+              },
+            }}
+            whileHover={{ scale: 1.2 }}
+            viewport={{ once: true }}
           >
             {icon.icon}
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

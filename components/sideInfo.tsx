@@ -19,13 +19,16 @@ const fromLeft = {
 export default function SideInfo() {
   return (
     <motion.div
-      className="fixed -right-10 bottom-20"
+      className="fixed hidden -right-10 bottom-20 md:block"
       variants={fromLeft}
       initial="initial"
       animate="animate"
       viewport={{ once: true }}
     >
-      <Link href="https://github.com/kmsungporant/minsung-web" passHref>
+      <Link
+        href="https://github.com/kmsungporant/kmsungporant.github.io"
+        passHref
+      >
         <a target="_blank">
           <h1 className="-rotate-90 text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75">
             {"</> by Minsung Kim"}

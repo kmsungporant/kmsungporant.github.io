@@ -1,6 +1,7 @@
+import { motion, MotionConfig } from "framer-motion";
+import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { useTheme } from "next-themes";
 
 type Props = {
   menuIsOpen: boolean;
@@ -32,10 +33,10 @@ export default function ThemeToggle({ menuIsOpen }) {
           : " text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75"
       }
     >
-      <div>
-        <FaSun className="hidden dark:block" />
-        <FaMoon className="block dark:hidden" />
-      </div>
+      <motion.div whileHover={{ scale: 1.1 }}>
+        <FaSun className="hidden mx-2 dark:block" />
+        <FaMoon className="block mx-2 dark:hidden" />
+      </motion.div>
     </button>
   );
 }

@@ -1,12 +1,12 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillMail,
-  AiFillFacebook,
-} from "react-icons/ai";
+import Link from "next/link";
 import { ReactNode } from "react";
+import {
+  AiFillFacebook,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillMail,
+} from "react-icons/ai";
 
 type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
@@ -31,7 +31,6 @@ export default function HeaderOptions({ setMenuIsOpen }) {
     { name: "Home", link: "#hero" },
     { name: "About", link: "#about" },
     { name: "Portfolio", link: "#portfolio" },
-    { name: "Timeline", link: "#timeline" },
     { name: "Contacts", link: "#contacts" },
   ];
 
@@ -39,7 +38,16 @@ export default function HeaderOptions({ setMenuIsOpen }) {
     <div className="h-full text-5xl font-black ">
       <ul className="flex flex-col items-center justify-center h-full leading-snug text-light-secondary dark:text-dark-secondary ">
         {categories.map((name, i) => (
-          <div key={i}>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.5, ease: "easeInOut", delay: i * 0.15 },
+            }}
+            whileHover={{ scale: 1.1 }}
+          >
             <Link href={name.link} passHref>
               <li
                 className="cursor-pointer hover:dark:text-dark-secondary/75 hover:text-light-secondary/75"
@@ -48,18 +56,29 @@ export default function HeaderOptions({ setMenuIsOpen }) {
                 {name.name}
               </li>
             </Link>
-          </div>
+          </motion.div>
         ))}
 
         <div className="flex flex-row mt-4 space-x-4 ">
           {icons.map((icon, i) => (
-            <Link href={icon.link} key={i}>
-              <a
+            <Link href={icon.link} key={i} passHref>
+              <motion.a
                 target="_blank"
                 className="cursor-pointer hover:dark:text-dark-secondary/75 hover:text-light-secondary/75 "
+                initial={{ opacity: 0, y: 100 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: "easeInOut",
+                    delay: i * 0.15,
+                  },
+                }}
+                whileHover={{ scale: 1.1 }}
               >
                 <motion.div>{icon.icon}</motion.div>
-              </a>
+              </motion.a>
             </Link>
           ))}
         </div>
