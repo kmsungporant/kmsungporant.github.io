@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Categories from "./categories";
 import MenuIcon from "./menuIcon";
 import ThemeToggle from "./themetoggle";
 
@@ -41,7 +42,8 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center justify-end h-full text-4xl">
+            <div className="flex items-center justify-end h-full gap-3 text-4xl">
+              <Categories menuIsOpen={menuIsOpen} />
               <ThemeToggle menuIsOpen={menuIsOpen} />
               <MenuIcon menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
             </div>

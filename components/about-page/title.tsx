@@ -17,7 +17,7 @@ const Bar = {
 
 export default function Title() {
   return (
-    <div className="hidden w-1/2 h-full lg:block">
+    <div className="hidden w-1/2 h-full xl:block">
       <div className="flex flex-col justify-center h-full">
         <div className="flex flex-col justify-center w-full h-40 ">
           <motion.h1

@@ -34,8 +34,8 @@ export default function ThemeToggle({ menuIsOpen }) {
       }
     >
       <motion.div whileHover={{ scale: 1.1 }}>
-        <FaSun className="hidden mx-2 dark:block" />
-        <FaMoon className="block mx-2 dark:hidden" />
+        <FaSun className="hidden dark:block" />
+        <FaMoon className="block dark:hidden" />
       </motion.div>
     </button>
   );

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ImageLogo() {
   return (
-    <div className="hidden lg:block">
+    <div className="hidden xl:block">
       <div className="flex flex-col items-end w-1/2 mx-24 ">
         <motion.div
           className=""

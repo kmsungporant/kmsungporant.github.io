@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function SmallTitle() {
   return (
     <div className="h-full">
-      <div className="block h-full lg:hidden">
+      <div className="block h-full xl:hidden">
         <div className="flex flex-col items-center justify-center h-full font-black ">
           <motion.p
             initial={{ opacity: 0 }}
