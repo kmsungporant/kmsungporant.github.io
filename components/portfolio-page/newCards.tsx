@@ -28,7 +28,7 @@ export default function NewCards({ projects }) {
                     Featured Projects
                   </h1>
                   <h2 className="mb-4 text-3xl font-black ">{project.name}</h2>
-                  <p className="p-8 my-4 text-lg opacity-60 bg-dark-secondary dark:bg-light-secondary rounded-2xl text-dark-tertiary dark:text-light-tertiary">
+                  <p className="p-8 my-4 text-lg opacity-80 bg-dark-secondary dark:bg-light-secondary rounded-2xl text-dark-tertiary dark:text-light-tertiary">
                     <span className="font-semibold opacity-100">
                       {project.description}
                     </span>
@@ -87,7 +87,7 @@ export default function NewCards({ projects }) {
                     Featured Projects
                   </h1>
                   <h2 className="mb-4 text-3xl font-black ">{project.name}</h2>
-                  <p className="p-8 my-4 text-lg rounded-2xl opacity-60 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
+                  <p className="p-8 my-4 text-lg rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
                     <span className="font-semibold opacity-100">
                       {project.description}
                     </span>
