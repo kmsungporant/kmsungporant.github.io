@@ -93,7 +93,7 @@ export default function NewCards() {
                     Featured Projects
                   </h1>
                   <h2 className="mb-4 text-3xl font-black ">{project.name}</h2>
-                  <p className="p-8 my-4 text-lg bg-dark-secondary dark:bg-light-secondary rounded-2xl text-dark-tertiary dark:text-light-tertiary">
+                  <p className="p-8 my-4 text-lg opacity-80 bg-dark-secondary dark:bg-light-secondary rounded-2xl text-dark-tertiary dark:text-light-tertiary">
                     {project.description}
                   </p>
                   <div className="flex justify-end my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">
@@ -146,7 +146,7 @@ export default function NewCards() {
                     Featured Projects
                   </h1>
                   <h2 className="mb-4 text-3xl font-black ">{project.name}</h2>
-                  <p className="p-8 my-4 text-lg rounded-2xl bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
+                  <p className="p-8 my-4 text-lg rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
                     {project.description}
                   </p>
                   <div className="flex justify-start my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">
