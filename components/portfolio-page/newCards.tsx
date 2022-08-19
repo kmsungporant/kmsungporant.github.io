@@ -1,77 +1,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ReactNode } from "react";
-import { MdAnimation } from "react-icons/md";
-import {
-  SiGithub,
-  SiGithubactions,
-  SiGooglecloud,
-  SiJava,
-  SiLinux,
-  SiMicrosoftazure,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-} from "react-icons/si";
-import { VscRemoteExplorer } from "react-icons/vsc";
+import { SiGithub } from "react-icons/si";
 
-const projects: {
-  name: string;
-  description: string;
-  link: string;
-  image: string;
-  direction: string;
-  icons: ReactNode[];
-}[] = [
-  {
-    name: "Personal Portfolio Website",
-    description:
-      "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
-    link: "https://github.com/kmsungporant/kmsungporant.github.io",
-    image: "websiteVid.gif",
-    direction: "right",
-    icons: [
-      <SiNextdotjs key="first" />,
-      <SiReact key="second" />,
-      <SiNodedotjs key="third" />,
-      <SiTailwindcss key="fourth" />,
-      <SiGithubactions key="fifth" />,
-      <MdAnimation key="sixth" />,
-    ],
-  },
-  {
-    name: "Discord [Moon] Bot",
-    description:
-      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features for the server: music player for YouTube, mini games, shortcut commands and more!",
-    link: "https://github.com/kmsungporant/Moon-Bot",
-    image: "discord.gif",
-    direction: "left",
-    icons: [
-      <SiPython key="first" />,
-      <SiMicrosoftazure key="second" />,
-      <SiLinux key="third" />,
-      <VscRemoteExplorer key="fourth" />,
-    ],
-  },
-
-  {
-    name: "Private Minecraft Server",
-    description:
-      "Hosted and managed a Private Minecraft Server on Azure and Remote SSH Terminal.",
-    link: "",
-    image: "server.gif",
-    direction: "right",
-    icons: [
-      <SiGooglecloud key="first" />,
-      <SiLinux key="second" />,
-      <SiJava key="third" />,
-    ],
-  },
-];
-
-export default function NewCards() {
+export default function NewCards({ projects }) {
   return (
     <div className="flex flex-col items-center justify-center h-full gap-y-52">
       {projects.map((project, i) => (
@@ -89,12 +20,18 @@ export default function NewCards() {
                 className="absolute right-0 w-[55%] h-full text-right text-dark-primary dark:text-light-primary"
               >
                 <div className="flex flex-col justify-center h-full">
+                  <span className="flex justify-end mb-5 text-2xl font-black ">
+                    {i + 1}
+                    {")"}
+                  </span>
                   <h1 className="text-dark-secondary dark:text-light-secondary">
                     Featured Projects
                   </h1>
                   <h2 className="mb-4 text-3xl font-black ">{project.name}</h2>
-                  <p className="p-8 my-4 text-lg opacity-80 bg-dark-secondary dark:bg-light-secondary rounded-2xl text-dark-tertiary dark:text-light-tertiary">
-                    {project.description}
+                  <p className="p-8 my-4 text-lg opacity-60 bg-dark-secondary dark:bg-light-secondary rounded-2xl text-dark-tertiary dark:text-light-tertiary">
+                    <span className="font-semibold opacity-100">
+                      {project.description}
+                    </span>
                   </p>
                   <div className="flex justify-end my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">
                     {project.icons}
@@ -142,12 +79,18 @@ export default function NewCards() {
                 className="absolute left-0 h-full text-left text-dark-primary dark:text-light-primary"
               >
                 <div className="flex flex-col w-[55%] justify-center h-full">
+                  <span className="flex justify-start mb-5 text-2xl font-black ">
+                    {i + 1}
+                    {")"}
+                  </span>
                   <h1 className="text-dark-secondary dark:text-light-secondary">
                     Featured Projects
                   </h1>
                   <h2 className="mb-4 text-3xl font-black ">{project.name}</h2>
-                  <p className="p-8 my-4 text-lg rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
-                    {project.description}
+                  <p className="p-8 my-4 text-lg rounded-2xl opacity-60 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
+                    <span className="font-semibold opacity-100">
+                      {project.description}
+                    </span>
                   </p>
                   <div className="flex justify-start my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">
                     {project.icons}
