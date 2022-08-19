@@ -31,7 +31,7 @@ export default function Menu({ menuIsOpen, setMenuIsOpen }) {
               borderEndStartRadius: "50%",
             }}
             transition={{ type: "spring", duration: 1, damping: 20 }}
-            className="fixed z-50 flex items-center justify-center w-full h-full overflow-hidden bg-dark-secondary dark:bg-light-secondary"
+            className="fixed z-50 flex items-center justify-center w-full h-full overflow-hidden bg-gray-800 dark:bg-light-tertiary"
           >
             <HeaderOptions setMenuIsOpen={setMenuIsOpen} />
           </motion.div>

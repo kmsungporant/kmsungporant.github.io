@@ -11,13 +11,7 @@ export default function MenuIcon({ menuIsOpen, setMenuIsOpen }) {
   };
   return (
     <div className="flex items-center justify-center h-full">
-      <div
-        className={
-          menuIsOpen
-            ? " text-light-secondary dark:text-dark-secondary hover:text-light-secondary/75 hover:dark:text-dark-secondary/75"
-            : " text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75"
-        }
-      >
+      <div className="text-dark-secondary hover:text-dark-secondary/70 dark:text-light-secondary dark:hover:text-light-secondary/70 ">
         <motion.button onClick={handleMenuChange} whileHover={{ scale: 1.1 }}>
           {menuIsOpen ? <CgClose /> : <CgMenuRight />}
         </motion.button>

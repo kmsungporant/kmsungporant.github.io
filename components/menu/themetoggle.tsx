@@ -27,11 +27,7 @@ export default function ThemeToggle({ menuIsOpen }) {
             : "dark"
         )
       }
-      className={
-        menuIsOpen
-          ? " text-light-secondary dark:text-dark-secondary hover:text-light-secondary/75 hover:dark:text-dark-secondary/75"
-          : " text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75"
-      }
+      className="text-dark-secondary hover:text-dark-secondary/70 dark:text-light-secondary dark:hover:text-light-secondary/70"
     >
       <motion.div whileHover={{ scale: 1.1 }}>
         <FaSun className="hidden dark:block" />

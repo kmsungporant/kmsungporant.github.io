@@ -5,10 +5,10 @@ export default function Timeline() {
   return (
     <div
       id="timeline"
-      className="flex flex-col items-center justify-center h-full bg-gray-800 dark:bg-light-background font-Consolas"
+      className="flex flex-col items-center justify-center h-full bg-gray-900 dark:bg-light-background font-Consolas"
     >
       <motion.h1
-        className="text-2xl text-dark-tertiary dark:text-light-tertiary"
+        className="text-4xl font-black text-dark-tertiary dark:text-light-tertiary"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -20,25 +20,9 @@ export default function Timeline() {
         }}
         viewport={{ once: true }}
       >
-        {"<Timeline>"}
+        {"<Timeline />"}
       </motion.h1>
-
       <Cards />
-      <motion.h1
-        className="text-2xl text-dark-tertiary dark:text-light-tertiary"
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "easeInOut",
-            delay: 0.2,
-          },
-        }}
-        viewport={{ once: true }}
-      >
-        {"</Timeline>"}
-      </motion.h1>
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <div
       id="about"
-      className="flex flex-col items-center justify-center h-full bg-gray-800 dark:bg-light-background md:flex-row font-Consolas"
+      className="flex flex-col items-center justify-center h-full bg-gray-900 dark:bg-light-background md:flex-row font-Consolas"
     >
       <ImageLogo />
       <Title />

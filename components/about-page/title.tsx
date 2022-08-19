@@ -20,21 +20,6 @@ export default function Title() {
     <div className="hidden w-1/2 h-full xl:block">
       <div className="flex flex-col justify-center h-full">
         <div className="flex flex-col justify-center w-full h-40 ">
-          <motion.h1
-            className="text-2xl text-dark-tertiary dark:text-light-tertiary"
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-                ease: "easeInOut",
-                delay: 0.1,
-              },
-            }}
-            viewport={{ once: true }}
-          >
-            {"<AboutMe>"}
-          </motion.h1>
           <div className="flex flex-col items-start font-black">
             <motion.span
               initial={{ opacity: 0 }}

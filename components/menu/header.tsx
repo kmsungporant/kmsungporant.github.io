@@ -18,8 +18,8 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
       <div
         className={
           menuIsOpen
-            ? "bg-dark-secondary dark:bg-light-secondary h-full"
-            : "bg-gray-800 dark:bg-light-background h-full"
+            ? "bg-gray-800 dark:bg-light-tertiary h-full"
+            : "bg-gray-900 dark:bg-light-background h-full"
         }
       >
         <div className="flex justify-center h-full ">
@@ -27,14 +27,10 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
             <div className="flex justify-start ">
               <div className="text-4xl font-black">
                 <Link href={"/"} passHref>
-                  <div className="fixed flex justify-start p-5 overflow-hidden cursor-pointer -skew-x-2 text-dark-secondary dark:text-light-secondary">
+                  <div className="fixed flex justify-start p-5 overflow-hidden cursor-pointer -skew-x-2 ">
                     <motion.span
                       whileHover={{ scale: 1.1, rotate: 1 }}
-                      className={
-                        menuIsOpen
-                          ? " text-light-secondary dark:text-dark-secondary hover:text-light-secondary/75 hover:dark:text-dark-secondary/75"
-                          : " text-dark-secondary dark:text-light-secondary hover:text-dark-secondary/75 hover:dark:text-light-secondary/75"
-                      }
+                      className=" text-dark-secondary hover:text-dark-secondary/70 dark:text-light-secondary dark:hover:text-light-secondary/70"
                     >
                       Minsung
                     </motion.span>

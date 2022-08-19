@@ -34,7 +34,7 @@ export default function SmallTitle() {
                   }}
                   viewport={{ once: true }}
                   className="bg-dark-secondary dark:bg-light-secondary h-[7%]"
-                ></motion.div>
+                />
               </div>
             </div>
           </motion.p>
@@ -65,7 +65,7 @@ export default function SmallTitle() {
                 }}
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: true }}
-                className="px-4 py-2 mt-5 font-bold text-black bg-white rounded-full dark:text-white dark:bg-black hover:bg-WitchingHourLight hover:dark:hover:bg-NavyBlueLight"
+                className="px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary"
               >
                 My Résumé
               </motion.button>

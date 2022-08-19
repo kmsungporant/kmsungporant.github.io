@@ -37,7 +37,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
 
   return (
     <div className="h-full text-5xl font-black ">
-      <ul className="flex flex-col items-center justify-center h-full leading-snug text-light-secondary dark:text-dark-secondary ">
+      <ul className="flex flex-col items-center justify-center h-full leading-snug text-light-tertiary dark:text-dark-tertiary ">
         {categories.map((name, i) => (
           <motion.div
             key={i}
@@ -51,7 +51,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
           >
             <Link href={name.link} passHref>
               <li
-                className="cursor-pointer hover:dark:text-dark-secondary/75 hover:text-light-secondary/75"
+                className="cursor-pointer hover:dark:text-dark-tertiary/75 hover:text-light-tertiary/75"
                 onClick={() => handleClick()}
               >
                 {name.name}
@@ -65,7 +65,7 @@ export default function HeaderOptions({ setMenuIsOpen }) {
             <Link href={icon.link} key={i} passHref>
               <motion.a
                 target="_blank"
-                className="cursor-pointer hover:dark:text-dark-secondary/75 hover:text-light-secondary/75 "
+                className="cursor-pointer hover:dark:text-dark-tertiary/75 hover:text-light-tertiary/75 "
                 initial={{ opacity: 0, y: 100 }}
                 animate={{
                   opacity: 1,

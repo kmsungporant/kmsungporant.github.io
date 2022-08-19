@@ -42,7 +42,7 @@ export default function Contacts() {
   ];
 
   return (
-    <div id="contacts" className="h-full bg-gray-800 dark:bg-light-background ">
+    <div id="contacts" className="h-full bg-gray-900 dark:bg-light-background ">
       <div className="flex items-center justify-center h-[95%] space-x-5  ">
         <div className="flex justify-center w-[3%]">
           <div className="flex justify-end w-[20%] space-x-5">
@@ -73,21 +73,6 @@ export default function Contacts() {
           className="flex w-2 h-60 lg:h-80 bg-dark-secondary dark:bg-light-secondary"
         />
         <div>
-          <motion.h1
-            className="text-2xl text-dark-tertiary dark:text-light-tertiary"
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 1,
-                ease: "easeInOut",
-                delay: 0.2,
-              },
-            }}
-            viewport={{ once: true }}
-          >
-            {"<Contacts>"}
-          </motion.h1>
           <motion.div
             initial={{ opacity: 0, transform: "translateX(10px)" }}
             whileInView={{
@@ -118,21 +103,6 @@ export default function Contacts() {
               </motion.div>
             ))}
           </motion.div>
-          <motion.h1
-            className="text-2xl text-dark-tertiary dark:text-light-tertiary"
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 1,
-                ease: "easeInOut",
-                delay: 0.2,
-              },
-            }}
-            viewport={{ once: true }}
-          >
-            {"</Contacts>"}
-          </motion.h1>
         </div>
       </div>
     </div>
