@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 import Categories from "./categories";
 import MenuIcon from "./menuIcon";
 import ThemeToggle from "./themetoggle";
@@ -9,7 +10,12 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-export default function Header({ menuIsOpen, setMenuIsOpen }) {
+export default function Header({
+  menuIsOpen,
+  setMenuIsOpen,
+  selected,
+  setSelected,
+}) {
   const toggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);
   };
@@ -31,6 +37,9 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
                     <motion.span
                       whileHover={{ scale: 1.1, rotate: 1 }}
                       className=" text-dark-secondary hover:text-dark-secondary/70 dark:text-light-secondary dark:hover:text-light-secondary/70"
+                      onClick={() => {
+                        setSelected(0);
+                      }}
                     >
                       Minsung
                     </motion.span>
@@ -39,7 +48,7 @@ export default function Header({ menuIsOpen, setMenuIsOpen }) {
               </div>
             </div>
             <div className="flex items-center justify-end h-full gap-3 text-4xl">
-              <Categories menuIsOpen={menuIsOpen} />
+              <Categories selected={selected} setSelected={setSelected} />
               <ThemeToggle menuIsOpen={menuIsOpen} />
               <MenuIcon menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
             </div>

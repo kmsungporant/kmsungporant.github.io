@@ -1,12 +1,17 @@
 import { AnimatePresence, motion } from "framer-motion";
-import HeaderOptions from "./menu/menuOptions";
+import MenuOptions from "./menu/menuOptions";
 
 type Props = {
   menuIsOpen: boolean;
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-export default function Menu({ menuIsOpen, setMenuIsOpen }) {
+export default function Menu({
+  menuIsOpen,
+  setMenuIsOpen,
+  selected,
+  setSelected,
+}) {
   return (
     <AnimatePresence>
       <div className="">
@@ -33,7 +38,11 @@ export default function Menu({ menuIsOpen, setMenuIsOpen }) {
             transition={{ type: "spring", duration: 1, damping: 20 }}
             className="fixed z-50 flex items-center justify-center w-full h-full overflow-hidden bg-gray-800 dark:bg-light-tertiary"
           >
-            <HeaderOptions setMenuIsOpen={setMenuIsOpen} />
+            <MenuOptions
+              setMenuIsOpen={setMenuIsOpen}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </motion.div>
         )}
       </div>

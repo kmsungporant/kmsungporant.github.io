@@ -12,11 +12,7 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-export default function HeaderOptions({ setMenuIsOpen }) {
-  let handleClick = () => {
-    setMenuIsOpen(false);
-  };
-
+export default function MenuOptions({ setMenuIsOpen, selected, setSelected }) {
   const icons: { link: string; icon: ReactNode }[] = [
     { link: "https://github.com/kmsungporant/", icon: <AiFillGithub /> },
     {
@@ -52,7 +48,10 @@ export default function HeaderOptions({ setMenuIsOpen }) {
             <Link href={name.link} passHref>
               <li
                 className="cursor-pointer hover:dark:text-dark-tertiary/75 hover:text-light-tertiary/75"
-                onClick={() => handleClick()}
+                onClick={() => {
+                  setMenuIsOpen(false);
+                  setSelected(i);
+                }}
               >
                 {name.name}
               </li>

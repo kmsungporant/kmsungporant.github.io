@@ -1,6 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "../components/menu";
 import Header from "../components/menu/header";
 import SideInfo from "../components/sideInfo";
@@ -8,6 +8,7 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [selected, setSelected] = useState(0);
 
   return (
     <ThemeProvider enableSystem={true} attribute="class">
@@ -20,8 +21,18 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/logo.png" />
       </Head>
       <SideInfo />
-      <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-      <Header menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+      <Menu
+        menuIsOpen={menuIsOpen}
+        setMenuIsOpen={setMenuIsOpen}
+        selected={selected}
+        setSelected={setSelected}
+      />
+      <Header
+        menuIsOpen={menuIsOpen}
+        setMenuIsOpen={setMenuIsOpen}
+        selected={selected}
+        setSelected={setSelected}
+      />
       <Component {...pageProps} />
     </ThemeProvider>
   );

@@ -1,18 +1,16 @@
 import { AnimateSharedLayout, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const categories: { name: string; link: string; color: string }[] = [
-  { name: "Home", link: "#hero", color: "#f5f5f5" },
-  { name: "About", link: "#about", color: "#f5f5f5" },
-  { name: "Portfolio", link: "#portfolio", color: "#f5f5f5" },
-  { name: "Timeline", link: "#timeline", color: "#f5f5f5" },
-  { name: "Contacts", link: "#contacts", color: "#f5f5f5" },
+const categories: { name: string; link: string }[] = [
+  { name: "Home", link: "#hero" },
+  { name: "About", link: "#about" },
+  { name: "Portfolio", link: "#portfolio" },
+  { name: "Timeline", link: "#timeline" },
+  { name: "Contacts", link: "#contacts" },
 ];
 
-export default function Categories({ menuIsOpen }) {
-  const [selected, setSelected] = useState(0);
-
+export default function Categories({ selected, setSelected }) {
   return (
     <AnimateSharedLayout>
       <div className="hidden lg:block">
@@ -28,13 +26,14 @@ export default function Categories({ menuIsOpen }) {
                   "font-3xl text-dark-primary dark:text-light-primary"
                 }`}
                 onClick={() => setSelected(i)}
-                animate
               >
                 <Link href={categories.link}>{categories.name}</Link>
                 {i === selected && (
                   <motion.div
                     className="w-full h-1 rounded-lg bg-dark-primary dark:bg-light-primary"
                     layoutId="underline"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                   />
                 )}
               </motion.button>
