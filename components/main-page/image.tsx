@@ -31,7 +31,7 @@ export default function ImageLogo() {
         className="block dark:hidden"
         whileHover={{ scale: 1.1, rotate: 3 }}
       >
-        <img src="/logo.png" alt="logo" width={500} height={500} />
+        <img src="logo/logo.png" alt="logo" width={500} height={500} />
       </motion.div>
       <motion.div
         className="hidden dark:block"

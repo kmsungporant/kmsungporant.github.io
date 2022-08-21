@@ -32,7 +32,7 @@ const projects: {
     description:
       "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
     link: "https://github.com/kmsungporant/kmsungporant.github.io",
-    image: "websiteVid.gif",
+    image: "portfolio/websiteVid.gif",
     direction: "right",
     icons: [
       <SiNextdotjs key="first" />,
@@ -48,7 +48,7 @@ const projects: {
     description:
       "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features for the server: music player for YouTube, mini games, shortcut commands and more!",
     link: "https://github.com/kmsungporant/Moon-Bot",
-    image: "discord.gif",
+    image: "portfolio/discord.gif",
     direction: "left",
     icons: [
       <SiPython key="first" />,

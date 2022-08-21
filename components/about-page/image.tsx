@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 
 export default function ImageLogo() {
@@ -21,7 +22,7 @@ export default function ImageLogo() {
             viewport={{ once: true }}
           >
             <img
-              src="/MinsungFace.jpg"
+              src="other/MinsungFace.jpg"
               alt="logo"
               width={500}
               height={500}
