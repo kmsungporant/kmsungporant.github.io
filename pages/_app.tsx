@@ -1,6 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Menu from "../components/menu";
 import Header from "../components/menu/header";
 import SideInfo from "../components/sideInfo";

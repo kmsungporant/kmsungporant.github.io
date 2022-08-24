@@ -12,7 +12,7 @@ import {
   SiNodedotjs,
   SiPython,
   SiReact,
-  SiTailwindcss,
+  SiTailwindcss
 } from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
 import Cards from "./portfolio-page/cards";
@@ -27,37 +27,37 @@ const projects: {
   direction: string;
   icons: ReactNode[];
 }[] = [
-  {
-    name: "Personal Portfolio Website",
-    description:
-      "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
-    link: "https://github.com/kmsungporant/kmsungporant.github.io",
-    image: "portfolio/websiteVid.gif",
-    direction: "right",
-    icons: [
-      <SiNextdotjs key="first" />,
-      <SiReact key="second" />,
-      <SiNodedotjs key="third" />,
-      <SiTailwindcss key="fourth" />,
-      <SiGithubactions key="fifth" />,
-      <MdAnimation key="sixth" />,
-    ],
-  },
-  {
-    name: "Discord [Moon] Bot",
-    description:
-      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features for the server: music player for YouTube, mini games, shortcut commands and more!",
-    link: "https://github.com/kmsungporant/Moon-Bot",
-    image: "portfolio/discord.gif",
-    direction: "left",
-    icons: [
-      <SiPython key="first" />,
-      <SiMicrosoftazure key="second" />,
-      <SiLinux key="third" />,
-      <VscRemoteExplorer key="fourth" />,
-    ],
-  },
-];
+    {
+      name: "Personal Portfolio Website",
+      description:
+        "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
+      link: "https://github.com/kmsungporant/kmsungporant.github.io",
+      image: "portfolio/websiteVid.gif",
+      direction: "right",
+      icons: [
+        <SiNextdotjs key="first" />,
+        <SiReact key="second" />,
+        <SiNodedotjs key="third" />,
+        <SiTailwindcss key="fourth" />,
+        <SiGithubactions key="fifth" />,
+        <MdAnimation key="sixth" />,
+      ],
+    },
+    {
+      name: "Discord [Moon] Bot",
+      description:
+        "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features for the server: music player for YouTube, mini games, shortcut commands and more!",
+      link: "https://github.com/kmsungporant/Moon-Bot",
+      image: "portfolio/discord.gif",
+      direction: "left",
+      icons: [
+        <SiPython key="first" />,
+        <SiMicrosoftazure key="second" />,
+        <SiLinux key="third" />,
+        <VscRemoteExplorer key="fourth" />,
+      ],
+    },
+  ];
 
 export default function PorfolioPage() {
   return (
@@ -80,10 +80,10 @@ export default function PorfolioPage() {
       >
         {"<Portfolio />"}
       </motion.h1>
-      <div className="hidden 2xl:block">
+      <div className="hidden xl:block">
         <NewCards projects={projects} />
       </div>
-      <div className="block 2xl:hidden">
+      <div className="block xl:hidden">
         <Cards projects={projects} />
       </div>
       <Icons />
