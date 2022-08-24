@@ -12,10 +12,8 @@ export default function Home() {
       <AboutPage />
       <PorfolioPage />
       <Timeline />
-      <div className="relative h-full">
-        <Contacts />
-        <Footer />
-      </div>
+      <Contacts />
+      <Footer />
     </div>
   );
 }
