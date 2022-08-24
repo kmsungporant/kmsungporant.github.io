@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 
 const animatedImage = {
@@ -37,7 +38,7 @@ export default function ImageLogo() {
         className="hidden dark:block"
         whileHover={{ scale: 1.1, rotate: 3 }}
       >
-        <img src="/logoLight.png" alt="logo" width={500} height={500} />
+        <img src="logo/logoLight.png" alt="logo" width={500} height={500} />
       </motion.div>
     </motion.div>
   );
