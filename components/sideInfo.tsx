@@ -19,7 +19,7 @@ const fromLeft = {
 export default function SideInfo() {
   return (
     <motion.div
-      className="fixed hidden -right-10 bottom-20 md:block"
+      className="fixed z-50 hidden -right-10 bottom-20 md:block"
       variants={fromLeft}
       initial="initial"
       animate="animate"
