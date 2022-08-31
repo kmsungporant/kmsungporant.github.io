@@ -83,7 +83,7 @@ export default function Title() {
           viewport={{ once: true }}
           className="w-32 px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
         >
-          <Link href="/resume.pdf" passHref>
+          <Link href="documentation/resume.pdf" passHref>
             <a target="_blank">My Resume</a>
           </Link>
         </motion.button>
