@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { FaNode } from "react-icons/fa";
 import { MdAnimation } from "react-icons/md";
 import {
@@ -18,7 +18,7 @@ import {
   SiPython,
   SiReact,
   SiSass,
-  SiTailwindcss,
+  SiTailwindcss
 } from "react-icons/si";
 
 const icons: { name: string; icon: ReactNode }[] = [
@@ -41,14 +41,27 @@ const icons: { name: string; icon: ReactNode }[] = [
   { name: "TailwindCSS", icon: <SiTailwindcss /> },
   { name: "Framer-Motion", icon: <MdAnimation /> },
 ];
+
+
 export default function Icons() {
   return (
     <div className="flex flex-col items-center">
+      <motion.h1 className="p-5 text-xl font-black underline 2xl:text-3xl text-dark-secondary dark:text-light-secondary"
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+            ease: "easeIn",
+          },
+        }}
+        viewport={{ once: true }}
+      >Technical Skills</motion.h1>
       <div className="grid grid-cols-5 place-self-center lg:grid-cols-12">
         {icons.map((icon, i) => (
           <motion.div
             key={i}
-            className="m-4 text-3xl lg:text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary"
+            className="m-4 text-3xl 2xl:text-5xl text-dark-secondary hover:text-dark-primary dark:text-light-secondary hover:dark:text-light-primary"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,

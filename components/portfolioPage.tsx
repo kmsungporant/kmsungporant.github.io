@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import { ReactNode, useEffect, useState } from "react";
 import { MdAnimation } from "react-icons/md";
 import {
   SiGithub,
@@ -17,6 +18,7 @@ import {
 import { VscRemoteExplorer } from "react-icons/vsc";
 import Cards from "./portfolio-page/cards";
 import Icons from "./portfolio-page/icons";
+import Nav from "./portfolio-page/nav";
 import NewCards from "./portfolio-page/newCards";
 
 const projects: {
@@ -24,7 +26,6 @@ const projects: {
   description: string;
   link: string;
   image: string;
-  direction: string;
   icons: ReactNode[];
 }[] = [
     {
@@ -33,7 +34,6 @@ const projects: {
         "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
       link: "https://github.com/kmsungporant/kmsungporant.github.io",
       image: "portfolio/websiteVid.gif",
-      direction: "right",
       icons: [
         <SiNextdotjs key="first" />,
         <SiReact key="second" />,
@@ -49,7 +49,6 @@ const projects: {
         "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features for the server: music player for YouTube, mini games, shortcut commands and more!",
       link: "https://github.com/kmsungporant/Moon-Bot",
       image: "portfolio/discord.gif",
-      direction: "left",
       icons: [
         <SiPython key="first" />,
         <SiMicrosoftazure key="second" />,
@@ -60,13 +59,29 @@ const projects: {
   ];
 
 export default function PorfolioPage() {
+  const [selected, setSelected] = useState(0);
+  const [iValue, setIValue] = useState(0);
+
+  useEffect(() => {
+    if (selected != projects.length) {
+      const timer = setInterval(() => {
+        setSelected(selected + 1);
+      }, 7500);
+      return () => clearInterval(timer);
+    } else {
+      setSelected(0)
+    }
+
+  }, [selected])
+
+
   return (
     <div
       id="portfolio"
-      className="flex flex-col items-center justify-center bg-gray-900 gap-y-5 dark:bg-light-background font-Consolas"
+      className="flex flex-col items-center justify-center bg-gray-900 dark:bg-light-background font-Consolas "
     >
       <motion.h1
-        className="text-4xl font-black text-dark-tertiary dark:text-light-tertiary"
+        className="pt-40 text-4xl font-black text-dark-tertiary dark:text-light-tertiary"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -80,13 +95,16 @@ export default function PorfolioPage() {
       >
         {"<Portfolio />"}
       </motion.h1>
-      <div className="hidden xl:block">
-        <NewCards projects={projects} />
+      <div >
+        <div className="hidden lg:block">
+          <NewCards projects={projects} selected={selected} />
+        </div>
+        <div className="block lg:hidden">
+          <Cards projects={projects} />
+        </div>
+        <Nav projects={projects} selected={selected} setSelected={setSelected} />
+        <Icons />
       </div>
-      <div className="block xl:hidden">
-        <Cards projects={projects} />
-      </div>
-      <Icons />
     </div>
   );
 }

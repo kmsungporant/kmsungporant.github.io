@@ -70,7 +70,7 @@ export default function Title() {
             </span>
             , studying Computer Science at George Mason University. Most of the
             projects I&apos;ve worked on are self-taught and I&apos;m always
-            persist for new challenges to learn.
+            persistent for new challenges.
           </span>
         </motion.div>
         <motion.button
