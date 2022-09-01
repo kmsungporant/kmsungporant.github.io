@@ -56,6 +56,26 @@ const projects: {
         <VscRemoteExplorer key="fourth" />,
       ],
     },
+    {
+      name: "Video Uploader [In Progress]",
+      description:
+        "A private web application that lets only discord members to upload videos onto a database via Azure. A discord bot will then retrieve the videos weekly and upload the top 5 videos rated in the database and upload it to a discord channel.",
+      link: "https://github.com/kmsungporant/video_upload_web",
+      image: "portfolio/videoUploader.gif",
+      icons: [
+        <SiPython key="first" />,
+        <SiMicrosoftazure key="second" />,
+        <SiLinux key="third" />,
+        <VscRemoteExplorer key="fourth" />,
+        <SiNextdotjs key="first" />,
+        <SiReact key="second" />,
+        <SiNodedotjs key="third" />,
+        <SiTailwindcss key="fourth" />,
+        <SiGithubactions key="fifth" />,
+        <MdAnimation key="sixth" />,
+        <SiMicrosoftazure key="seventh" />,
+      ],
+    },
   ];
 
 export default function PorfolioPage() {
