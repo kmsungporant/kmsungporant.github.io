@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import { ReactNode, useEffect, useState } from "react";
-import { MdAnimation } from "react-icons/md";
 import {
-  SiGithub,
-  SiGithubactions,
-  SiGooglecloud,
-  SiJava,
+  SiFramer, SiGithubactions,
   SiLinux,
   SiMicrosoftazure,
   SiNextdotjs,
@@ -40,7 +36,7 @@ const projects: {
         <SiNodedotjs key="third" />,
         <SiTailwindcss key="fourth" />,
         <SiGithubactions key="fifth" />,
-        <MdAnimation key="sixth" />,
+        <SiFramer key="sixth" />,
       ],
     },
     {
@@ -72,7 +68,7 @@ const projects: {
         <SiNodedotjs key="third" />,
         <SiTailwindcss key="fourth" />,
         <SiGithubactions key="fifth" />,
-        <MdAnimation key="sixth" />,
+        <SiFramer key="sixth" />,
         <SiMicrosoftazure key="seventh" />,
       ],
     },
@@ -80,8 +76,6 @@ const projects: {
 
 export default function PorfolioPage() {
   const [selected, setSelected] = useState(0);
-  const [iValue, setIValue] = useState(0);
-
   useEffect(() => {
     if (selected != projects.length) {
       const timer = setInterval(() => {

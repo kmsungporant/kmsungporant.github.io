@@ -1,8 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { createContext } from "react";
 import { SiGithub } from "react-icons/si";
-import Nav from "./nav";
 
 export default function NewCards({ projects, selected }) {
   return (

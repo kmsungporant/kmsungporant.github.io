@@ -1,6 +1,5 @@
 import { AnimateSharedLayout, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const categories: { name: string; link: string }[] = [
   { name: "Home", link: "#hero" },
@@ -21,10 +20,9 @@ export default function Categories({ selected, setSelected }) {
               className="text-dark-secondary hover:text-dark-secondary/70 dark:text-light-secondary dark:hover:text-light-secondary/70"
             >
               <motion.button
-                className={`relative ${
-                  i === selected &&
+                className={`relative ${i === selected &&
                   "font-3xl text-dark-primary dark:text-light-primary"
-                }`}
+                  }`}
                 onClick={() => setSelected(i)}
               >
                 <Link href={categories.link}>{categories.name}</Link>

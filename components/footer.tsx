@@ -1,4 +1,4 @@
-import { SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
+import { SiFramer, SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -9,8 +9,8 @@ export default function Footer() {
         </span>
         <span className="flex flex-row items-center space-x-2">
           <span className="">Powered by</span>
-          <SiNextdotjs />, <SiReact />,<span className="mr-2"> and</span>
-          <SiTailwindcss />
+          <SiNextdotjs />, <SiReact />, <SiTailwindcss /> <span className="mr-2"> and</span>
+          <SiFramer />
         </span>
       </div>
     </div>
