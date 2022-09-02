@@ -17,7 +17,8 @@ import {
   SiPython,
   SiReact,
   SiSass,
-  SiTailwindcss
+  SiTailwindcss,
+  SiTypescript
 } from "react-icons/si";
 
 const icons: { name: string; icon: ReactNode; link: string }[] = [
@@ -28,6 +29,7 @@ const icons: { name: string; icon: ReactNode; link: string }[] = [
   { name: "TailwindCSS", icon: <SiTailwindcss />, link: "https://tailwindcss.com/" },
   { name: "Node", icon: <FaNode />, link: "https://nodejs.org/en/" },
   { name: "GitHub Actions", icon: <SiGithubactions />, link: "https://github.com/features/actions" },
+  { name: "TypeScript", icon: <SiTypescript />, link: "https://www.typescriptlang.org/" },
   { name: "C++", icon: <SiCplusplus />, link: "https://cplusplus.com/" },
   { name: "Python", icon: <SiPython />, link: "https://www.python.org/" },
   { name: "Microsoft Azure", icon: <SiMicrosoftazure />, link: "https://azure.microsoft.com/en-us/" },

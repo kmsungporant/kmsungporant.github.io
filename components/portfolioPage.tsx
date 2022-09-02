@@ -9,7 +9,8 @@ import {
   SiNodedotjs,
   SiPython,
   SiReact,
-  SiTailwindcss
+  SiTailwindcss,
+  SiTypescript
 } from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
 import Cards from "./portfolio-page/cards";
@@ -37,6 +38,7 @@ const projects: {
         <SiTailwindcss key="fourth" />,
         <SiGithubactions key="fifth" />,
         <SiFramer key="sixth" />,
+        <SiTypescript key="seventh" />
       ],
     },
     {
@@ -67,9 +69,10 @@ const projects: {
         <SiReact key="second" />,
         <SiNodedotjs key="third" />,
         <SiTailwindcss key="fourth" />,
-        <SiGithubactions key="fifth" />,
         <SiFramer key="sixth" />,
         <SiMicrosoftazure key="seventh" />,
+        <SiTypescript key="eighth" />
+
       ],
     },
   ];
