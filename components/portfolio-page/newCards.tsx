@@ -4,7 +4,7 @@ import { SiGithub } from "react-icons/si";
 
 export default function NewCards({ projects, selected }) {
   return (
-    <div className="flex flex-col items-center justify-center h-[50em] ">
+    <div className="flex flex-col items-center justify-center h-[40em] ">
       {projects.map((project, i) => (
         <div key={i}>
           <AnimatePresence exitBeforeEnter>
