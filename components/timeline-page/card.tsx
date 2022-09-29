@@ -15,7 +15,7 @@ export default function Card({ project, i }) {
           delay: i * 0.2,
         },
       }}
-      className="lg:w-[50rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary dark:bg-light-secondary"
+      className="lg:w-[50rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary dark:bg-light-secondary drop-shadow-2xl"
       viewport={{ once: true }}
     >
       <div className="flex flex-col items-center p-3 sm:flex-row">

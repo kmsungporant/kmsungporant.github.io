@@ -16,7 +16,7 @@ export default function NewCards({ projects, selected }) {
                       <motion.img
                         src={project.image}
                         alt={project.name}
-                        className="w-full rounded-3xl "
+                        className="w-full rounded-3xl drop-shadow-2xl"
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{
                           opacity: 1,
@@ -56,7 +56,9 @@ export default function NewCards({ projects, selected }) {
                           <h1 className="text-dark-secondary dark:text-light-secondary">
                             Featured Projects
                           </h1>
-                          <h2 className="text-xl font-black 2xl:text-3xl">{project.name}</h2>
+                          <h2 className="text-xl font-black 2xl:text-3xl">
+                            {project.name}
+                          </h2>
                         </div>
                       </div>
                       <p className="p-8 my-4 2xl:text-lg text-md rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
@@ -89,9 +91,7 @@ export default function NewCards({ projects, selected }) {
             )}
           </AnimatePresence>
         </div>
-
       ))}
     </div>
-
   );
 }

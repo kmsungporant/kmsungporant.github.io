@@ -5,7 +5,7 @@ import {
   AiFillFacebook,
   AiFillGithub,
   AiFillLinkedin,
-  AiFillTwitterSquare
+  AiFillTwitterSquare,
 } from "react-icons/ai";
 
 export default function Contacts() {
@@ -15,31 +15,31 @@ export default function Contacts() {
     link: string;
     icon: ReactNode;
   }[] = [
-      {
-        name: "Github",
-        linkName: "github.com/kmsungporant",
-        link: "https://github.com/kmsungporant/",
-        icon: <AiFillGithub />,
-      },
-      {
-        name: "Linkedin",
-        linkName: "linkedin/kmsungporant",
-        link: "https://www.linkedin.com/in/kmsungporant/",
-        icon: <AiFillLinkedin />,
-      },
-      {
-        name: "Twitter",
-        linkName: "twitter/kmsjoseph",
-        link: "https://twitter.com/kmsjoseph/",
-        icon: <AiFillTwitterSquare />,
-      },
-      {
-        name: "Facebook",
-        linkName: "facebook/kmsungporant",
-        link: "https://www.facebook.com/kmsungporant/",
-        icon: <AiFillFacebook />,
-      },
-    ];
+    {
+      name: "Github",
+      linkName: "github.com/kmsungporant",
+      link: "https://github.com/kmsungporant/",
+      icon: <AiFillGithub />,
+    },
+    {
+      name: "Linkedin",
+      linkName: "linkedin/kmsungporant",
+      link: "https://www.linkedin.com/in/kmsungporant/",
+      icon: <AiFillLinkedin />,
+    },
+    {
+      name: "Twitter",
+      linkName: "twitter/kmsjoseph",
+      link: "https://twitter.com/kmsjoseph/",
+      icon: <AiFillTwitterSquare />,
+    },
+    {
+      name: "Facebook",
+      linkName: "facebook/kmsungporant",
+      link: "https://www.facebook.com/kmsungporant/",
+      icon: <AiFillFacebook />,
+    },
+  ];
 
   return (
     <div id="contacts" className="h-full bg-gray-900 dark:bg-light-background ">
@@ -92,7 +92,7 @@ export default function Contacts() {
                 <Link href={icon.link} passHref>
                   <a
                     target="_blank"
-                    className="flex flex-row items-center space-x-2 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary"
+                    className="flex flex-row items-center space-x-2 transition-colors duration-300 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary"
                   >
                     {icon.icon}
                     <a className="flex flex-col text-xl font-black lg:text-3xl">
