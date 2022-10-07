@@ -64,29 +64,26 @@ export default function Title() {
           viewport={{ once: true }}
         >
           <span className="text-2xl font-medium">
-            My name is{" "}
-            <span className="font-black underline text-dark-primary dark:text-light-primary ">
-              Minsung Kim
-            </span>
-            , studying Computer Science at George Mason University. Most of the
-            projects I&apos;ve worked on are self-taught and I&apos;m always
-            persistent for new challenges.
+            My name is <span className="font-black underline text-dark-primary dark:text-light-primary ">Minsung Kim</span>, studying Computer Science at George
+            Mason University. Most of the projects I&apos;ve worked on are self-taught and I&apos;m always persistent for new challenges.
           </span>
         </motion.div>
-        <motion.button
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: { duration: 0.5, delay: 0.35 },
-          }}
-          whileHover={{ scale: 1.1 }}
-          viewport={{ once: true }}
-          className="w-32 px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
-        >
-          <Link href="documentation/resume.pdf" passHref>
-            <a target="_blank">My Resume</a>
-          </Link>
-        </motion.button>
+        <Link href="documentation/resume.pdf" passHref>
+          <a target="_blank">
+            <motion.button
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 0.5, delay: 0.35 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              viewport={{ once: true }}
+              className="w-32 px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
+            >
+              My Resume
+            </motion.button>
+          </a>
+        </Link>
       </div>
     </div>
   );
