@@ -69,20 +69,18 @@ export default function Title() {
           </span>
         </motion.div>
         <Link href="documentation/resume.pdf" passHref>
-          <a target="_blank">
-            <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 0.5, delay: 0.35 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              viewport={{ once: true }}
-              className="w-32 px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
-            >
-              My Resume
-            </motion.button>
-          </a>
+          <motion.button
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 0.5, delay: 0.35 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            viewport={{ once: true }}
+            className="w-32 px-4 py-2 mt-5 font-bold rounded-full text-dark-secondary bg-dark-primary dark:bg-light-primary dark:text-light-tertiary "
+          >
+            <a target="_blank">My Resume</a>
+          </motion.button>
         </Link>
       </div>
     </div>
