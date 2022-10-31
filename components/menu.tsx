@@ -6,12 +6,7 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-export default function Menu({
-  menuIsOpen,
-  setMenuIsOpen,
-  selected,
-  setSelected,
-}) {
+export default function Menu({ menuIsOpen, setMenuIsOpen, selected, setSelected }) {
   return (
     <AnimatePresence>
       <div className="">
@@ -36,13 +31,9 @@ export default function Menu({
               borderEndStartRadius: "50%",
             }}
             transition={{ type: "spring", duration: 1, damping: 20 }}
-            className="fixed z-50 flex items-center justify-center w-full h-full overflow-hidden bg-gray-800 dark:bg-light-tertiary"
+            className="fixed z-50 flex items-center justify-center w-full h-full overflow-hidden transition-colors bg-gray-800 dark:bg-light-tertiary"
           >
-            <MenuOptions
-              setMenuIsOpen={setMenuIsOpen}
-              selected={selected}
-              setSelected={setSelected}
-            />
+            <MenuOptions setMenuIsOpen={setMenuIsOpen} selected={selected} setSelected={setSelected} />
           </motion.div>
         )}
       </div>

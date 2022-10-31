@@ -10,23 +10,14 @@ type Props = {
   setMenuIsOpen: (menuIsOpen: boolean) => void;
 };
 
-export default function Header({
-  menuIsOpen,
-  setMenuIsOpen,
-  selected,
-  setSelected,
-}) {
+export default function Header({ menuIsOpen, setMenuIsOpen, selected, setSelected }) {
   const toggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);
   };
   return (
-    <div className="fixed z-50 w-full h-20 drop-shadow-2xl ">
+    <div className="fixed z-50 w-full h-20 drop-shadow-2xl">
       <div
-        className={
-          menuIsOpen
-            ? "bg-gray-800 dark:bg-light-tertiary h-full"
-            : "bg-gray-900 dark:bg-light-background h-full"
-        }
+        className={menuIsOpen ? "bg-gray-800 dark:bg-light-tertiary h-full transition-colors" : "bg-gray-900 dark:bg-light-background h-full transition-colors"}
       >
         <div className="flex justify-center h-full ">
           <div className="justify-between w-4/5">

@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ReactNode } from "react";
-import {
-  AiFillFacebook,
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillTwitterSquare,
-} from "react-icons/ai";
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillTwitterSquare } from "react-icons/ai";
 
 export default function Contacts() {
   const icons: {
@@ -42,7 +37,7 @@ export default function Contacts() {
   ];
 
   return (
-    <div id="contacts" className="h-full bg-gray-900 dark:bg-light-background ">
+    <div id="contacts" className="h-full transition-colors bg-gray-900 dark:bg-light-background">
       <div className="flex items-center justify-center h-full space-x-5 ">
         <div className="flex justify-center w-[3%]">
           <div className="flex justify-end w-[20%] space-x-5">
@@ -84,20 +79,14 @@ export default function Contacts() {
             className="space-y-3"
           >
             {icons.map((icon, i) => (
-              <motion.div
-                key={i}
-                className="text-5xl"
-                whileHover={{ scale: 1.1, x: 30 }}
-              >
+              <motion.div key={i} className="text-5xl" whileHover={{ scale: 1.1, x: 30 }}>
                 <Link href={icon.link} passHref>
                   <a
                     target="_blank"
                     className="flex flex-row items-center space-x-2 transition-colors duration-300 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary"
                   >
                     {icon.icon}
-                    <a className="flex flex-col text-xl font-black lg:text-3xl">
-                      {icon.linkName}
-                    </a>
+                    <a className="flex flex-col text-xl font-black lg:text-3xl">{icon.linkName}</a>
                   </a>
                 </Link>
               </motion.div>

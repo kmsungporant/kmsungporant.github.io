@@ -47,10 +47,7 @@ const projects: {
 
 export default function Timeline() {
   return (
-    <div
-      id="timeline"
-      className="flex flex-col items-center justify-center h-full bg-gray-900 dark:bg-light-background font-Consolas"
-    >
+    <div id="timeline" className="flex flex-col items-center justify-center h-full transition-colors bg-gray-900 dark:bg-light-background font-Consolas">
       <motion.h1
         className="text-4xl font-black text-dark-tertiary dark:text-light-tertiary"
         initial={{ opacity: 0 }}

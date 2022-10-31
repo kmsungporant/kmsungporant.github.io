@@ -53,22 +53,14 @@ export default function NewCards({ projects, selected }) {
                           {")"}
                         </span>
                         <div className="flex-col">
-                          <h1 className="text-dark-secondary dark:text-light-secondary">
-                            Featured Projects
-                          </h1>
-                          <h2 className="text-xl font-black 2xl:text-3xl">
-                            {project.name}
-                          </h2>
+                          <h1 className="text-dark-secondary dark:text-light-secondary">Featured Projects</h1>
+                          <h2 className="text-xl font-black 2xl:text-3xl">{project.name}</h2>
                         </div>
                       </div>
                       <p className="p-8 my-4 2xl:text-lg text-md rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
-                        <span className="font-semibold opacity-100">
-                          {project.description}
-                        </span>
+                        <span className="font-semibold opacity-100">{project.description}</span>
                       </p>
-                      <div className="flex justify-start my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">
-                        {project.icons}
-                      </div>
+                      <div className="flex justify-start my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">{project.icons}</div>
                       {project.link ? (
                         <div className="flex justify-start text-dark-secondary dark:text-light-secondary">
                           <Link href={project.link} passHref>
