@@ -1,17 +1,18 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
+import Nav from "./nav";
 
-export default function NewCards({ projects, selected }) {
+export default function NewCards({ projects, selected, setSelected }) {
   return (
-    <div className="flex flex-col items-center justify-center h-[40em] ">
+    <div className="flex flex-col items-center justify-center h-[40em] relative ">
       {projects.map((project, i) => (
         <div key={i}>
           <AnimatePresence exitBeforeEnter>
             {selected == i && (
               <div className="relative flex items-center 2xl:w-[85rem] w-[60rem]">
                 <div className="absolute flex flex-col items-center justify-center w-full 2xl:flex-row 2xl:justify-end">
-                  <div className="relative w-1/2 after:content-[''] after:block 2xl:pb-[50%] pb-[40%]">
+                  <div className="relative w-1/2 2xl:pb-[50%] pb-[40%]">
                     <div className="absolute flex items-center w-full h-full">
                       <motion.img
                         src={project.image}
@@ -84,6 +85,7 @@ export default function NewCards({ projects, selected }) {
           </AnimatePresence>
         </div>
       ))}
+      <Nav projects={projects} selected={selected} setSelected={setSelected} />
     </div>
   );
 }

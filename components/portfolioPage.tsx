@@ -97,9 +97,9 @@ export default function PorfolioPage() {
   }, [selected]);
 
   return (
-    <div id="portfolio" className="flex flex-col items-center justify-center transition-colors bg-gray-900 dark:bg-light-background font-Consolas">
+    <div id="portfolio" className="flex flex-col items-center justify-center h-full transition-colors bg-gray-900 dark:bg-light-background font-Consolas">
       <motion.h1
-        className="pt-40 text-4xl font-black text-dark-tertiary dark:text-light-tertiary"
+        className="mb-10 text-4xl font-black text-dark-tertiary dark:text-light-tertiary"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -115,13 +115,11 @@ export default function PorfolioPage() {
       </motion.h1>
       <div>
         <div className="hidden lg:block">
-          <NewCards projects={projects} selected={selected} />
+          <NewCards projects={projects} selected={selected} setSelected={setSelected} />
         </div>
         <div className="block lg:hidden">
           <Cards projects={projects} />
         </div>
-        <Nav projects={projects} selected={selected} setSelected={setSelected} />
-        <Icons />
       </div>
     </div>
   );
