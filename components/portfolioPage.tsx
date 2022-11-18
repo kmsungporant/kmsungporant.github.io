@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import { ReactNode, useEffect, useState } from "react";
-import { SiFramer, SiGithubactions, SiLinux, SiMicrosoftazure, SiNextdotjs, SiNodedotjs, SiPython, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiDart,
+  SiFlutter,
+  SiFramer,
+  SiGithubactions,
+  SiGooglemaps,
+  SiLinux,
+  SiMicrosoftazure,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
 import Cards from "./portfolio-page/cards";
 import Icons from "./portfolio-page/icons";
@@ -58,6 +72,14 @@ const projects: {
       <SiMicrosoftazure key="seventh" />,
       <SiTypescript key="eighth" />,
     ],
+  },
+  {
+    name: "Food Swipe (VT Hacks X)",
+    description:
+      "Developed a tinder like application that allows user to browse through local restaurants. Utilized the users location using GooglePlacesAPI to search local restaurants. Implemented a UI using Flutter to allow users to swipe right if they want more information of the restaurants",
+    link: "https://github.com/kmsungporant/food_swipe/",
+    image: "portfolio/foodSwipe.png",
+    icons: [<SiDart key="first" />, <SiFlutter key="second" />, <SiGooglemaps key="third" />],
   },
 ];
 
