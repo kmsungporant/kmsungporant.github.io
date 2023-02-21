@@ -26,7 +26,7 @@ export default function Header({ menuIsOpen, setMenuIsOpen, selected, setSelecte
                 <Link href={"/"} passHref>
                   <div className="fixed flex justify-start p-5 overflow-hidden cursor-pointer -skew-x-2 ">
                     <motion.span
-                      whileHover={{ scale: 1.1, rotate: 1 }}
+                      whileHover={{ scale: 1.1 }}
                       className=" text-dark-secondary hover:text-dark-secondary/70 dark:text-light-secondary dark:hover:text-light-secondary/70"
                       onClick={() => {
                         setSelected(0);

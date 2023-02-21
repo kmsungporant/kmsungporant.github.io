@@ -64,8 +64,9 @@ export default function Title() {
           viewport={{ once: true }}
         >
           <span className="text-2xl font-medium">
-            My name is <span className="font-black underline text-dark-primary dark:text-light-primary ">Minsung Kim</span>, studying Computer Science at George
-            Mason University. Most of the projects I&apos;ve worked on are self-taught and I&apos;m always persistent for new challenges.
+            Hi, I&apos;m <span className="font-black underline text-dark-primary dark:text-light-primary ">Minsung Kim</span>, a computer science student at
+            George Mason University. As a self-taught programmer, I&apos;m always up for a challenge and eager to explore new technologies. I&apos;m a
+            collaborative team player and enjoy learning with peers. I&apos;m excited to see where my passion for computer science will take me!
           </span>
         </motion.div>
         <Link href="documentation/resume.pdf" passHref>

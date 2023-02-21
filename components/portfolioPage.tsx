@@ -32,7 +32,7 @@ const projects: {
   {
     name: "Personal Portfolio Website",
     description:
-      "Developed a fully functional personal portfolio website using Next.js, React.js and TailwindCSS. Hosted on GitHub Pages with the domain provided and managed on Google Domains.",
+      "I created a personal portfolio website using Next.js, React.js, and TailwindCSS. The website is fully functional and hosted on GitHub Pages with a custom domain managed through Google Domains.",
     link: "https://github.com/kmsungporant/kmsungporant.github.io",
     image: "portfolio/websiteVid.gif",
     icons: [
@@ -48,7 +48,7 @@ const projects: {
   {
     name: "Discord [Moon] Bot",
     description:
-      "Developed a discord bot using python and Discord API and hosted via Azure using Virtual Machine to run 24/7 for a discord server. Integrated various features for the server: music player for YouTube, mini games, shortcut commands and more!",
+      "I used Python and the Discord API to develop a Discord bot that is hosted on Azure using a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot includes a variety of features, such as a music player for YouTube, mini games, shortcut commands, and more.",
     link: "https://github.com/kmsungporant/Moon-Bot",
     image: "portfolio/discord.gif",
     icons: [<SiPython key="first" />, <SiMicrosoftazure key="second" />, <SiLinux key="third" />, <VscRemoteExplorer key="fourth" />],
@@ -56,7 +56,7 @@ const projects: {
   {
     name: "Video Uploader [In Progress]",
     description:
-      "A private web application that lets only discord members to upload videos onto a database via Azure. A discord bot will then retrieve the videos weekly and upload the top 5 videos rated in the database and upload it to a discord channel.",
+      "I developed a private web application that allows only members of a Discord server to upload videos to an Azure database. A Discord bot then retrieves the videos weekly and uploads the top 5 rated videos from the database to a designated Discord channel.",
     link: "https://github.com/kmsungporant/video_upload_web",
     image: "portfolio/videoUploader.gif",
     icons: [
@@ -76,7 +76,7 @@ const projects: {
   {
     name: "Food Swipe (VT Hacks X)",
     description:
-      "Developed a tinder like application that allows user to browse through local restaurants. Utilized the users location using GooglePlacesAPI to search local restaurants. Implemented a UI using Flutter to allow users to swipe right if they want more information of the restaurants",
+      "I created a restaurant discovery app similar to Tinder, which enables users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. Using Flutter, I developed a user interface that enables users to swipe right if they want more information about a particular restaurant.",
     link: "https://github.com/kmsungporant/food_swipe/",
     image: "portfolio/foodSwipe.png",
     icons: [<SiDart key="first" />, <SiFlutter key="second" />, <SiGooglemaps key="third" />],
