@@ -68,7 +68,7 @@ export default function Title() {
         }}
         viewport={{ once: true }}
       >
-        An Incoming Software Engineer
+        An upcoming Software Engineer
       </motion.h3>
     </div>
   );
