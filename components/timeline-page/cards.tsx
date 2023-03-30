@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import Card from "./card";
 
-export default function Cards({ projects }) {
+export default function Cards({ Experience }) {
   return (
     <div className="flex flex-col items-center justify-center ">
-      {projects.map((project, i) => (
+      {Experience.map((project, i) => (
         <motion.div
           key={i}
           initial={{ opacity: 0 }}

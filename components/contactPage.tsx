@@ -1,41 +1,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ReactNode } from "react";
-import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillTwitterSquare } from "react-icons/ai";
+import { Icons } from "./data/Contacts";
 
 export default function Contacts() {
-  const icons: {
-    name: string;
-    linkName: string;
-    link: string;
-    icon: ReactNode;
-  }[] = [
-    {
-      name: "Github",
-      linkName: "github.com/kmsungporant",
-      link: "https://github.com/kmsungporant/",
-      icon: <AiFillGithub />,
-    },
-    {
-      name: "Linkedin",
-      linkName: "linkedin/kmsungporant",
-      link: "https://www.linkedin.com/in/kmsungporant/",
-      icon: <AiFillLinkedin />,
-    },
-    {
-      name: "Twitter",
-      linkName: "twitter/kmsjoseph",
-      link: "https://twitter.com/kmsjoseph/",
-      icon: <AiFillTwitterSquare />,
-    },
-    {
-      name: "Facebook",
-      linkName: "facebook/kmsungporant",
-      link: "https://www.facebook.com/kmsungporant/",
-      icon: <AiFillFacebook />,
-    },
-  ];
-
   return (
     <div id="contacts" className="h-full transition-colors bg-gray-900 dark:bg-light-background">
       <div className="flex items-center justify-center h-full space-x-5 ">
@@ -78,7 +45,7 @@ export default function Contacts() {
             viewport={{ once: true }}
             className="space-y-3"
           >
-            {icons.map((icon, i) => (
+            {Icons.map((icon, i) => (
               <motion.div key={i} className="text-5xl" whileHover={{ scale: 1.1, x: 30 }}>
                 <Link href={icon.link} passHref>
                   <a
