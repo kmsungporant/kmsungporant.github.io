@@ -19,12 +19,7 @@ export const Icons: {
     link: "https://www.linkedin.com/in/kmsungporant/",
     icon: <AiFillLinkedin />,
   },
-  {
-    name: "Twitter",
-    linkName: "twitter/kmsjoseph",
-    link: "https://twitter.com/kmsjoseph/",
-    icon: <AiFillTwitterSquare />,
-  },
+
   {
     name: "Facebook",
     linkName: "facebook/kmsungporant",

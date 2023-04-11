@@ -32,7 +32,7 @@ export default function Contacts() {
             transition: { duration: 1 },
           }}
           viewport={{ once: true }}
-          className="flex w-2 h-60 lg:h-80 bg-dark-secondary dark:bg-light-secondary"
+          className="flex w-2 h-60 lg:h-60 bg-dark-secondary dark:bg-light-secondary"
         />
         <div>
           <motion.div
@@ -48,10 +48,7 @@ export default function Contacts() {
             {Icons.map((icon, i) => (
               <motion.div key={i} className="text-5xl" whileHover={{ scale: 1.1, x: 30 }}>
                 <Link href={icon.link} passHref>
-                  <a
-                    target="_blank"
-                    className="flex flex-row items-center space-x-2 transition-colors duration-300 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary"
-                  >
+                  <a target="_blank" className="flex flex-row items-center space-x-2 transition-colors duration-300 cursor-pointer text-dark-secondary dark:text-light-secondary hover:text-dark-primary hover:dark:text-light-primary">
                     {icon.icon}
                     <a className="flex flex-col text-xl font-black lg:text-3xl">{icon.linkName}</a>
                   </a>
