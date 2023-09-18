@@ -1,78 +1,80 @@
 import { ReactNode } from "react";
 import {
-  SiDart,
-  SiFlutter,
-  SiFramer,
-  SiGithubactions,
-  SiGooglemaps,
-  SiLinux,
-  SiMicrosoftazure,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
+    SiDart,
+    SiExpo,
+    SiFirebase,
+    SiFlutter,
+    SiFramer,
+    SiGithubactions,
+    SiGooglemaps,
+    SiLinux,
+    SiMicrosoftazure,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiPython,
+    SiReact,
+    SiTailwindcss,
+    SiTypescript,
 } from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
 
 export const Projects: {
-  name: string;
-  description: string;
-  link: string;
-  image: string;
-  icons: ReactNode[];
+    name: string;
+    description: string;
+    link: string;
+    website: string;
+    source: string;
+    icons: ReactNode[];
 }[] = [
-  {
-    name: "Personal Portfolio Website",
-    description:
-      "I created a personal portfolio website using Next.js, React.js, and TailwindCSS. The website is fully functional and hosted on GitHub Pages with a custom domain managed through Google Domains.",
-    link: "https://github.com/kmsungporant/kmsungporant.github.io",
-    image: "portfolio/websiteVid.gif",
-    icons: [
-      <SiNextdotjs key="first" />,
-      <SiReact key="second" />,
-      <SiNodedotjs key="third" />,
-      <SiTailwindcss key="fourth" />,
-      <SiGithubactions key="fifth" />,
-      <SiFramer key="sixth" />,
-      <SiTypescript key="seventh" />,
-    ],
-  },
-  {
-    name: "Discord [Moon] Bot",
-    description:
-      "I used Python and the Discord API to develop a Discord bot that is hosted on Azure using a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot includes a variety of features, such as a music player for YouTube, mini games, shortcut commands, and more.",
-    link: "https://github.com/kmsungporant/Moon-Bot",
-    image: "portfolio/discord.gif",
-    icons: [<SiPython key="first" />, <SiMicrosoftazure key="second" />, <SiLinux key="third" />, <VscRemoteExplorer key="fourth" />],
-  },
-  {
-    name: "Video Uploader [In Progress]",
-    description:
-      "I developed a private web application that allows only members of a Discord server to upload videos to an Azure database. A Discord bot then retrieves the videos weekly and uploads the top 5 rated videos from the database to a designated Discord channel.",
-    link: "https://github.com/kmsungporant/video_upload_web",
-    image: "portfolio/videoUploader.gif",
-    icons: [
-      <SiPython key="first" />,
-      <SiMicrosoftazure key="second" />,
-      <SiLinux key="third" />,
-      <VscRemoteExplorer key="fourth" />,
-      <SiNextdotjs key="first" />,
-      <SiReact key="second" />,
-      <SiNodedotjs key="third" />,
-      <SiTailwindcss key="fourth" />,
-      <SiFramer key="sixth" />,
-      <SiMicrosoftazure key="seventh" />,
-      <SiTypescript key="eighth" />,
-    ],
-  },
-  {
-    name: "Food Swipe (VT Hacks X)",
-    description:
-      "I created a restaurant discovery app similar to Tinder, which enables users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. Using Flutter, I developed a user interface that enables users to swipe right if they want more information about a particular restaurant.",
-    link: "https://github.com/kmsungporant/food_swipe/",
-    image: "portfolio/foodSwipe.png",
-    icons: [<SiDart key="first" />, <SiFlutter key="second" />, <SiGooglemaps key="third" />],
-  },
+    {
+        name: "SimpliSplit",
+        description:
+            "A mobile app has been created to simplify the process of splitting the bill by simply scanning a receipt and organizing the order items as needed. The app is fully functional, with OCR scanning and an easy-to-use design. It is currently in the process of being published on the Apple Store for general use. The technologies used include React Native, Native Wind, Firebase, RapidAPI, Python, TypeScript, Expo Go, and more.",
+        link: "https://github.com/kmsungporant/SimpliSplit/",
+        source: "portfolio/simpliSplit.gif",
+        website: "https://www.simplisplit.com/",
+        icons: [
+            <SiReact key="first" />,
+            <SiTailwindcss key="second" />,
+            <SiFirebase key="third" />,
+            <SiPython key="fourth" />,
+            <SiTypescript key="fifth" />,
+            <SiExpo key="sixth" />,
+        ],
+    },
+    {
+        name: "Personal Portfolio Website",
+        description:
+            "I have created a fully developed personal portfolio website using Next.js, Tailwind CSS, Framer Motion, TypeScript, and more. I utilized GitHub Actions for automatic building and deployment (CI/CD) of the most up-to-date webpage. The website is hosted on GitHub Pages and managed through Google Domains.",
+        link: "https://github.com/kmsungporant/kmsungporant.github.io/",
+        source: "portfolio/websiteVid.gif",
+        website: "https://MinsungK.com/",
+        icons: [
+            <SiNextdotjs key="first" />,
+            <SiReact key="second" />,
+            <SiNodedotjs key="third" />,
+            <SiTailwindcss key="fourth" />,
+            <SiGithubactions key="fifth" />,
+            <SiFramer key="sixth" />,
+            <SiTypescript key="seventh" />,
+        ],
+    },
+    {
+        name: "Discord [Moon] Bot",
+        description:
+            "I developed a Discord bot using Python and the Discord API, which is hosted on Azure through a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot boasts a variety of features, including a YouTube music player, mini-games, shortcut commands, and more.",
+        link: "https://github.com/kmsungporant/Moon-Bot/",
+        source: "portfolio/discord.gif",
+        website: null,
+        icons: [<SiPython key="first" />, <SiMicrosoftazure key="second" />, <SiLinux key="third" />, <VscRemoteExplorer key="fourth" />],
+    },
+    {
+        name: "Food Swipe (VT Hacks X)",
+        description:
+            "I developed a web application that functions as a restaurant discovery app, similar to Tinder. It allows users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. The user interface enables users to swipe right if they want more information about a particular restaurant.",
+        link: "https://github.com/kmsungporant/food_swipe/",
+        source: "portfolio/foodSwipe.gif",
+        website: null,
+        icons: [<SiDart key="first" />, <SiFlutter key="second" />, <SiGooglemaps key="third" />],
+    },
 ];
