@@ -10,7 +10,7 @@ export default function PorfolioPage() {
         if (selected != Projects.length) {
             const timer = setInterval(() => {
                 setSelected(selected + 1);
-            }, 9000);
+            }, 10000);
             return () => clearInterval(timer);
         } else {
             setSelected(0);
