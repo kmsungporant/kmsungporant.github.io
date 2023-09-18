@@ -25,7 +25,7 @@ export default function Cards({ projects }) {
             </h1>
             <motion.div className="w-[90%] mt-5 " whileHover={{ scale: 1.3 }}>
               <img
-                src={project.image}
+                src={project.source}
                 alt={project.name}
                 className="border-2 rounded-2xl border-dark-tertiary dark:border-light-tertiary"
               />
