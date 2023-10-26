@@ -1,21 +1,5 @@
 import { ReactNode } from "react";
-import {
-    SiDart,
-    SiExpo,
-    SiFirebase,
-    SiFlutter,
-    SiFramer,
-    SiGithubactions,
-    SiGooglemaps,
-    SiLinux,
-    SiMicrosoftazure,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiPython,
-    SiReact,
-    SiTailwindcss,
-    SiTypescript,
-} from "react-icons/si";
+import { SiDart, SiExpo, SiFirebase, SiFlutter, SiFramer, SiGithubactions, SiGooglemaps, SiLinux, SiMicrosoftazure, SiNextdotjs, SiNodedotjs, SiPython, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { VscRemoteExplorer } from "react-icons/vsc";
 
 export const Projects: {
@@ -27,51 +11,36 @@ export const Projects: {
     icons: ReactNode[];
 }[] = [
     {
-        name: "SimpliSplit",
+        name: "SimpliSplit - Mobile Application",
         description:
-            "A mobile app has been created to simplify the process of splitting the bill by simply scanning a receipt and organizing the order items as needed. The app is fully functional, with OCR scanning and an easy-to-use design. It is currently in the process of being published on the Apple Store for general use. The technologies used include React Native, Native Wind, Firebase, RapidAPI, Python, TypeScript, Expo Go, and more.",
+            "A fully functional iOS application that allows users to simply scan their receipts and easily split the bill. The app utilizes Mindee OCR API to extract the data from the receipt and React Native with Expo to create and design the UI/UX. The app published and available on the App Store.",
         link: "https://github.com/kmsungporant/SimpliSplit/",
         source: "portfolio/simpliSplit.gif",
         website: "https://www.simplisplit.com/",
-        icons: [
-            <SiReact key="first" />,
-            <SiTailwindcss key="second" />,
-            <SiFirebase key="third" />,
-            <SiPython key="fourth" />,
-            <SiTypescript key="fifth" />,
-            <SiExpo key="sixth" />,
-        ],
+        icons: [<SiReact key="first" />, <SiTailwindcss key="second" />, <SiTypescript key="fifth" />, <SiExpo key="sixth" />],
     },
     {
-        name: "Personal Portfolio Website",
+        name: "Personal Portfolio - Web Application",
         description:
-            "I have created a fully developed personal portfolio website using Next.js, Tailwind CSS, Framer Motion, TypeScript, and more. I utilized GitHub Actions for automatic building and deployment (CI/CD) of the most up-to-date webpage. The website is hosted on GitHub Pages and managed through Google Domains.",
+            "A personal portfolio website using Next.js, Tailwind CSS, Framer Motion, TypeScript, and more. I utilized GitHub Actions for automatic building and deployment (CI/CD) of the most up-to-date webpage. The website is hosted on GitHub Pages and managed through Google Domains.",
         link: "https://github.com/kmsungporant/kmsungporant.github.io/",
         source: "portfolio/websiteVid.gif",
         website: "https://MinsungK.com/",
-        icons: [
-            <SiNextdotjs key="first" />,
-            <SiReact key="second" />,
-            <SiNodedotjs key="third" />,
-            <SiTailwindcss key="fourth" />,
-            <SiGithubactions key="fifth" />,
-            <SiFramer key="sixth" />,
-            <SiTypescript key="seventh" />,
-        ],
+        icons: [<SiNextdotjs key="first" />, <SiReact key="second" />, <SiNodedotjs key="third" />, <SiTailwindcss key="fourth" />, <SiGithubactions key="fifth" />, <SiFramer key="sixth" />, <SiTypescript key="seventh" />],
     },
     {
-        name: "Discord [Moon] Bot",
+        name: "Moon Bot - Discord Bot",
         description:
-            "I developed a Discord bot using Python and the Discord API, which is hosted on Azure through a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot boasts a variety of features, including a YouTube music player, mini-games, shortcut commands, and more.",
+            "A Discord bot developed using Python and the Discord API, which is hosted on Azure through a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot boasts a variety of features, including a YouTube music player, mini-games, shortcut commands, and more.",
         link: "https://github.com/kmsungporant/Moon-Bot/",
         source: "portfolio/discord.gif",
         website: null,
         icons: [<SiPython key="first" />, <SiMicrosoftazure key="second" />, <SiLinux key="third" />, <VscRemoteExplorer key="fourth" />],
     },
     {
-        name: "Food Swipe (VT Hacks X)",
+        name: "Food Swipe [VT hacks X] - Web Application",
         description:
-            "I developed a web application that functions as a restaurant discovery app, similar to Tinder. It allows users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. The user interface enables users to swipe right if they want more information about a particular restaurant.",
+            "A web application that functions as a restaurant discovery app, similar to Tinder. It allows users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. The user interface enables users to swipe right if they want more information about a particular restaurant.",
         link: "https://github.com/kmsungporant/food_swipe/",
         source: "portfolio/foodSwipe.gif",
         website: null,

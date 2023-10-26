@@ -50,49 +50,43 @@ export default function NewCards({ projects, selected, setSelected }) {
                                     >
                                         <div className="flex flex-col w-[55%] justify-center h-full">
                                             <div className="flex flex-row 2xl:flex-col gap-x-3 ">
-                                                <span className="flex justify-start mb-4 text-3xl font-black 2xl:text-4xl ">
-                                                    {i + 1}
-                                                    {")"}
-                                                </span>
                                                 <div className="flex-col">
                                                     <h1 className="text-dark-secondary dark:text-light-secondary">Featured Projects</h1>
                                                     <h2 className="text-xl font-black 2xl:text-3xl">{project.name}</h2>
                                                 </div>
                                             </div>
-                                            <p className="p-8 my-4 2xl:text-lg text-md rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
-                                                <span className="font-semibold opacity-100">{project.description}</span>
-                                            </p>
-                                            <div className="flex justify-start my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">
-                                                {project.icons}
-                                            </div>
-                                            {project.link ? (
-                                                <div className="flex flex-col justify-start text-dark-secondary dark:text-light-secondary">
-                                                    {project.website !== null && (
-                                                        <Link href={project.website} passHref>
-                                                            <motion.a
-                                                                target="_blank"
-                                                                className="flex items-center justify-start w-full gap-4 font-bold 2xl:text-2xl hover:text-dark-primary hover:dark:text-light-primary "
-                                                                whileHover={{ scale: 1.02, x: 4 }}
-                                                            >
-                                                                <BsGlobe /> {"View Wesbite"}
-                                                            </motion.a>
-                                                        </Link>
-                                                    )}
+                                            <div className="p-8 my-4 2xl:text-lg text-md rounded-2xl opacity-80 bg-dark-secondary dark:bg-light-secondary text-dark-tertiary dark:text-light-tertiary">
+                                                <div className="font-semibold opacity-100">
+                                                    {project.description}
+                                                    <div className="h-0.5 w-44 bg-dark-tertiary my-5" />
+                                                    {project.link ? (
+                                                        <div className="flex flex-col justify-start ">
+                                                            {project.website !== null && (
+                                                                <Link href={project.website} passHref>
+                                                                    <motion.a target="_blank" className="flex items-center justify-start w-full gap-4 font-bold 2xl:text-2xl " whileHover={{ scale: 1.02, x: 4 }}>
+                                                                        <BsGlobe /> {"View Wesbite"}
+                                                                    </motion.a>
+                                                                </Link>
+                                                            )}
 
-                                                    <Link href={project.link} passHref>
-                                                        <motion.a
-                                                            target="_blank"
-                                                            className="flex items-center justify-start w-full gap-4 font-bold 2xl:text-2xl hover:text-dark-primary hover:dark:text-light-primary "
-                                                            whileHover={{ scale: 1.02, x: 4 }}
-                                                        >
-                                                            <SiGithub />
-                                                            {"View GitHub"}
-                                                        </motion.a>
-                                                    </Link>
+                                                            <Link href={project.link} passHref>
+                                                                <motion.a
+                                                                    target="_blank"
+                                                                    className="flex items-center justify-start w-full gap-4 mt-2 font-bold 2xl:text-2xl hover:text-dark-primary hover:dark:text-light-primary "
+                                                                    whileHover={{ scale: 1.02, x: 4 }}
+                                                                >
+                                                                    <SiGithub />
+                                                                    {"View GitHub"}
+                                                                </motion.a>
+                                                            </Link>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="m-5" />
+                                                    )}
                                                 </div>
-                                            ) : (
-                                                <div className="m-5" />
-                                            )}
+                                            </div>
+
+                                            <div className="flex justify-start my-4 text-3xl gap-7 text-dark-secondary dark:text-light-secondary">{project.icons}</div>
                                         </div>
                                     </motion.div>
                                 </div>
