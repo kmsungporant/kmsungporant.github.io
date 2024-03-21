@@ -15,7 +15,7 @@ export default function Card({ project, i }) {
                     delay: i * 0.2,
                 },
             }}
-            className="lg:w-[70rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary dark:bg-light-secondary drop-shadow-2xl p-4"
+            className="lg:w-[50rem] mx-auto lg:mx-0 w-[min(50rem,80%)] rounded-3xl bg-dark-secondary dark:bg-light-secondary drop-shadow-2xl p-4"
             viewport={{ once: true }}
         >
             <div className="flex flex-col items-center p-2 sm:flex-row">
@@ -37,7 +37,7 @@ export default function Card({ project, i }) {
                         <BsFillCalendarDateFill />
                         {project.startDate} - {project.endDate}
                     </h6>
-                    <ul className="text-md w-[95%] list-disc my-3 pl-4 ">
+                    <ul className="text-sm w-[95%] list-disc my-3 pl-4 ">
                         {project.description.map((description, i) => (
                             <li key={i}>{description}</li>
                         ))}
