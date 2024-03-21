@@ -10,7 +10,7 @@ export default function PorfolioPage() {
         if (selected != Projects.length) {
             const timer = setInterval(() => {
                 setSelected(selected + 1);
-            }, 10000);
+            }, 15000);
             return () => clearInterval(timer);
         } else {
             setSelected(0);
@@ -35,10 +35,10 @@ export default function PorfolioPage() {
                 {"<Portfolio />"}
             </motion.h1>
             <div>
-                <div className="hidden lg:block">
+                <div className="hidden xl:block">
                     <NewCards projects={Projects} selected={selected} setSelected={setSelected} />
                 </div>
-                <div className="block lg:hidden">
+                <div className="block xl:hidden">
                     <Cards projects={Projects} />
                 </div>
             </div>

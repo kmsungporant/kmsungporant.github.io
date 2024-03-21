@@ -13,7 +13,23 @@ export const Experience: {
     icon: ReactNode;
 }[] = [
     {
-        company: "Blackhorse Solutions",
+        company: "Systems Planning Analysis (Interim TS)",
+        title: "Software Engineer Intern",
+        description: [
+            "Developed a Microsoft SharePoint website aimed at optimizing data analysis processes by effectively organizing classified data.",
+            "Utilized libraries like ChartJS to create visualizations and implement data filtration functionalities using JSON data retrieved from the Microsoft SharePoint API.",
+            "Contributed to research efforts alongside engineers to identify and integrate superior tools for enhanced project efficiency.",
+            "Collaborated with senior engineers to design and implement an API library, subsequently adopted across all team websites for streamlined operations.",
+        ],
+
+        location: "Alexandria, VA",
+        startDate: "Jan 2024",
+        endDate: "Present",
+        logo: "timeline/SPALogo.png",
+        icon: <RiComputerLine />,
+    },
+    {
+        company: "Blackhorse Solutions - A Parsons Company",
         title: "Software Engineer Intern",
         description: [
             "Created a web application that creates form elements to ease the process of creating workflow forms.",

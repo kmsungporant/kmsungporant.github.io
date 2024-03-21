@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { BsGlobe } from "react-icons/bs";
+import { FaAppStore } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import Nav from "./nav";
 
@@ -11,14 +12,14 @@ export default function NewCards({ projects, selected, setSelected }) {
                 <div key={i}>
                     <AnimatePresence exitBeforeEnter>
                         {selected == i && (
-                            <div className="relative flex items-center 2xl:w-[85rem] w-[60rem]">
-                                <div className="absolute flex flex-col items-center justify-center w-full 2xl:flex-row 2xl:justify-end">
-                                    <div className="relative w-1/2 2xl:pb-[50%] pb-[40%]">
-                                        <div className="absolute flex items-center w-full h-full">
+                            <div className="relative flex items-center 2xl:w-[85rem] w-[85rem]">
+                                <div className="absolute flex flex-row items-center justify-center w-full 2xl:justify-end">
+                                    <div className="relative w-1/2 2xl:pb-[50%] pb-[40%] items-center">
+                                        <div className="absolute flex items-center justify-center w-full h-full">
                                             <motion.img
                                                 src={project.source}
                                                 alt={project.name}
-                                                className="w-full rounded-3xl drop-shadow-2xl "
+                                                className="rounded-3xl drop-shadow-2xl "
                                                 initial={{ opacity: 0, x: 100 }}
                                                 whileInView={{
                                                     opacity: 1,
@@ -46,7 +47,7 @@ export default function NewCards({ projects, selected, setSelected }) {
                                             transition: { duration: 0.5 },
                                         }}
                                         viewport={{ once: true }}
-                                        className="flex justify-center h-full text-left 2xl:justify-start 2xl:absolute text-dark-primary dark:text-light-primary"
+                                        className="flex justify-center w-2/3 h-full text-left 2xl:w-full 2xl:justify-start 2xl:absolute text-dark-primary dark:text-light-primary"
                                     >
                                         <div className="flex flex-col w-[55%] justify-center h-full">
                                             <div className="flex flex-row 2xl:flex-col gap-x-3 ">
@@ -59,16 +60,16 @@ export default function NewCards({ projects, selected, setSelected }) {
                                                 <div className="font-semibold opacity-100">
                                                     {project.description}
                                                     <div className="h-0.5 w-44 bg-dark-tertiary my-5" />
-                                                    {project.link ? (
-                                                        <div className="flex flex-col justify-start ">
-                                                            {project.website !== null && (
-                                                                <Link href={project.website} passHref>
-                                                                    <motion.a target="_blank" className="flex items-center justify-start w-full gap-4 font-bold 2xl:text-2xl " whileHover={{ scale: 1.02, x: 4 }}>
-                                                                        <BsGlobe /> {"View Wesbite"}
-                                                                    </motion.a>
-                                                                </Link>
-                                                            )}
+                                                    <div className="flex flex-col justify-start ">
+                                                        {project.website !== null && (
+                                                            <Link href={project.website} passHref>
+                                                                <motion.a target="_blank" className="flex items-center justify-start w-full gap-4 font-bold 2xl:text-2xl " whileHover={{ scale: 1.02, x: 4 }}>
+                                                                    <BsGlobe /> {"View Wesbite"}
+                                                                </motion.a>
+                                                            </Link>
+                                                        )}
 
+                                                        {project.link && (
                                                             <Link href={project.link} passHref>
                                                                 <motion.a
                                                                     target="_blank"
@@ -79,10 +80,16 @@ export default function NewCards({ projects, selected, setSelected }) {
                                                                     {"View GitHub"}
                                                                 </motion.a>
                                                             </Link>
-                                                        </div>
-                                                    ) : (
-                                                        <div className="m-5" />
-                                                    )}
+                                                        )}
+
+                                                        {project.download && (
+                                                            <Link href={project.download} passHref>
+                                                                <motion.a target="_blank" className="flex items-center justify-start w-full gap-4 font-bold 2xl:text-2xl " whileHover={{ scale: 1.02, x: 4 }}>
+                                                                    <FaAppStore /> {"Download App"}
+                                                                </motion.a>
+                                                            </Link>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
 
