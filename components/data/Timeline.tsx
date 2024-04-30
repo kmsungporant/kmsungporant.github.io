@@ -24,7 +24,7 @@ export const Experience: {
 
         location: "Alexandria, VA",
         startDate: "Jan 2024",
-        endDate: "Present",
+        endDate: "May 2024",
         logo: "timeline/SPALogo.png",
         icon: <RiComputerLine />,
     },

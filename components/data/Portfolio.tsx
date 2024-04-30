@@ -38,7 +38,7 @@ export const Projects: {
         id: 2,
         name: "Moon Bot - Discord Bot",
         description:
-            "I used Python and the Discord API to develop a Discord bot that is hosted on Azure using a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot includes a variety of features, such as a music player for YouTube, mini games, shortcut commands, and more.",
+            "A Discord bot developed using Python and the Discord API. The bot is hosted on Azure using a Virtual Machine to ensure it runs 24/7 for a Discord server. The bot includes a variety of features, such as a music player for YouTube, mini games, shortcut commands, and more.",
         link: "https://github.com/kmsungporant/Moon-Bot",
         source: "portfolio/discord.gif",
         website: null,
@@ -49,7 +49,7 @@ export const Projects: {
         id: 3,
         name: "Video Uploader - Web Application",
         description:
-            "I developed a private web application that allows only members of a Discord server to upload videos to an Azure database. A Discord bot then retrieves the videos weekly and uploads the top 5 rated videos from the database to a designated Discord channel.",
+            "A private web application that allows only members of a Discord server to upload videos to an Azure database. A Discord bot then retrieves the videos weekly and uploads the top 5 rated videos from the database to a designated Discord channel.",
         link: "https://github.com/kmsungporant/video_upload_web",
         website: null,
         download: null,
@@ -72,7 +72,7 @@ export const Projects: {
         id: 4,
         name: "Food Swipe (VT Hacks X) - Web Application",
         description:
-            "I created a restaurant discovery app similar to Tinder, which enables users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. Using Flutter, I developed a user interface that enables users to swipe right if they want more information about a particular restaurant.",
+            "A restaurant discovery app similar to Tinder, which enables users to browse through local restaurants. The app utilizes the Google Places API to search for restaurants based on the user's location. Using Flutter, I developed a user interface that enables users to swipe right if they want more information about a particular restaurant.",
         link: "https://github.com/kmsungporant/food_swipe/",
         website: null,
         download: null,
